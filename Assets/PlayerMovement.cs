@@ -5,50 +5,58 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5;
-    public float jumpPower = 5;
+    public float jumpPower = 10;
 
     public float dashTimer;
+    public float jumpTimer;
 
     bool dashOn = true;
 
+    public int jumpsLeft;
+    public GameObject jumpFlames;
+
     Rigidbody2D player;
     Vector2 movement = new Vector2();
-    bool grounded;
+
+    Vector3 offsetFlames;
 
     float dashSpeed;
+
+    public int maxJumps;
 
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+
+        maxJumps = jumpsLeft;
     }
 
     void Update()
     {
-        if (dashTimer > 0) dashTimer -= Time.deltaTime;
-
         float x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        }
-
-        if (Input.GetButtonDown("Fire3") && dashOn)
-        {
-            dashSpeed = 5;
-            dashOn = false;
-            dashTimer = 0.5f;
-        }
-        else
-        {
-            if (dashTimer <= 0)
-            {
-                dashSpeed = 0;
-                dashOn = true;
-            }
-        }
+        Jump();
+        Dash();
+        Timers();
+        JumpsLeftLimiter();
 
         movement.x = dashSpeed * x + speed * x;
+
+        offsetFlames = transform.position;
+        offsetFlames.y -= 0.2f;
+    }
+
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+        {
+            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+
+            Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+
+            jumpTimer = 0.2f;
+            jumpsLeft--;
+        }
     }
 
     private void FixedUpdate()
@@ -57,13 +65,38 @@ public class PlayerMovement : MonoBehaviour
         player.velocity = movement;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Dash()
     {
-        grounded = true;
+        if (Input.GetButtonDown("Fire3") && dashOn)
+        {
+            dashSpeed = 5;
+            dashOn = false;
+            dashTimer = 0.5f;
+        }
+        else if (dashTimer <= 0)
+            {
+                dashSpeed = 0;
+                dashOn = true;
+            }
+    }
+    private void Timers()
+    {
+        if (dashTimer > 0) dashTimer -= Time.deltaTime;
+
+        if (jumpTimer > 0) jumpTimer -= Time.deltaTime;
+    }
+    private void JumpsLeftLimiter()
+    {
+        if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        grounded = false;
+        if (collision.CompareTag("jumpFlames") && jumpTimer <= 0)
+        {
+            Destroy(collision.gameObject);
+            jumpsLeft++;
+        }
     }
-}
+    }
+
