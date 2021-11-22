@@ -7,9 +7,15 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5;
     public float jumpPower = 5;
 
+    public float dashTimer;
+
+    bool dashOn = true;
+
     Rigidbody2D player;
     Vector2 movement = new Vector2();
     bool grounded;
+
+    float dashSpeed;
 
     void Start()
     {
@@ -18,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (dashTimer > 0) dashTimer -= Time.deltaTime;
+
         float x = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump") && grounded)
@@ -25,18 +33,24 @@ public class PlayerMovement : MonoBehaviour
             player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
 
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Fire3") && dashOn)
         {
-            if (x < 0) player.AddForce(Vector2.left * jumpPower, ForceMode2D.Impulse);
-            if (x > 0) player.AddForce(Vector2.right * jumpPower, ForceMode2D.Impulse);
-            Debug.Log ("Dashing baby");
+            dashSpeed = 5;
+            dashOn = false;
+            dashTimer = 0.5f;
+        }
+        else
+        {
+            if (dashTimer <= 0)
+            {
+                dashSpeed = 0;
+                dashOn = true;
+            }
         }
 
-        movement.x = x * speed;
-
-
-
+        movement.x = dashSpeed * x + speed * x;
     }
+
     private void FixedUpdate()
     {
         movement.y = player.velocity.y;
