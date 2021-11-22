@@ -4,26 +4,52 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb2d;
-    float speed = 5;
+    public float speed = 5;
+    public float jumpPower = 5;
 
-    Vector2 movement;
+    Rigidbody2D player;
+    Vector2 movement = new Vector2();
+    bool grounded;
 
-    float x, y;
-    // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        movement = new Vector3(0, 0);
+        player = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxis("Horizontal");
+
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetButtonDown("Fire3"))
+        {
+            if (x < 0) player.AddForce(Vector2.left * jumpPower, ForceMode2D.Impulse);
+            if (x > 0) player.AddForce(Vector2.right * jumpPower, ForceMode2D.Impulse);
+            Debug.Log ("Dashing baby");
+        }
+
+        movement.x = x * speed;
+
+
+
     }
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        rb2d.velocity = movement * speed;
+        movement.y = player.velocity.y;
+        player.velocity = movement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        grounded = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        grounded = false;
     }
 }
