@@ -492,7 +492,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.23474543, g: 0.4819605, b: 0.7924528, a: 1}
+  m_Color: {r: 0.23474543, g: 0.4819605, b: 0.7924528, a: 0.654902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -528,13 +528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ac0eb64ac3a714e8c5320713353d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1489559671}
+  playerPrefab: {fileID: 3820087971820976396, guid: 511db31566e6c6441bd380af991895a3, type: 3}
   bonfirePrefab: {fileID: 255885746}
---- !u!1 &1489559671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3820087971820976396, guid: 511db31566e6c6441bd380af991895a3, type: 3}
-  m_PrefabInstance: {fileID: 1887826619}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1887826619
 PrefabInstance:
   m_ObjectHideFlags: 0
