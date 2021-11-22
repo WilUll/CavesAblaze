@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class WaterScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject playerPrefab;
+    public GameObject bonfirePrefab;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+            Instantiate(playerPrefab, bonfirePrefab.transform.position, Quaternion.identity);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
