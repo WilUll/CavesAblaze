@@ -34,8 +34,14 @@ public class fireSpreadScript : MonoBehaviour
                     fireSpreadScript flameScript = flammableObjects[i].GetComponent<fireSpreadScript>();
                     if (!flameScript.objectBurn)
                     {
+                        StartCoroutine(StartTimer());
+                        
+                    }
+                    IEnumerator StartTimer()
+                    {
+                        yield return new WaitForSeconds(1);
                         flameScript.objectBurn = true;
-                    }    
+                    }
                 }
             }
         }
@@ -75,5 +81,6 @@ public class fireSpreadScript : MonoBehaviour
     {
         objectBurn = true;
     }
+
 }
 
