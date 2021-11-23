@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxJumps;
 
+    public bool isGrounded;
+
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if(Input.GetButtonDown("Jump") && jumpsLeft > 0)
+        if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
             jumpTimer = 0.2f;
             jumpsLeft--;
@@ -76,10 +78,10 @@ public class PlayerMovement : MonoBehaviour
             dashTimer = 0.5f;
         }
         else if (dashTimer <= 0)
-            {
-                dashSpeed = 0;
-                dashOn = true;
-            }
+        {
+            dashSpeed = 0;
+            dashOn = true;
+        }
     }
     private void Timers()
     {
@@ -92,13 +94,27 @@ public class PlayerMovement : MonoBehaviour
         if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("jumpFlames") && jumpTimer <= 0)
+        if (other.CompareTag("Ground"))
         {
-            Destroy(collision.gameObject);
+            isGrounded = true;
+        }
+        if (other.CompareTag("jumpFlames") && jumpTimer <= 0)
+        {
+            Destroy(other.gameObject);
             jumpsLeft++;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
+}
+    
+   
 
