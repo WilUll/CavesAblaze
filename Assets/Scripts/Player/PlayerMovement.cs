@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
         }
 
-        if (Input.GetButton("Jump") && jumpsLeft > 0 && jumpTimer > 0)
+        if (Input.GetButton("Jump") && jumpTimer > 0)
         {
             player.AddForce(Vector2.up * pressJumpPower, ForceMode2D.Impulse);
         }
