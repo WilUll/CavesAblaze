@@ -13,6 +13,11 @@ public class WaterScript : MonoBehaviour
             Destroy(other.gameObject);
             Instantiate(playerPrefab, bonfirePrefab.transform.position, Quaternion.identity);
         }
+
+        if (other.CompareTag("Flammable"))
+        {
+            other.GetComponent<fireSpreadScript>().fuel=0;
+        }
     }
 
 }

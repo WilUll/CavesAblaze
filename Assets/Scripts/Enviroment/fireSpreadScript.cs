@@ -55,7 +55,7 @@ public class fireSpreadScript : MonoBehaviour
             fireObject.transform.parent = gameObject.transform;
             isBurning = true;
         }
-        else if (objectBurn && isBurning)
+        else if (isBurning)
         {
 
             if (isBurning && fuel > 0)
@@ -71,15 +71,19 @@ public class fireSpreadScript : MonoBehaviour
             }
             else if (fuel <= 0 && isBurning)
             {
-                //Destroy();
+                Destroy(gameObject.transform.GetChild(0).gameObject);
                 objectBurn = false;
+                isBurning = false;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        objectBurn = true;
+        if (collision.CompareTag("Player"))
+        {
+            objectBurn = true;
+        }
     }
 
 }
