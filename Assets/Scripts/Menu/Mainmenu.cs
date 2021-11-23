@@ -7,17 +7,17 @@ public class Mainmenu : MonoBehaviour
 {
     public void Startgame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Testgaming");
     }
 
     public void Gotosettings()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Settings");
     }
 
     public void Gotomain()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Mainmenu");
     }
 
     public void Quitgame()
