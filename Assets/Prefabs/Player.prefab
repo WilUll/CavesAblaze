@@ -119,10 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aaebaefa0c41840a3f3e9a8afd44f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 0.12
+  speed: 8
+  pressJumpPower: 0.1
+  minJumpPower: 5
   dashTimer: 0
   jumpTimer: 0
+  jumpTimerValue: 0.2
   jumpsLeft: 4
   jumpFlames: {fileID: 0}
   maxJumps: 0

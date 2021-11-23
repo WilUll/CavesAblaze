@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5;
-    public float jumpPower = 10;
+    public float speed;
+    public float pressJumpPower;
+    public float minJumpPower;
 
     public float dashTimer;
     public float jumpTimer;
+    public float jumpTimerValue;
 
     bool dashOn = true;
 
@@ -52,14 +54,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
-            jumpTimer = 0.2f;
+            player.AddForce(Vector2.up * minJumpPower, ForceMode2D.Impulse);
+            jumpTimer = jumpTimerValue;
             jumpsLeft--;
             Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
         }
 
         if (Input.GetButton("Jump") && jumpsLeft > 0 && jumpTimer > 0)
         {
-            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            player.AddForce(Vector2.up * pressJumpPower, ForceMode2D.Impulse);
         }
     }
 

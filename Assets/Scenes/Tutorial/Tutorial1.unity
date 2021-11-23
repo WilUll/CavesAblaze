@@ -350,9 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followObject: {fileID: 305869749}
-  followOffset: {x: 5.61, y: 9.53}
-  speed: 3
-  yOffset: 2.48
+  followOffset: {x: 5.61, y: 8.51}
+  speed: 6.94
+  yOffsetPublic: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
