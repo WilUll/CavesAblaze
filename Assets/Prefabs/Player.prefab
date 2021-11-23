@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.5
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: f2bfd6eb398259d4c9b580b552df6b0b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -121,12 +121,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   pressJumpPower: 0.08
-  minJumpPower: 4
+  minJumpPower: 15
   dashTimer: 0
   jumpTimer: 0
   jumpTimerValue: 0.2
   jumpsLeft: 4
-  jumpFlames: {fileID: 0}
+  jumpFlames: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}
   maxJumps: 0
   isGrounded: 0
 --- !u!61 &3820087971820976402

@@ -29,25 +29,30 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("Vertical") == -1)
+        if (Input.GetAxis("Vertical") < 0)
         {
             yOffset = -2;
         }
-        else
+        else if (Input.GetAxis("Vertical") > 0)
         {
+            yOffset = 5;
+        }
+        else
+        { 
             yOffset = yOffsetPublic;
         }
 
             Vector2 follow = followObject.transform.position;
+
             xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
 
             yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
 
-
             Vector3 newPosition = transform.position;
+
             if (Mathf.Abs(xDifference) >= threshold.x)
             {
-                newPosition.x = follow.x;
+                newPosition.x = follow.x +2;
             }
             if (Mathf.Abs(yDifference) >= threshold.y && player.isGrounded)
             {

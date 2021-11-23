@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTimer;
     public float jumpTimerValue;
 
+    float xAxis;
+
     bool dashOn = true;
 
     public int jumpsLeft;
@@ -37,14 +39,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
+        //float x = Input.GetAxis("Horizontal");
 
         Jump();
-        Dash();
+        //Dash();
         Timers();
         JumpsLeftLimiter();
 
-        movement.x = dashSpeed * x + speed * x;
+        //movement.x = dashSpeed * x + speed * x;
 
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
@@ -52,24 +54,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
         {
-            player.AddForce(Vector2.up * minJumpPower, ForceMode2D.Impulse);
+            //player.AddForce(Vector2.up * minJumpPower, ForceMode2D.Impulse);
+            player.velocity = Vector2.up * minJumpPower;
             jumpTimer = jumpTimerValue;
             jumpsLeft--;
             Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
         }
 
-        if (Input.GetButton("Jump") && jumpTimer > 0)
-        {
-            player.AddForce(Vector2.up * pressJumpPower, ForceMode2D.Impulse);
-        }
+        //if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+        //{
+        //    //player.AddForce(Vector2.up * pressJumpPower, ForceMode2D.Impulse);
+        //    player.velocity = Vector2.up * pressJumpPower;
+        //}
     }
 
     private void FixedUpdate()
     {
-        movement.y = player.velocity.y;
-        player.velocity = movement;
+        xAxis = Input.GetAxisRaw("Horizontal");
+        player.velocity = new Vector2(xAxis * speed, player.velocity.y);
     }
 
     private void Dash()
