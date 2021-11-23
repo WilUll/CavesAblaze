@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  pressJumpPower: 0.1
-  minJumpPower: 5
+  pressJumpPower: 0.08
+  minJumpPower: 4
   dashTimer: 0
   jumpTimer: 0
   jumpTimerValue: 0.2
