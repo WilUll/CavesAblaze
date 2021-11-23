@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - jumpFlames
-  - Flamable
   - Ground
+  - Flammable
   layers:
   - Default
   - TransparentFX
