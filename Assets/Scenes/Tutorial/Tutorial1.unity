@@ -338,6 +338,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3820087971820976397, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976397, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: jumpPower
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976397, guid: 511db31566e6c6441bd380af991895a3, type: 3}
       propertyPath: jumpFlames
       value: 
       objectReference: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}
@@ -384,6 +392,18 @@ PrefabInstance:
     - target: {fileID: 3820087971820976401, guid: 511db31566e6c6441bd380af991895a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976403, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976403, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976403, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511db31566e6c6441bd380af991895a3, type: 3}

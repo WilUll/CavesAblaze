@@ -48,14 +48,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+        if(Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
-            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-
-            Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
-
             jumpTimer = 0.2f;
             jumpsLeft--;
+            Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+        }
+
+        if (Input.GetButton("Jump") && jumpsLeft > 0 && jumpTimer > 0)
+        {
+            player.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
     }
 
