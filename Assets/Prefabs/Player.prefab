@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aaebaefa0c41840a3f3e9a8afd44f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  pressJumpPower: 0.08
-  minJumpPower: 15
+  speed: 7
+  pressJumpPower: 4
+  minJumpPower: 8
   jumpTimer: 0
   jumpTimerValue: 0.2
   xAxis: 0
@@ -195,5 +195,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: 20
-  dashTimeReset: 0.1
+  dashTimeReset: 0.2
   dashOn: 0

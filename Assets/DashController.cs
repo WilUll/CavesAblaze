@@ -31,16 +31,13 @@ public class DashController : MonoBehaviour
             currentDashTime = dashTimeReset;
             //rb.velocity = Vector2.zero;
             direction = player.xAxis;
-
+           
             
         }
         if (dashOn)
         {
-            //rb.AddForce(Vector2.right * dashSpeed, ForceMode2D.Impulse);
             rb.velocity = transform.right * direction * dashSpeed;
             currentDashTime -= Time.deltaTime;
-            //Debug.Log(direction);
-            Debug.Log(rb.velocity);
 
             if (currentDashTime <= 0)
             {
