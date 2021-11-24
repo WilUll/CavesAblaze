@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 865984746661636296, guid: c97a435054a3fb0489cf7e779de7c99a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 865984746661636299, guid: c97a435054a3fb0489cf7e779de7c99a, type: 3}
       propertyPath: m_Density
       value: 1.92
@@ -186,6 +190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 865984746661636311, guid: c97a435054a3fb0489cf7e779de7c99a, type: 3}
+      propertyPath: bonfirePrefab
+      value: 
+      objectReference: {fileID: 255885746}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c97a435054a3fb0489cf7e779de7c99a, type: 3}
 --- !u!1 &179737099 stripped
@@ -269,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255885746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.85, y: 2.44, z: 0}
+  m_LocalPosition: {x: 1.24, y: 2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
