@@ -54,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
             jumpsLeft--;
             Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
         }
+        if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+        {
+            player.velocity = Vector2.up * minJumpPower;
+        }
     }
 
     private void FixedUpdate()

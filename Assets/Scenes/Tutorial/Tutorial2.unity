@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 255885748}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 1372593726}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,6 +1340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followObject: {fileID: 179737099}
-  followOffset: {x: 0, y: 0}
-  speed: 3
-  yOffsetPublic: 0
+  followOffset: {x: 4.73, y: 6.43}
+  speed: 7
+  yOffsetPublic: 3

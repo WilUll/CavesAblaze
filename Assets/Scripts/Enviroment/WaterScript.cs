@@ -15,7 +15,7 @@ public class WaterScript : MonoBehaviour
         }
 
         if (other.CompareTag("Flammable"))
-        {
+        {   
             other.GetComponent<fireSpreadScript>().fuel=0;
         }
     }
