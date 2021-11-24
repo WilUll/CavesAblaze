@@ -9,6 +9,9 @@ public class CameraMovement : MonoBehaviour
     public float speed = 3f;
     public float yOffsetPublic;
 
+    public float cameraLookDown;
+    public float cameraLookUp;
+
     float yOffset;
 
     private Vector2 threshold;
@@ -27,22 +30,22 @@ public class CameraMovement : MonoBehaviour
         yOffset = yOffsetPublic;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetAxis("Vertical") < 0)
         {
-            yOffset = -2;
+            yOffset = cameraLookDown;
         }
         else if (Input.GetAxis("Vertical") > 0)
         {
-            yOffset = 5;
+            yOffset = cameraLookUp;
         }
         else
-        { 
+        {
             yOffset = yOffsetPublic;
         }
 
-            Vector2 follow = followObject.transform.position;
+        Vector2 follow = followObject.transform.position;
 
             xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
 
@@ -52,15 +55,19 @@ public class CameraMovement : MonoBehaviour
 
             if (Mathf.Abs(xDifference) >= threshold.x)
             {
-                newPosition.x = follow.x +2;
+                newPosition.x = follow.x;
             }
             if (Mathf.Abs(yDifference) >= threshold.y) //&& player.isGrounded
         {
                 newPosition.y = follow.y + yOffset;
             }
             float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
-            transform.position = Vector3.MoveTowards(transform.position, newPosition, moveSpeed * Time.deltaTime);
-        }
+
+            transform.position = Vector3.Lerp(transform.position, newPosition, 5f * Time.deltaTime);
+
+             transform.LookAt(followObject.transform);
+            transform.rotation = Quaternion.identity;
+    }
     
         Vector3 calculateThreshold()
         {
