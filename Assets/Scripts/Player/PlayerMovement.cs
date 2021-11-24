@@ -8,23 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public float pressJumpPower;
     public float minJumpPower;
 
-    public float dashTimer;
     public float jumpTimer;
     public float jumpTimerValue;
 
-    float xAxis;
-
-    bool dashOn = true;
+    public float xAxis;
 
     public int jumpsLeft;
     public GameObject jumpFlames;
 
     Rigidbody2D player;
+    DashController dash;
+
     Vector2 movement = new Vector2();
 
     Vector3 offsetFlames;
-
-    float dashSpeed;
 
     public int maxJumps;
 
@@ -33,20 +30,16 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        dash = GetComponent<DashController>();
 
         maxJumps = jumpsLeft;
     }
 
     void Update()
     {
-        //float x = Input.GetAxis("Horizontal");
-
         Jump();
-        //Dash();
         Timers();
         JumpsLeftLimiter();
-
-        //movement.x = dashSpeed * x + speed * x;
 
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
@@ -56,44 +49,24 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
         {
-            //player.AddForce(Vector2.up * minJumpPower, ForceMode2D.Impulse);
             player.velocity = Vector2.up * minJumpPower;
             jumpTimer = jumpTimerValue;
             jumpsLeft--;
             Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
         }
-
-        //if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
-        //{
-        //    //player.AddForce(Vector2.up * pressJumpPower, ForceMode2D.Impulse);
-        //    player.velocity = Vector2.up * pressJumpPower;
-        //}
     }
 
     private void FixedUpdate()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
-        player.velocity = new Vector2(xAxis * speed, player.velocity.y);
-    }
-
-    private void Dash()
-    {
-        if (Input.GetButtonDown("Fire3") && dashOn)
+        if (!dash.dashOn)
         {
-            dashSpeed = 5;
-            dashOn = false;
-            dashTimer = 0.5f;
-        }
-        else if (dashTimer <= 0)
-        {
-            dashSpeed = 0;
-            dashOn = true;
+            player.velocity = new Vector2(xAxis * speed, player.velocity.y);
         }
     }
+       
     private void Timers()
     {
-        if (dashTimer > 0) dashTimer -= Time.deltaTime;
-
         if (jumpTimer > 0) jumpTimer -= Time.deltaTime;
     }
     private void JumpsLeftLimiter()

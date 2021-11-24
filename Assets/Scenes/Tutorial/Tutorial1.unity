@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followObject: {fileID: 751494761}
-  followOffset: {x: 5.79, y: 9.56}
+  followOffset: {x: 6.77, y: 9.56}
   speed: 6.94
   yOffsetPublic: 3
 --- !u!20 &519420031

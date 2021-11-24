@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3820087971820976397}
   - component: {fileID: 3820087971820976402}
   - component: {fileID: 9184261570862654983}
+  - component: {fileID: -4145284584313615210}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -122,9 +123,9 @@ MonoBehaviour:
   speed: 8
   pressJumpPower: 0.08
   minJumpPower: 15
-  dashTimer: 0
   jumpTimer: 0
   jumpTimerValue: 0.2
+  xAxis: 0
   jumpsLeft: 4
   jumpFlames: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}
   maxJumps: 0
@@ -181,3 +182,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6750519, y: 0.5114936}
   m_EdgeRadius: 0
+--- !u!114 &-4145284584313615210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820087971820976396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fbb378ba5f0674ca096fe82a6f5eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 20
+  dashTimeReset: 0.1
+  dashOn: 0
