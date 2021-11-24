@@ -89,10 +89,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             jumpsLeft++;
         }
-        if (other.CompareTag("Water"))
+        if (other.gameObject.tag == "Water")
         {
-            GetComponent<CheckpointSystem>().RespawnPlayer(this.gameObject.transform);
+            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D other)

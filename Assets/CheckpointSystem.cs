@@ -7,6 +7,7 @@ public class CheckpointSystem : MonoBehaviour
     bool isPlayerClose = false;
     public bool isBurning = false;
     GameObject[] checkpoints;
+    GameObject[] jumpFlames;
 
     private void Start()
     {
@@ -25,27 +26,45 @@ public class CheckpointSystem : MonoBehaviour
             }
             isBurning = true;
         }
+        if (isPlayerClose && Input.GetKeyDown(KeyCode.E))
+        {
+            RefillJump();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Fungerar");
             isPlayerClose = true;
         }
     }
 
-    public void RespawnPlayer(Transform player)
+    public void RespawnPlayer()
     {
         for (int i = 0; i < checkpoints.Length; i++)
         {
             CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
             if (checkpointScript.isBurning)
             {
-                player.transform.position = checkpoints[i].transform.position;
+                GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position;
+                RefillJump();
             }
         }
+    }
+
+    public void RefillJump()
+    {
+        var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+
+        jumpFlames = GameObject.FindGameObjectsWithTag("jumpFlames");
+        for (int i = 0; i < jumpFlames.Length; i++)
+        {
+            Destroy(jumpFlames[i]);
+        }
+        player.jumpsLeft = player.maxJumps;
+
     }
 
 
