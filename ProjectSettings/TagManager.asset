@@ -7,6 +7,8 @@ TagManager:
   - jumpFlames
   - Ground
   - Flammable
+  - Checkpoint
+  - Water
   layers:
   - Default
   - TransparentFX

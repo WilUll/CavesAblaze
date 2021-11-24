@@ -21,12 +21,9 @@ public class CheckpointSystem : MonoBehaviour
             {
                 CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
                 checkpointScript.isBurning = false;
+                checkpointScript.isPlayerClose = false;
             }
             isBurning = true;
-        }
-        if (isBurning)
-        {
-            transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.active);
         }
     }
 
@@ -36,6 +33,18 @@ public class CheckpointSystem : MonoBehaviour
         {
             Debug.Log("Fungerar");
             isPlayerClose = true;
+        }
+    }
+
+    public void RespawnPlayer(Transform player)
+    {
+        for (int i = 0; i < checkpoints.Length; i++)
+        {
+            CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
+            if (checkpointScript.isBurning)
+            {
+                player.transform.position = checkpoints[i].transform.position;
+            }
         }
     }
 
