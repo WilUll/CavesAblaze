@@ -54,8 +54,8 @@ public class CameraMovement : MonoBehaviour
             {
                 newPosition.x = follow.x +2;
             }
-            if (Mathf.Abs(yDifference) >= threshold.y && player.isGrounded)
-            {
+            if (Mathf.Abs(yDifference) >= threshold.y) //&& player.isGrounded
+        {
                 newPosition.y = follow.y + yOffset;
             }
             float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
