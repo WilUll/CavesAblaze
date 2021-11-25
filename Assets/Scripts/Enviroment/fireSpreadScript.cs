@@ -29,7 +29,7 @@ public class fireSpreadScript : MonoBehaviour
 
             for (int i = 0; i < flammableObjects.Length; i++)
             {
-                if (Vector2.Distance(transform.position, flammableObjects[i].transform.position) <= 3)
+                if (Vector2.Distance(transform.position, flammableObjects[i].transform.position) <= 2)
                 {
                     fireSpreadScript flameScript = flammableObjects[i].GetComponent<fireSpreadScript>();
                     if (!flameScript.objectBurn)
