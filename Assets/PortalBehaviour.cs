@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PortalBehaviour : MonoBehaviour
 {
-    Transform player;
-    Transform portal2;
+    public Transform player;
+    public Transform portal2;
     bool teleport;
 
     void Start()
@@ -19,6 +19,7 @@ public class PortalBehaviour : MonoBehaviour
         if(teleport && Input.GetKeyDown(KeyCode.E))
         {
             player.transform.position = portal2.transform.position;
+            teleport = false;
         }
     }
 

@@ -26,7 +26,7 @@ public class CheckpointSystem : MonoBehaviour
             }
             isBurning = true;
         }
-        if (isPlayerClose && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerClose)
         {
             RefillJump();
         }
