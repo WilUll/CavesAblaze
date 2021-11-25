@@ -39,6 +39,23 @@ public class CheckpointSystem : MonoBehaviour
             isPlayerClose = true;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isPlayerClose = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isPlayerClose = false;
+        }
+    }
+
+
 
     public void RespawnPlayer()
     {
@@ -64,7 +81,6 @@ public class CheckpointSystem : MonoBehaviour
             Destroy(jumpFlames[i]);
         }
         player.jumpsLeft = player.maxJumps;
-
     }
 
 
