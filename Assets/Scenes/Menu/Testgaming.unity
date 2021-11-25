@@ -625,6 +625,8 @@ MonoBehaviour:
   followOffset: {x: 11.15, y: 4.79}
   speed: 3
   yOffsetPublic: 0
+  cameraLookDown: 0
+  cameraLookUp: 0
 --- !u!1 &1125438165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1274,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3393673495515195989, guid: 2944a50623cddd041916f185b739a148, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9984194
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393673495515195989, guid: 2944a50623cddd041916f185b739a148, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0040621012
+      objectReference: {fileID: 0}
     - target: {fileID: 3393673495515195991, guid: 2944a50623cddd041916f185b739a148, type: 3}
       propertyPath: m_RootOrder
       value: 12
