@@ -198,6 +198,7 @@ MonoBehaviour:
   dashSpeed: 25
   dashTimeReset: 0.2
   dashOn: 0
+  cooldownReset: 1.5
 --- !u!114 &-4616040385747132521
 MonoBehaviour:
   m_ObjectHideFlags: 0

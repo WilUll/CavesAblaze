@@ -15,25 +15,31 @@ public class DashController : MonoBehaviour
 
     public bool dashOn;
 
+    public float cooldownReset;
+    float dashCooldown;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<PlayerMovement>();
+
+        dashCooldown = cooldownReset;
     }
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire3") && player.xAxis != 0)
+        dashCooldown -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Fire3") && player.xAxis != 0 && dashCooldown <= 0)
         {
             dashOn = true;
             currentDashTime = dashTimeReset;
             //rb.velocity = Vector2.zero;
             direction = player.xAxis;
-           
-            
         }
+
         if (dashOn)
         {
             rb.velocity = transform.right * direction * dashSpeed;
@@ -42,6 +48,7 @@ public class DashController : MonoBehaviour
             if (currentDashTime <= 0)
             {
                 dashOn = false;
+                dashCooldown = cooldownReset;
             }
         }
     }
