@@ -10,8 +10,8 @@ public class PortalBehaviour : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<Transform>();
-        portal2 = GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        portal2 = GameObject.FindGameObjectWithTag("Portal 2").GetComponent<Transform>();
 
     }
     void Update()
