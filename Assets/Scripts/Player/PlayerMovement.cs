@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D player;
     DashController dash;
+    //JumpsCounter jumpsCounter;
 
     Vector2 movement = new Vector2();
 
@@ -31,8 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
+        //jumpsCounter = GetComponent<JumpsCounter>();
 
-        maxJumps = jumpsLeft;
+        jumpsLeft = maxJumps;
     }
 
     void Update()
@@ -40,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
+        Respawn();
+        
+        //jumpsCounter.CountingJumpsLeft();
 
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
@@ -68,10 +73,17 @@ public class PlayerMovement : MonoBehaviour
             player.velocity = new Vector2(xAxis * speed, player.velocity.y);
         }
     }
-       
+    
     private void Timers()
     {
         if (jumpTimer > 0) jumpTimer -= Time.deltaTime;
+    }
+    private void Respawn()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+        }
     }
     private void JumpsLeftLimiter()
     {
