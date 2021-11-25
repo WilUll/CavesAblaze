@@ -46,17 +46,6 @@ public class CheckpointSystem : MonoBehaviour
             isPlayerClose = false;
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            isPlayerClose = false;
-        }
-    }
-
-
-
     public void RespawnPlayer()
     {
         for (int i = 0; i < checkpoints.Length; i++)
