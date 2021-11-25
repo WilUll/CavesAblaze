@@ -16,12 +16,11 @@ public class Paralaxx : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float temp = (cam.transform.position.x * (1 - paralaxx));
+        
         float dist = (cam.transform.position.x * paralaxx);
 
         transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
 
-        if (temp > startpos + length) startpos += length;
-        else if (temp < startpos - length) startpos -= length;
+        
     }
 }
