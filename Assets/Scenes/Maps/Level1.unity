@@ -390,10 +390,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &326556389
 Transform:
   m_ObjectHideFlags: 0
@@ -700,10 +700,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &451787946
 Transform:
   m_ObjectHideFlags: 0
@@ -1734,10 +1734,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 30
+    m_UpperAngle: -30
 --- !u!50 &973321483
 Rigidbody2D:
   serializedVersion: 4
@@ -1983,17 +1983,17 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 2129056994}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.039237976, y: -0.078858376}
+  m_ConnectedAnchor: {x: -0, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &1343630168
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,10 +2208,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &1507962646
 Transform:
   m_ObjectHideFlags: 0
@@ -2285,10 +2285,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &1538066885
 Transform:
   m_ObjectHideFlags: 0
@@ -2627,10 +2627,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &1602586548
 Transform:
   m_ObjectHideFlags: 0
@@ -2831,7 +2831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735631742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83.39621, y: 3.926858, z: 0}
+  m_LocalPosition: {x: -87.15, y: 3.926858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2129056996}
@@ -3054,6 +3054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3820087971820976397, guid: 511db31566e6c6441bd380af991895a3, type: 3}
+      propertyPath: maxJumps
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3820087971820976400, guid: 511db31566e6c6441bd380af991895a3, type: 3}
       propertyPath: m_SortingOrder
       value: 24
@@ -3163,10 +3167,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: 60
+    m_UpperAngle: -60
 --- !u!4 &1898228036
 Transform:
   m_ObjectHideFlags: 0
@@ -3420,7 +3424,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!233 &2129056995
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -3436,7 +3440,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -83.39621, y: 7.426858}
+  m_ConnectedAnchor: {x: -87.18924, y: 7.3479996}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3452,8 +3456,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129056993}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071069, w: 0.7071067}
+  m_LocalPosition: {x: -0.039236296, y: 3.4211419, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1735631745}
