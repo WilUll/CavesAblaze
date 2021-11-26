@@ -61,7 +61,7 @@ public class CheckpointSystem : MonoBehaviour
 
     public void RefillJump()
     {
-        var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
 
 
         jumpFlames = GameObject.FindGameObjectsWithTag("jumpFlames");
