@@ -5,7 +5,8 @@ using UnityEngine;
 public class DashController : MonoBehaviour
 {
     Rigidbody2D rb;
-    PlayerMovement player;
+    //PlayerMovement player;
+    PlayerMovement2 player;
 
     public float dashSpeed;
     public float dashTimeReset;
@@ -22,7 +23,8 @@ public class DashController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GetComponent<PlayerMovement>();
+        //player = GetComponent<PlayerMovement>();
+        player = GetComponent<PlayerMovement2>();
 
         dashCooldown = cooldownReset;
     }
@@ -42,6 +44,7 @@ public class DashController : MonoBehaviour
 
         if (dashOn)
         {
+            player.Detach();
             rb.velocity = transform.right * direction * dashSpeed;
             currentDashTime -= Time.deltaTime;
 

@@ -140,9 +140,9 @@ public class PlayerMovement2 : MonoBehaviour
         StartCoroutine(varTimer());
         IEnumerator varTimer()
         {
-            yield return new WaitForSeconds(0.2f);
             varSet = false;
             isAttached = false;
+            yield return new WaitForSeconds(0.2f);
             player.GetComponent<BoxCollider2D>().enabled = true;
             player.gravityScale = 4;
         }
