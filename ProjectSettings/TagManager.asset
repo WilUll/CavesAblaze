@@ -12,6 +12,7 @@ TagManager:
   - Portal 1
   - Portal 2
   - Rope
+  - WaterDrop
   layers:
   - Default
   - TransparentFX

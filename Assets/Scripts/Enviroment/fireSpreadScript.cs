@@ -84,6 +84,10 @@ public class fireSpreadScript : MonoBehaviour
         {
             objectBurn = true;
         }
+        if (collision.CompareTag("Water"))
+        {
+            fuel = 0;
+        }
     }
 
 }

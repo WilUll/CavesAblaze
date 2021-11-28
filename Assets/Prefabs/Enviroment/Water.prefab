@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6097576614809922174}
   - component: {fileID: 8818901806432179411}
   - component: {fileID: 5386817988292013015}
-  - component: {fileID: 1663787227025472983}
   m_Layer: 0
   m_Name: Water
   m_TagString: Water
@@ -130,17 +129,3 @@ BuoyancyEffector2D:
   m_FlowAngle: 0
   m_FlowMagnitude: 0
   m_FlowVariation: 0
---- !u!114 &1663787227025472983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342967632230545060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7ac0eb64ac3a714e8c5320713353d4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3820087971820976396, guid: 511db31566e6c6441bd380af991895a3, type: 3}
-  bonfirePrefab: {fileID: 4918128258319616910, guid: 414e96947c027994b92f37c7a0486da2, type: 3}
