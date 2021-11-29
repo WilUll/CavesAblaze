@@ -134,6 +134,8 @@ public class PlayerMovement2 : MonoBehaviour
         isAttached = true;
         gameObject.transform.parent = ropeBone.transform;
     }
+
+    //Detaches player from the rope and enables rb
     public void Detach()
     {
         gameObject.transform.parent = null;
@@ -151,7 +153,7 @@ public class PlayerMovement2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Rope
+        //Rope attach
         if (!isAttached)
         {
             if (other.gameObject.tag=="Rope")
@@ -160,19 +162,19 @@ public class PlayerMovement2 : MonoBehaviour
             }
         }
 
-
-
-
-
         if (other.CompareTag("Ground"))
         {
             isGrounded = true;
         }
+
+        //Destroys jumpflames
         if (other.CompareTag("jumpFlames") && jumpTimer <= 0)
         {
             Destroy(other.gameObject);
             jumpsLeft++;
         }
+
+        //If water, respawn player
         if (other.gameObject.tag == "Water")
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
