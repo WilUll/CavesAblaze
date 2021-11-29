@@ -46,7 +46,6 @@ public class BurnAndJumps : MonoBehaviour
 
         Burn();
         CreateJumpFlames();
-
     }
 
     void Burn()
@@ -64,6 +63,7 @@ public class BurnAndJumps : MonoBehaviour
         {
             Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame1, Quaternion.identity);
             Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame2, Quaternion.identity);
+            burnAlreadyStarted = false;
         }
     }
 
