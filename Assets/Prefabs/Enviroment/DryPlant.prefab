@@ -125,5 +125,5 @@ MonoBehaviour:
   jumpFlames: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}
   burnPlantTime: 1.5
   burnPlantOffset: 0.1
-  offsetFlame1: {x: -0.32, y: 0}
-  offsetFlame2: {x: 0.36, y: 0}
+  offsetFlame1: {x: -1.02, y: 0}
+  offsetFlame2: {x: 0.86, y: 0}

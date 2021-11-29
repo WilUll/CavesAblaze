@@ -63,7 +63,6 @@ public class CheckpointSystem : MonoBehaviour
     {
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
 
-
         jumpFlames = GameObject.FindGameObjectsWithTag("jumpFlames");
         for (int i = 0; i < jumpFlames.Length; i++)
         {

@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (other.CompareTag("jumpFlames") && jumpTimer <= 0)
+        if (other.CompareTag("jumpFlames")) // && jumpTimer <= 0
         {
             Destroy(other.gameObject);
             jumpsLeft++;
@@ -105,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D other)

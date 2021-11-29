@@ -17,24 +17,22 @@ public class BurnAndJumps : MonoBehaviour
     public Vector2 offsetFlame1;
     public Vector2 offsetFlame2;
 
+    BoxCollider2D boxCollider;
+
 
     void Start()
     {
         burnTimer = burnPlantTime + burnPlantOffset;
         jumpFlamesInstantiatePosition = transform.position;
+
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
         if (burnAlreadyStarted)
         {
-            burnTimer -= Time.deltaTime;
             burnPlantTime -= Time.deltaTime;
-        }
-
-        if(isBurning && burnPlantTime <= 0)
-        {
-            isBurning = false;
         }
 
         if(isPlayerClose && !isBurning && burnTimer > 0)
@@ -42,6 +40,11 @@ public class BurnAndJumps : MonoBehaviour
             isBurning = true;
             burnAlreadyStarted = true;
             burnPlant = true;
+        }
+
+        if(isBurning && burnPlantTime <= 0)
+        {
+            isBurning = false;
         }
 
         Burn();
@@ -62,8 +65,11 @@ public class BurnAndJumps : MonoBehaviour
         if (burnAlreadyStarted && !isBurning)
         {
             Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame1, Quaternion.identity);
-            Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame2, Quaternion.identity);
+            Instantiate(jumpFlames, jumpFlamesInstantiatePosition + offsetFlame2, Quaternion.identity);
+            //It is broken, ask Luis why. (Hint: he doesn´t know.)
+           
             burnAlreadyStarted = false;
+            boxCollider.enabled = false;
         }
     }
 
