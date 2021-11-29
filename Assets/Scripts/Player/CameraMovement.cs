@@ -11,6 +11,7 @@ public class CameraMovement : MonoBehaviour
 
     public float cameraLookDown;
     public float cameraLookUp;
+    public float maxPanoramicSize, progresiveCameraDistance, fixedCameraDistance;
 
     float yOffset;
 
@@ -21,66 +22,101 @@ public class CameraMovement : MonoBehaviour
     float xDifference;
     float yDifference;
 
+    public bool panoramicCameraON, fixedCameraOn;
+
     void Start()
     {
-        threshold = calculateThreshold();
+        threshold = CalculateThreshold();
         rb = followObject.GetComponent<Rigidbody2D>();
         player = followObject.GetComponent<PlayerMovement>();
 
         yOffset = yOffsetPublic;
+
+        fixedCameraOn = true;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (panoramicCameraON)
+            {
+                panoramicCameraON = false;
+                fixedCameraOn = true;
+            }
+            else if (fixedCameraOn)
+            {
+                panoramicCameraON = true;
+                fixedCameraOn = false;
+            }
+        }
+
+        PanoramicCamera();
     }
 
     void FixedUpdate()
     {
-        if (Input.GetAxis("Vertical") < 0)
-        {
-            yOffset = cameraLookDown;
-        }
-        else if (Input.GetAxis("Vertical") > 0)
-        {
-            yOffset = cameraLookUp;
-        }
-        else
-        {
-            yOffset = yOffsetPublic;
-        }
+        //if (Input.GetAxis("Vertical") < 0)
+        //{
+        //    yOffset = cameraLookDown;
+        //}
+        //else if (Input.GetAxis("Vertical") > 0)
+        //{
+        //    yOffset = cameraLookUp;
+        //}
+        //else
+        //{
+        //    yOffset = yOffsetPublic;
+        //}
 
         Vector2 follow = followObject.transform.position;
 
-            xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
+        xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
 
-            yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
+        yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
 
-            Vector3 newPosition = transform.position;
+        Vector3 newPosition = transform.position;
 
-            if (Mathf.Abs(xDifference) >= threshold.x)
-            {
-                newPosition.x = follow.x;
-            }
-            if (Mathf.Abs(yDifference) >= threshold.y) //&& player.isGrounded
+        if (Mathf.Abs(xDifference) >= threshold.x)
         {
-                newPosition.y = follow.y + yOffset;
-            }
-            float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
+            newPosition.x = follow.x;
+        }
+        if (Mathf.Abs(yDifference) >= threshold.y) //&& player.isGrounded
+        {
+            newPosition.y = follow.y + yOffset;
+        }
+        float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
 
-            transform.position = Vector3.Lerp(transform.position, newPosition, 5f * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, newPosition, 5f * Time.deltaTime);
 
-             transform.LookAt(followObject.transform);
-            transform.rotation = Quaternion.identity;
+        transform.LookAt(followObject.transform);
+        transform.rotation = Quaternion.identity;
     }
-    
-        Vector3 calculateThreshold()
+
+    void PanoramicCamera()
+    {
+        if (panoramicCameraON)
         {
-            Rect aspect = Camera.main.pixelRect;
-            Vector2 t = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
-            t.x -= followOffset.x;
-            t.y -= followOffset.y;
-            return t;
+            Camera.main.orthographicSize += progresiveCameraDistance;
+            Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, fixedCameraDistance, maxPanoramicSize);
         }
-        void OnDrawGizmos()
+        else if (fixedCameraOn)
         {
-            Gizmos.color = Color.blue;
-            Vector2 border = calculateThreshold();
-            Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
+            Camera.main.orthographicSize = fixedCameraDistance;
         }
+    }
+
+    Vector3 CalculateThreshold()
+    {
+        Rect aspect = Camera.main.pixelRect;
+        Vector2 t = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
+        t.x -= followOffset.x;
+        t.y -= followOffset.y;
+        return t;
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Vector2 border = CalculateThreshold();
+        Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
+    }
 }
