@@ -6422,6 +6422,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4751118685323752107, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751118685323752107, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: jumpPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751118685323752107, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: jumpTimer
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751118685323752107, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: jumpTimerValue
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751118685323752107, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: startTimeValue
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -6470,7 +6490,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWilliam
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9088223349309008068, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
 --- !u!1 &1378820961
 GameObject:

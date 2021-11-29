@@ -59,7 +59,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
             {
-                player.velocity = Vector2.up * minJumpPower;
+                player.velocity = Vector2.up * pressJumpPower;
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
