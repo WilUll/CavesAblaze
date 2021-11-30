@@ -17,7 +17,7 @@ public class PlayerMovement2 : MonoBehaviour
     public int jumpsLeft;
     public GameObject jumpFlames;
 
-    Rigidbody2D player;
+    Rigidbody2D playerRB;
     DashController dash;
     //JumpsCounter jumpsCounter;
 
@@ -34,7 +34,7 @@ public class PlayerMovement2 : MonoBehaviour
     bool varSet = false;
     void Start()
     {
-        player = GetComponent<Rigidbody2D>();
+        playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
         //jumpsCounter = GetComponent<JumpsCounter>();
 
@@ -62,7 +62,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
             {
-                player.velocity = Vector2.up * pressJumpPower;
+                playerRB.velocity = Vector2.up * pressJumpPower;
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
@@ -70,20 +70,20 @@ public class PlayerMovement2 : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
-                player.velocity = Vector2.up * minJumpPower;
+                playerRB.velocity = Vector2.up * minJumpPower;
             }
         }
         else if (isAttached)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                player.velocity = Vector2.up * minJumpPower;
+                playerRB.velocity = Vector2.up * minJumpPower;
                 jumpTimer = jumpTimerValue;
                 Detach();
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
-                player.velocity = Vector2.up * minJumpPower;
+                playerRB.velocity = Vector2.up * minJumpPower;
                 Detach();
 
             }
@@ -95,14 +95,14 @@ public class PlayerMovement2 : MonoBehaviour
     {
         if (!dash.dashOn && !isAttached)
         {
-            player.velocity = new Vector2(xAxis * speed, player.velocity.y);
+            playerRB.velocity = new Vector2(xAxis * speed, playerRB.velocity.y);
         }
 
         if (isAttached)
         {
-            player.transform.position = ropeObj.transform.position;
-            player.GetComponent<BoxCollider2D>().enabled = false;
-            player.gravityScale = 0;
+            playerRB.transform.position = ropeObj.transform.position;
+            playerRB.GetComponent<BoxCollider2D>().enabled = false;
+            playerRB.gravityScale = 0;
             varSet = true;
         }
         if (isAttached && varSet)
@@ -146,8 +146,8 @@ public class PlayerMovement2 : MonoBehaviour
             varSet = false;
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
-            player.GetComponent<BoxCollider2D>().enabled = true;
-            player.gravityScale = 4;
+            playerRB.GetComponent<BoxCollider2D>().enabled = true;
+            playerRB.gravityScale = 4;
         }
     }
 
