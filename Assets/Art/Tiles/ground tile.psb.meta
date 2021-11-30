@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09fa6941aca695d469a016aa06e61adc
+guid: 470d0a91c2bdb934996f1e952eec2a0a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 4
       width: 1276
       height: 723
-    spriteID: 5c259f41467ea164fa5f17116c1ef83f
+    spriteID: 9d95702e25e65f54fa2ad37ff162adca
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +124,7 @@ ScriptedImporter:
       y: 2193
       width: 411
       height: 723
-    spriteID: d2cd28f2c8213454086738e0bb082054
+    spriteID: be4ddd568b3bd6c4c8ce5a5fb26f05d6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +146,7 @@ ScriptedImporter:
       y: 4
       width: 439
       height: 721
-    spriteID: b522c88fd6fc9b4429c5c6dcfb2cc007
+    spriteID: df99a1ebfee426f4fad8fd7c65fc6f5a
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 1464
       width: 426
       height: 721
-    spriteID: 90e4e18180355e14e995c7c56d1b45ce
+    spriteID: 95cf3331febb6c04b9cd42d1fada0c14
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 735
       width: 1276
       height: 721
-    spriteID: f08de938c9f20094fa1e8ede63851fe7
+    spriteID: b70e9053c64a85a4dade9037484ea0f0
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -224,35 +224,35 @@ ScriptedImporter:
     spriteName: ground whole
     isGroup: 0
     parentIndex: -1
-    spriteID: 5c259f41467ea164fa5f17116c1ef83f
+    spriteID: 9d95702e25e65f54fa2ad37ff162adca
     layerID: 15
     mosaicPosition: {x: 4, y: 4}
   - name: ground left
     spriteName: ground left
     isGroup: 0
     parentIndex: -1
-    spriteID: d2cd28f2c8213454086738e0bb082054
+    spriteID: be4ddd568b3bd6c4c8ce5a5fb26f05d6
     layerID: 16
     mosaicPosition: {x: 4, y: 2193}
   - name: ground mid
     spriteName: ground mid
     isGroup: 0
     parentIndex: -1
-    spriteID: b522c88fd6fc9b4429c5c6dcfb2cc007
+    spriteID: df99a1ebfee426f4fad8fd7c65fc6f5a
     layerID: 17
     mosaicPosition: {x: 1288, y: 4}
   - name: ground right
     spriteName: ground right
     isGroup: 0
     parentIndex: -1
-    spriteID: 90e4e18180355e14e995c7c56d1b45ce
+    spriteID: 95cf3331febb6c04b9cd42d1fada0c14
     layerID: 18
     mosaicPosition: {x: 4, y: 1464}
   - name: ground dark
     spriteName: ground dark
     isGroup: 0
     parentIndex: -1
-    spriteID: f08de938c9f20094fa1e8ede63851fe7
+    spriteID: b70e9053c64a85a4dade9037484ea0f0
     layerID: 4
     mosaicPosition: {x: 4, y: 735}
   characterData:
