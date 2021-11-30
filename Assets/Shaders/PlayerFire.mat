@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: PlayerFire
   m_Shader: {fileID: -6465566751694194690, guid: 63540b56d953923479dfa07bcbc456d0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -54,7 +54,7 @@ Material:
     - _EnableExternalAlpha: 0
     m_Colors:
     - Color_aef171ebd32444dcbd2194322e6e492e: {r: 1.144605, g: 0.3098655, b: 0.1707422, a: 0}
-    - Vector2_3c9e15a2087341e092a7709b10f6eeab: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_3c9e15a2087341e092a7709b10f6eeab: {r: 1.59, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
