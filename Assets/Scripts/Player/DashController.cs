@@ -46,7 +46,7 @@ public class DashController : MonoBehaviour
                 //rb.velocity = Vector2.zero;
                 playerMove = new Vector2(player.xAxis, player.yAxis);
                 playerMove.Normalize();
-                rb.gravityScale = 0;
+               // rb.gravityScale = 0;
             }
         }
 
