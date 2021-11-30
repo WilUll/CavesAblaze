@@ -12,6 +12,7 @@ public class PlayerMovement2 : MonoBehaviour
     public float jumpTimerValue;
 
     public float xAxis;
+    public float yAxis;
 
     public int jumpsLeft;
     public GameObject jumpFlames;
@@ -42,6 +43,8 @@ public class PlayerMovement2 : MonoBehaviour
 
     void Update()
     {
+        xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
         Jump();
         Timers();
         JumpsLeftLimiter();
@@ -90,8 +93,6 @@ public class PlayerMovement2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
-        float yAxis = Input.GetAxisRaw("Vertical");
         if (!dash.dashOn && !isAttached)
         {
             player.velocity = new Vector2(xAxis * speed, player.velocity.y);

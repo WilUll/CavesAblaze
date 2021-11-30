@@ -17,6 +17,9 @@
         },
         {
             "m_Id": "aef171ebd32444dcbd2194322e6e492e"
+        },
+        {
+            "m_Id": "b0af55cb9eb7475a9088c88676128fc1"
         }
     ],
     "m_Keywords": [],
@@ -1397,7 +1400,7 @@
     },
     "m_Name": "Ystretch",
     "m_DefaultReferenceName": "Vector1_33c2f7059e2a4eab90d938941a473d00",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Ystretch",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -1534,7 +1537,7 @@
     },
     "m_Name": "NoiseScale",
     "m_DefaultReferenceName": "Vector2_3c9e15a2087341e092a7709b10f6eeab",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_NoiseScale",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -1630,7 +1633,7 @@
     },
     "m_Name": "Firebottomoffset",
     "m_DefaultReferenceName": "Vector1_404630396775461faa6de3358707cd8b",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Firebottomoffset",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -3267,6 +3270,29 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
+    "m_ObjectId": "b0af55cb9eb7475a9088c88676128fc1",
+    "m_Guid": {
+        "m_GuidSerialized": "f26f4974-079c-4393-8986-b84d2e29c221"
+    },
+    "m_Name": "_MainTex",
+    "m_DefaultReferenceName": "Texture2D_b0af55cb9eb7475a9088c88676128fc1",
+    "m_OverrideReferenceName": "_MainTex",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_Guid": ""
+    },
+    "m_Modifiable": true,
+    "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "b0d46616c7b64742a0274da9f612ac7f",
     "m_Group": {
@@ -3794,7 +3820,7 @@
     },
     "m_Name": "DistorsionStreangh",
     "m_DefaultReferenceName": "Vector1_d40f355618d044ac968a847d8659cb3e",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_DistorsionStreangh",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
