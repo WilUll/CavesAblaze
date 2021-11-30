@@ -5,13 +5,13 @@ using UnityEngine;
 public class DashController : MonoBehaviour
 {
     Rigidbody2D rb;
-    //PlayerMovement player;
     PlayerMovement2 player;
 
     public float dashSpeed;
     public float dashTimeReset;
     
     float currentDashTime;
+    Vector2 playerMove;
     float direction;
 
     public bool dashOn;
@@ -19,6 +19,7 @@ public class DashController : MonoBehaviour
     public float cooldownReset;
     float dashCooldown;
 
+    float startGrav;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class DashController : MonoBehaviour
         //player = GetComponent<PlayerMovement>();
         player = GetComponent<PlayerMovement2>();
 
+
+        startGrav = rb.gravityScale;
         dashCooldown = cooldownReset;
     }
 
@@ -39,18 +42,22 @@ public class DashController : MonoBehaviour
             dashOn = true;
             currentDashTime = dashTimeReset;
             //rb.velocity = Vector2.zero;
-            direction = player.xAxis;
+            playerMove = new Vector2(player.xAxis, player.yAxis);
+            playerMove.Normalize();
+            rb.gravityScale = 0;
         }
 
         if (dashOn)
         {
             player.Detach();
-            rb.velocity = transform.right * direction * dashSpeed;
+            
+            rb.velocity = (playerMove * dashSpeed);
             currentDashTime -= Time.deltaTime;
 
             if (currentDashTime <= 0)
             {
                 dashOn = false;
+                rb.gravityScale = startGrav;
                 dashCooldown = cooldownReset;
             }
         }
