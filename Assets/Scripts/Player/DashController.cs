@@ -37,14 +37,17 @@ public class DashController : MonoBehaviour
     {
         dashCooldown -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire3") && player.xAxis != 0 && dashCooldown <= 0)
+        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)//&& player.xAxis != 0
         {
-            dashOn = true;
-            currentDashTime = dashTimeReset;
-            //rb.velocity = Vector2.zero;
-            playerMove = new Vector2(player.xAxis, player.yAxis);
-            playerMove.Normalize();
-            rb.gravityScale = 0;
+            if (player.xAxis != 0 || player.yAxis != 0)
+            {
+                dashOn = true;
+                currentDashTime = dashTimeReset;
+                //rb.velocity = Vector2.zero;
+                playerMove = new Vector2(player.xAxis, player.yAxis);
+                playerMove.Normalize();
+               // rb.gravityScale = 0;
+            }
         }
 
         if (dashOn)
