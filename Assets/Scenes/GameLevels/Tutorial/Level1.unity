@@ -6934,7 +6934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536329485350302741, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6536329485350302741, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7058,9 +7058,9 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9254902, g: 0.31339192, b: 0.1254902, a: 1}
-  m_Intensity: 1.92
-  m_LightVolumeOpacity: 0.06
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.76
+  m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -7680,7 +7680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalScale.x
@@ -8162,11 +8162,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -31190454216922538, guid: ea56a5d84d5f42d40b9f4dcaabfa2f66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.22
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: -31190454216922538, guid: ea56a5d84d5f42d40b9f4dcaabfa2f66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.67
+      value: 12.69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 3438458402375818000, guid: ea56a5d84d5f42d40b9f4dcaabfa2f66, type: 3}
