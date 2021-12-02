@@ -13,6 +13,7 @@ TagManager:
   - Portal 2
   - Rope
   - WaterDrop
+  - Light
   layers:
   - Default
   - TransparentFX
