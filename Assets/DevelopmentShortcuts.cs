@@ -6,16 +6,18 @@ public class DevelopmentShortcuts : MonoBehaviour
 {
     GameObject player;
     PlayerMovement2 playerScript;
-    
-    void Awake()
+
+    void Start()
     {
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerMovement2>();
+    }
 
     void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
                 playerScript.enabled = false;
-    }
+            }
+        }
 }
