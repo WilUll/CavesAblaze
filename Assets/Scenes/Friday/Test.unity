@@ -6463,6 +6463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547082797358234565, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: dashTimeReset
+      value: 0.075
+      objectReference: {fileID: 0}
     - target: {fileID: 4511006456511467860, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Size.y
       value: 0.38661575

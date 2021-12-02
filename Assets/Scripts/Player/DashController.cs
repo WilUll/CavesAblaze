@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashController : MonoBehaviour
 {
     Rigidbody2D rb;
-    PlayerMovement2 player;
+    PlayerMovement2 playerScript;
 
     public float dashSpeed;
     public float dashTimeReset;
@@ -25,7 +25,7 @@ public class DashController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //player = GetComponent<PlayerMovement>();
-        player = GetComponent<PlayerMovement2>();
+        playerScript = GetComponent<PlayerMovement2>();
 
 
         startGrav = rb.gravityScale;
@@ -37,19 +37,24 @@ public class DashController : MonoBehaviour
     {
         dashCooldown -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire3") && player.xAxis != 0 && dashCooldown <= 0)
+        if (Input.GetButtonDown("Fire3") && playerScript.xAxis != 0 && dashCooldown <= 0)
         {
+            if (playerScript.oneDashOnAir)
+            {
                 dashOn = true;
+                playerScript.oneDashOnAir = true;
+
                 currentDashTime = dashTimeReset;
                 //rb.velocity = Vector2.zero;
-                playerMove = new Vector2(player.xAxis, player.yAxis);
+                playerMove = new Vector2(playerScript.xAxis, playerScript.yAxis);
                 playerMove.Normalize();
                 rb.gravityScale = 0;
+            }
         }
 
         if (dashOn)
         {
-            player.Detach();
+            playerScript.Detach();
             
             rb.velocity = (playerMove * dashSpeed);
             currentDashTime -= Time.deltaTime;

@@ -17,6 +17,8 @@ public class PlayerMovement2 : MonoBehaviour
     public int jumpsLeft;
     public GameObject jumpFlames;
 
+    public bool oneDashOnAir;
+
     Rigidbody2D playerRB;
     DashController dash;
     //JumpsCounter jumpsCounter;
@@ -29,7 +31,8 @@ public class PlayerMovement2 : MonoBehaviour
 
     public bool isGrounded;
 
-    bool isAttached = false;
+    bool isAttached;
+
     GameObject ropeObj;
     bool varSet = false;
     void Start()
@@ -62,15 +65,16 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
             {
-                playerRB.velocity = Vector2.up * pressJumpPower;
+                playerRB.velocity = Vector2.up * minJumpPower;
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
+                oneDashOnAir = true;
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
                 Detach();
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
-                playerRB.velocity = Vector2.up * minJumpPower;
+                playerRB.velocity = Vector2.up * pressJumpPower;
             }
         }
         else if (isAttached)
@@ -83,7 +87,7 @@ public class PlayerMovement2 : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
-                playerRB.velocity = Vector2.up * minJumpPower;
+                playerRB.velocity = Vector2.up * pressJumpPower;
                 Detach();
 
             }
