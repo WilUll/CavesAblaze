@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class WaterDropDestroyer : MonoBehaviour
 {
-    float destroy = 2;
-
-    WaterDropCreator waterDrop;
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        waterDrop = GetComponent<WaterDropCreator>();
-
-        Destroy(gameObject, destroy);
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
-        
+
 }
