@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashWalls : MonoBehaviour
+public class DashWallsDestroy : MonoBehaviour
 {
     public int wallHP = 3;
 
