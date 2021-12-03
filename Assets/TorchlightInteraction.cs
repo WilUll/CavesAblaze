@@ -16,14 +16,15 @@ public class TorchlightInteraction : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
 
         isBurning = true;
+
     }
 
     private void Update()
     {
         if (isPlayerClose && isBurning)
         {
-            RefillJump();
             isBurning = false;
+            playerScript.jumpsLeft += 2;
         }
 
         if (playerScript.playerDead)
@@ -45,11 +46,6 @@ public class TorchlightInteraction : MonoBehaviour
         {
             isPlayerClose = false;
         }
-    }
-
-    public void RefillJump()
-    {
-        playerScript.jumpsLeft += torchlightJumps;
     }
 
 

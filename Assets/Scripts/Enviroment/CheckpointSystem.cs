@@ -58,9 +58,9 @@ public class CheckpointSystem : MonoBehaviour
             if (checkpointScript.isBurning)
             {
                 GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position;
+                playerScript.playerDead = false;
                 RefillJump();
 
-                playerScript.playerDead = false;
             }
         }
     }

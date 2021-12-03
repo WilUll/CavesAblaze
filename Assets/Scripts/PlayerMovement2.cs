@@ -197,6 +197,11 @@ public class PlayerMovement2 : MonoBehaviour
         {
             isGrounded = false;
         }
+
+        if (other.gameObject.tag == "Water")
+        {
+            playerDead = false;
+        }
     }
 }
 
