@@ -232,6 +232,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &36920051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1498141282436877220, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
+  m_PrefabInstance: {fileID: 1468386403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &36920052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36920051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f93bb7f0a6672478e1157dbc9f5e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBurning: 0
+  torchlightJumps: 2
 --- !u!4 &58914150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4918128258319616906, guid: 414e96947c027994b92f37c7a0486da2, type: 3}
@@ -4970,6 +4989,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4918128258319616909, guid: 414e96947c027994b92f37c7a0486da2, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2462649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918128258319616909, guid: 414e96947c027994b92f37c7a0486da2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.024416685
+      objectReference: {fileID: 0}
     - target: {fileID: 4918128258319616910, guid: 414e96947c027994b92f37c7a0486da2, type: 3}
       propertyPath: m_Name
       value: Checkpoint
@@ -6509,11 +6536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.4
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6895,9 +6922,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8123091429479057611, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1498141282436877220, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
       propertyPath: m_Name
       value: DryPlant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410590191099865409, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
+      propertyPath: m_Size.y
+      value: 2.9194813
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410590191099865409, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.015233934
       objectReference: {fileID: 0}
     - target: {fileID: 6536329485350302741, guid: 2dccfac816cb7ec4ea0ea4e53588073b, type: 3}
       propertyPath: m_RootOrder

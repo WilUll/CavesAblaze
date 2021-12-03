@@ -14,6 +14,7 @@ TagManager:
   - Rope
   - WaterDrop
   - Light
+  - Torchlight
   layers:
   - Default
   - TransparentFX
