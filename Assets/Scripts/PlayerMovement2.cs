@@ -29,7 +29,7 @@ public class PlayerMovement2 : MonoBehaviour
 
     public int maxJumps;
 
-    public bool isGrounded;
+    public bool isGrounded, playerDead;
 
     bool isAttached;
 
@@ -42,6 +42,8 @@ public class PlayerMovement2 : MonoBehaviour
         //jumpsCounter = GetComponent<JumpsCounter>();
 
         jumpsLeft = maxJumps;
+
+        playerDead = false;
     }
 
     void Update()
@@ -183,6 +185,8 @@ public class PlayerMovement2 : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+
+            playerDead = true;
         }
 
     }

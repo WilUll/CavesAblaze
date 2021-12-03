@@ -64,8 +64,10 @@ public class BurnAndJumps : MonoBehaviour
     {
         if (burnAlreadyStarted && !isBurning)
         {
-            Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame1, Quaternion.identity);
-            Instantiate(jumpFlames, jumpFlamesInstantiatePosition + offsetFlame2, Quaternion.identity);
+
+
+            //Instantiate (jumpFlames, jumpFlamesInstantiatePosition + offsetFlame1, Quaternion.identity);
+            //Instantiate(jumpFlames, jumpFlamesInstantiatePosition + offsetFlame2, Quaternion.identity);
             //It is broken, ask Luis why. (Hint: he doesn´t know.)
            
             burnAlreadyStarted = false;

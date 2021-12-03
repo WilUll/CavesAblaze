@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2410590191099865409}
   - component: {fileID: -8123091429479057611}
   m_Layer: 0
-  m_Name: DryPlant
+  m_Name: Torchlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.04, y: 15.35}
+    oldSize: {x: 0.67333335, y: 2.5583334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

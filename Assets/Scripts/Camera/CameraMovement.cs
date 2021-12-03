@@ -17,7 +17,7 @@ public class CameraMovement : MonoBehaviour
 
     private Vector2 threshold;
     private Rigidbody2D rb;
-    private PlayerMovement player;
+    private PlayerMovement2 player;
 
     float xDifference;
     float yDifference;
@@ -28,7 +28,7 @@ public class CameraMovement : MonoBehaviour
     {
         threshold = CalculateThreshold();
         rb = followObject.GetComponent<Rigidbody2D>();
-        player = followObject.GetComponent<PlayerMovement>();
+        player = followObject.GetComponent<PlayerMovement2>();
 
         yOffset = yOffsetPublic;
 

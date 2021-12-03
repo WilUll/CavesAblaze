@@ -9,9 +9,13 @@ public class CheckpointSystem : MonoBehaviour
     GameObject[] checkpoints;
     GameObject[] jumpFlames;
 
+    PlayerMovement2 playerScript;
+
     private void Start()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
     }
 
     private void Update()
@@ -55,20 +59,20 @@ public class CheckpointSystem : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position;
                 RefillJump();
+
+                playerScript.playerDead = false;
             }
         }
     }
 
     public void RefillJump()
     {
-        var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
-
         jumpFlames = GameObject.FindGameObjectsWithTag("jumpFlames");
         for (int i = 0; i < jumpFlames.Length; i++)
         {
             Destroy(jumpFlames[i]);
         }
-        player.jumpsLeft = player.maxJumps;
+        playerScript.jumpsLeft = playerScript.maxJumps;
     }
 
 
