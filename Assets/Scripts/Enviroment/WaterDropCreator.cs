@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterDrop : MonoBehaviour
+public class WaterDropCreator : MonoBehaviour
 {
     public float dropDelay;
     bool isDripping = false;
@@ -21,8 +21,7 @@ public class WaterDrop : MonoBehaviour
 
     void SpawnWaterDrop()
     {   
-        var instance = Instantiate(waterDrop, transform.position, Quaternion.identity);
-        Destroy(instance, dropDelay);
+       Instantiate(waterDrop, transform.position, Quaternion.identity);
     }
 
 }
