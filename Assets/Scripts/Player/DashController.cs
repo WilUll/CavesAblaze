@@ -5,7 +5,7 @@ using UnityEngine;
 public class DashController : MonoBehaviour
 {
     Rigidbody2D rb;
-    PlayerMovement2 playerScript;
+    PlayerMovement playerScript;
 
     public float dashSpeed;
     public float dashTimeReset;
@@ -24,8 +24,7 @@ public class DashController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //player = GetComponent<PlayerMovement>();
-        playerScript = GetComponent<PlayerMovement2>();
+        playerScript = GetComponent<PlayerMovement>();
 
 
         startGrav = rb.gravityScale;

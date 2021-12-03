@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class JumpsCounter : MonoBehaviour
 {
     public Text jumpsText;
-    PlayerMovement2 jumps;
+    PlayerMovement jumps;
 
     private void Start()
     {
-        jumps = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
+        jumps = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     private void Update()

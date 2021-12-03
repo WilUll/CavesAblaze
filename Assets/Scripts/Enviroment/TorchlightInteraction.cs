@@ -7,13 +7,13 @@ public class TorchlightInteraction : MonoBehaviour
     bool isPlayerClose = false;
     public bool isBurning;
     
-    PlayerMovement2 playerScript;
+    PlayerMovement playerScript;
 
     public int torchlightJumps;
 
     private void Start()
     {
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
         isBurning = true;
 
@@ -25,11 +25,19 @@ public class TorchlightInteraction : MonoBehaviour
         {
             isBurning = false;
             playerScript.jumpsLeft += 2;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
 
         if (playerScript.playerDead)
         {
             isBurning = true;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
         }
     }
 
