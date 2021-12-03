@@ -6,37 +6,23 @@ public class WaterDrop : MonoBehaviour
 {
     public float dropDelay;
     bool isDripping = false;
-    GameObject waterDrop;
+    public GameObject waterDrop;
 
     // Start is called before the first frame update
     void Start()
     {
-        waterDrop = GameObject.FindGameObjectWithTag("WaterDrop");
+        InvokeRepeating("SpawnWaterDrop", dropDelay, dropDelay);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDripping)
-        {
-
-        }
     }
 
     void SpawnWaterDrop()
-    {
-
+    {   
+        var instance = Instantiate(waterDrop, transform.position, Quaternion.identity);
+        Destroy(instance, dropDelay);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        isDripping = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        isDripping = false;
-    }
-
 
 }
