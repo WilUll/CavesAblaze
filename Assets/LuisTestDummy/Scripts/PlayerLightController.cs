@@ -10,21 +10,29 @@ public class PlayerLightController : MonoBehaviour
 
     public float minIntensity, maxIntensity, minOutterRadius, maxOutterRadius;
 
+    float randomValueIntensity, randomValueOutterRadius;
 
     void Start()
     {
         Player = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         Player.intensity = minIntensity;
         Player.pointLightOuterRadius = minOutterRadius;
+
     }
 
     private void Update()
     {
+        randomValueIntensity = Random.Range(minIntensity, maxIntensity);
+        randomValueOutterRadius = Random.Range(minIntensity, maxIntensity);
+
         ChangeIntensity();
         ChangeOutterRadius();
 
-        Player.intensity += intensityFluctuation;
-        Player.pointLightOuterRadius += outteRadiusFluctuation;
+        Player.intensity = randomValueIntensity;
+        Player.pointLightOuterRadius = randomValueOutterRadius;
+
+        //Player.intensity += intensityFluctuation;
+        //Player.pointLightOuterRadius += outteRadiusFluctuation;
     }
 
     private void ChangeIntensity()
