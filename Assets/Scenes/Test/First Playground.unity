@@ -672,9 +672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5815f3f87abe718448c1cb41182797a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation1: -30
-  rotation2: -60
-  rotation3: -90
+  initialRotation: 0
+  maxRotation: -110
+  inputMovementSpeed: 0.1
+  goBackSpeed: 0.05
 --- !u!4 &193289008
 Transform:
   m_ObjectHideFlags: 0
@@ -1996,7 +1997,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.15
+  m_Intensity: 0.36
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -3482,11 +3483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &775783026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9193547981301182468, guid: 725ca8182f31c0546a8921cab9e1ad6a, type: 3}
-  m_PrefabInstance: {fileID: 1863937166}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &784931957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,6 +4078,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &874118681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2836532850026028542, guid: 725ca8182f31c0546a8921cab9e1ad6a, type: 3}
+  m_PrefabInstance: {fileID: 1863937166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875031701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,6 +6275,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2632147220517977302, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: xShaderScale
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: -2632147220517977302, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: initialXShaderValue
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 547082797358234565, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: dashTimeReset
       value: 0.075
@@ -6320,11 +6329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9184,7 +9193,7 @@ Transform:
   m_LocalPosition: {x: 5.69, y: -3.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 775783026}
+  - {fileID: 874118681}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
