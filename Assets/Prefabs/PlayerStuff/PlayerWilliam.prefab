@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8425373437722594881}
   - component: {fileID: 4511006456511467860}
   - component: {fileID: 547082797358234565}
-  - component: {fileID: 4751118685323752107}
   - component: {fileID: 6856148193809997190}
+  - component: {fileID: -3999278019864354211}
   m_Layer: 0
   m_Name: PlayerWilliam
   m_TagString: Player
@@ -177,7 +177,19 @@ MonoBehaviour:
   dashTimeReset: 0.075
   dashOn: 0
   cooldownReset: 1
---- !u!114 &4751118685323752107
+--- !u!114 &6856148193809997190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425373437722594911}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ffcec591755c4fbbb5cf866bc0d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3999278019864354211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8425373437722594911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb734111cca6db44b483e6ffba22670, type: 3}
+  m_Script: {fileID: 11500000, guid: 86df2364ad5469044a6d81e1b5798b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
@@ -201,15 +213,4 @@ MonoBehaviour:
   oneDashOnAir: 0
   maxJumps: 4
   isGrounded: 0
---- !u!114 &6856148193809997190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8425373437722594911}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9ffcec591755c4fbbb5cf866bc0d47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playerDead: 0
