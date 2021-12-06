@@ -5,12 +5,12 @@ using UnityEngine;
 public class DevelopmentShortcuts : MonoBehaviour
 {
     GameObject player;
-    PlayerMovement2 playerScript;
+    PlayerMovement playerScript;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerScript = player.GetComponent<PlayerMovement2>();
+        playerScript = player.GetComponent<PlayerMovement>();
     }
 
     void Update()

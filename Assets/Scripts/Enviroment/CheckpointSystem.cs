@@ -9,13 +9,13 @@ public class CheckpointSystem : MonoBehaviour
     GameObject[] checkpoints;
     GameObject[] jumpFlames;
 
-    PlayerMovement2 playerScript;
+    PlayerMovement playerScript;
 
     private void Start()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
 
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement2>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     private void Update()
