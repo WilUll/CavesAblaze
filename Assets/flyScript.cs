@@ -26,10 +26,18 @@ public class flyScript : MonoBehaviour
 
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        textDisplay.text = sentences[index];
+        foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            if (letter == ' ')
+            {
+                yield return new WaitForSeconds(0);
+            }
+            else
+            {
+                yield return new WaitForSeconds(typingSpeed);
+            }
         }
     }
 
