@@ -15797,7 +15797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1112431411704349470, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1112431411704349471, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_Size.x
@@ -15857,23 +15857,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1112431412157036431, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1112431412483484771, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_Size.x
-      value: 30.106403
+      value: 31.77707
       objectReference: {fileID: 0}
     - target: {fileID: 1112431412483484771, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_Offset.x
-      value: 0.01525116
+      value: -0.8200817
       objectReference: {fileID: 0}
     - target: {fileID: 1112431413348536760, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_Size.x
-      value: 27.938374
+      value: 30.339958
       objectReference: {fileID: 0}
     - target: {fileID: 1112431413348536760, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_Offset.x
-      value: -0.98973703
+      value: 0.21105528
       objectReference: {fileID: 0}
     - target: {fileID: 1112431413348536763, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: yMax
@@ -15889,7 +15889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1112431413348536763, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3111323281399985835, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_TagString
@@ -15917,7 +15917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736588757450978707, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4736823677787478190, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: m_RootOrder
@@ -15985,7 +15985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7361061799178381857, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8445870774581991520, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: xMin
@@ -16009,7 +16009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445870774581991520, guid: 992099a39d3477649a878241d3dd8d90, type: 3}
       propertyPath: progresiveCameraMovement
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 992099a39d3477649a878241d3dd8d90, type: 3}

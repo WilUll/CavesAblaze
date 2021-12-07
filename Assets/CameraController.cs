@@ -8,12 +8,18 @@ public class CameraController : MonoBehaviour
     CameraMovement cameraScript;
     GameObject mainCam;
 
+    PlayerMovement playerScript;
+    GameObject player;
+
     public bool changeCamera, invertMovementValue, expandOrtSize, shrinkOrtSize;
 
     private void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("CameraParent");
         cameraScript = mainCam.GetComponent<CameraMovement>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<PlayerMovement>();
 
         cameraScript.orthographicSize = targetOrthographicSize;
 
@@ -58,12 +64,16 @@ public class CameraController : MonoBehaviour
                 shrinkOrtSize = false;
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            var script = this.GetComponent<CameraController>();
+            script.enabled = true;
+
             cameraScript.yMinClamp = yMin;
             cameraScript.yMaxClamp = yMax;
             cameraScript.xMinClamp = xMin;
@@ -79,6 +89,9 @@ public class CameraController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             cameraScript.previousOrthograficSize = targetOrthographicSize;
+
+            var script = this.GetComponent<CameraController>();
+            script.enabled = false;
         }
     }
 
