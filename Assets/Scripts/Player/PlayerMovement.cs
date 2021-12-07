@@ -181,13 +181,7 @@ public class PlayerMovement : MonoBehaviour
             jumpsLeft++;
         }
 
-        //If water, respawn player
-        if (other.gameObject.tag == "Water")
-        {
-            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
 
-            playerDead = true;
-        }
 
     }
 
@@ -197,12 +191,28 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
 
-        if (other.gameObject.tag == "Water")
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //If water, respawn player
+        if (collision.gameObject.tag == "Water")
+        {
+            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+
+            playerDead = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Water")
         {
             playerDead = false;
         }
     }
+
+
 }
 
 
