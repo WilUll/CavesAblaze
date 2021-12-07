@@ -10,12 +10,15 @@ public class CheckpointSystem : MonoBehaviour
     GameObject[] jumpFlames;
 
     PlayerMovement playerScript;
+    CameraMovement camMovementScript;
 
     private void Start()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+        camMovementScript = GameObject.FindGameObjectWithTag("CameraParent").GetComponent<CameraMovement>();
     }
 
     private void Update()
@@ -57,10 +60,9 @@ public class CheckpointSystem : MonoBehaviour
             CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
             if (checkpointScript.isBurning)
             {
-                GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position;
+                GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position + Vector3.up / 2;
                 playerScript.playerDead = false;
                 RefillJump();
-
             }
         }
     }

@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     public float cameraLookDown;
     public float cameraLookUp;
 
-    public float yMinClamp, yMaxClamp, xMinClamp, xMaxClamp, ortographicSize;
+    public float yMinClamp, yMaxClamp, xMinClamp, xMaxClamp, orthographicSize, previousOrthograficSize;
 
     float yOffset;
 
@@ -30,6 +30,8 @@ public class CameraMovement : MonoBehaviour
         player = followObject.GetComponent<PlayerMovement>();
 
         yOffset = yOffsetPublic;
+
+        //orthographicSize = 5.5f;
     }
 
 
@@ -60,7 +62,7 @@ public class CameraMovement : MonoBehaviour
         //transform.LookAt(followObject.transform);
         transform.rotation = Quaternion.identity;
 
-        Camera.main.orthographicSize = ortographicSize;
+        Camera.main.orthographicSize = orthographicSize;
     }
     Vector3 CalculateThreshold()
     {

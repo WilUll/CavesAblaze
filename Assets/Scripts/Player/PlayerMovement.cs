@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxJumps;
 
-    public bool isGrounded, playerDead;
+    public bool isGrounded, playerDead, respawned;
 
     bool isAttached;
 
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
+        if (respawned) respawned = false;
         Respawn();
 
         //jumpsCounter.CountingJumpsLeft();
@@ -128,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+            respawned = true;
         }
     }
     private void JumpsLeftLimiter()
