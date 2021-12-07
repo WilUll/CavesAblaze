@@ -11,7 +11,8 @@ public class CameraMovement : MonoBehaviour
 
     public float cameraLookDown;
     public float cameraLookUp;
-    public float maxPanoramicSize, progresiveCameraDistance, fixedCameraDistance;
+
+    public float yMinClamp, yMaxClamp, xMinClamp, xMaxClamp, ortographicSize;
 
     float yOffset;
 
@@ -22,8 +23,6 @@ public class CameraMovement : MonoBehaviour
     float xDifference;
     float yDifference;
 
-    public bool panoramicCameraON, fixedCameraOn;
-
     void Start()
     {
         threshold = CalculateThreshold();
@@ -31,43 +30,11 @@ public class CameraMovement : MonoBehaviour
         player = followObject.GetComponent<PlayerMovement>();
 
         yOffset = yOffsetPublic;
-
-        fixedCameraOn = true;
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (panoramicCameraON)
-            {
-                panoramicCameraON = false;
-                fixedCameraOn = true;
-            }
-            else if (fixedCameraOn)
-            {
-                panoramicCameraON = true;
-                fixedCameraOn = false;
-            }
-        }
 
-        PanoramicCamera();
-    }
 
     void FixedUpdate()
     {
-        //if (Input.GetAxis("Vertical") < 0)
-        //{
-        //    yOffset = cameraLookDown;
-        //}
-        //else if (Input.GetAxis("Vertical") > 0)
-        //{
-        //    yOffset = cameraLookUp;
-        //}
-        //else
-        //{
-        //    yOffset = yOffsetPublic;
-        //}
-
         Vector2 follow = followObject.transform.position;
 
         xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
@@ -79,10 +46,12 @@ public class CameraMovement : MonoBehaviour
         if (Mathf.Abs(xDifference) >= threshold.x)
         {
             newPosition.x = follow.x;
+            newPosition.x = Mathf.Clamp(newPosition.x, xMinClamp, xMaxClamp);
         }
-        if (Mathf.Abs(yDifference) >= threshold.y) //&& player.isGrounded
+        if (Mathf.Abs(yDifference) >= threshold.y) 
         {
             newPosition.y = follow.y + yOffset;
+            newPosition.y = Mathf.Clamp(newPosition.y, yMinClamp, yMaxClamp);
         }
         float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
 
@@ -90,21 +59,9 @@ public class CameraMovement : MonoBehaviour
 
         transform.LookAt(followObject.transform);
         transform.rotation = Quaternion.identity;
-    }
 
-    void PanoramicCamera()
-    {
-        if (panoramicCameraON)
-        {
-            Camera.main.orthographicSize += progresiveCameraDistance;
-            Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, fixedCameraDistance, maxPanoramicSize);
-        }
-        else if (fixedCameraOn)
-        {
-            Camera.main.orthographicSize = fixedCameraDistance;
-        }
+        Camera.main.orthographicSize = ortographicSize;
     }
-
     Vector3 CalculateThreshold()
     {
         Rect aspect = Camera.main.pixelRect;
