@@ -95,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
-
     }
 
     private void FixedUpdate()
@@ -115,9 +114,7 @@ public class PlayerMovement : MonoBehaviour
         if (isAttached && varSet)
         {
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
-
         }
-
     }
 
     private void Timers()
@@ -159,7 +156,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Rope attach
@@ -182,9 +178,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             jumpsLeft++;
         }
-
-
-
     }
 
     private void OnTriggerExit2D(Collider2D other)

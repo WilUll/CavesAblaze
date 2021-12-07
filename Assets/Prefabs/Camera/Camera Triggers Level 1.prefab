@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3736588757450978707}
   - component: {fileID: 1112431411325702681}
   m_Layer: 0
-  m_Name: Camera1
+  m_Name: Camera1 1/1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,12 @@ MonoBehaviour:
   yMax: 0.3
   xMin: 1.31
   xMax: 28.7
-  ortographicSize: 5.5
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431411325702681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74,81 +79,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 36.136047, y: 11.9347725}
-  m_EdgeRadius: 0
---- !u!1 &1112431411411086351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2943462616010886961}
-  - component: {fileID: 3387730653259349388}
-  - component: {fileID: 1112431411411086344}
-  m_Layer: 0
-  m_Name: Camera3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2943462616010886961
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112431411411086351}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.5, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3387730653259349388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112431411411086351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d52e454186c1a45ab18babd1e28ca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yMin: 12
-  yMax: 12.8
-  xMin: 7.4
-  xMax: 30.1
-  ortographicSize: 9
---- !u!61 &1112431411411086344
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112431411411086351}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 8.083826, y: 1.6808205}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 34.442677, y: 4.361641}
   m_EdgeRadius: 0
 --- !u!1 &1112431411704349469
 GameObject:
@@ -180,7 +110,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112431411704349470
 MonoBehaviour:
@@ -198,7 +128,12 @@ MonoBehaviour:
   yMax: 6.68
   xMin: 1.31
   xMax: 31.5
-  ortographicSize: 4
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431411704349471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8445870774581991520
 MonoBehaviour:
@@ -273,7 +208,12 @@ MonoBehaviour:
   yMax: 12.6
   xMin: 3.65
   xMax: 15
-  ortographicSize: 8.95
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431412032415009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -330,7 +270,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112431412157036431
 MonoBehaviour:
@@ -348,7 +288,12 @@ MonoBehaviour:
   yMax: 2.8
   xMin: 1.31
   xMax: 31.5
-  ortographicSize: 4
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431412157036428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -405,7 +350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7361061799178381857
 MonoBehaviour:
@@ -423,7 +368,12 @@ MonoBehaviour:
   yMax: 13.6
   xMin: 1.31
   xMax: 24
-  ortographicSize: 8
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431412483484771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -462,7 +412,7 @@ GameObject:
   - component: {fileID: 1112431413348536763}
   - component: {fileID: 1112431413348536760}
   m_Layer: 0
-  m_Name: Camera 3
+  m_Name: Camera3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,12 +425,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112431413348536766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.8, y: 1.73, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.8, y: 1.7300006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1112431411851289493}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112431413348536763
 MonoBehaviour:
@@ -498,7 +448,12 @@ MonoBehaviour:
   yMax: 12.8
   xMin: 1.31
   xMax: 31.5
-  ortographicSize: 3.8
+  targetOrthographicSize: 0
+  progresiveCameraMovement: 0
+  changeCamera: 0
+  invertMovementValue: 0
+  expandOrtSize: 0
+  shrinkOrtSize: 0
 --- !u!61 &1112431413348536760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -553,12 +508,11 @@ Transform:
   m_LocalScale: {x: 0.5462718, y: 0.71980006, z: 0.7198}
   m_Children:
   - {fileID: 3478312509676515569}
-  - {fileID: 7844631455966185645}
-  - {fileID: 2943462616010886961}
-  - {fileID: 7259581130751257650}
   - {fileID: 1112431412157036429}
   - {fileID: 1112431411704349468}
+  - {fileID: 7844631455966185645}
   - {fileID: 1112431413348536761}
+  - {fileID: 7259581130751257650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
