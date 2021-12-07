@@ -175,9 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: 25
-  dashTimeReset: 0.12
+  dashTimeReset: 0.15
   dashOn: 0
-  cooldownReset: 1
+  cooldownReset: 0.5
 --- !u!114 &6856148193809997190
 MonoBehaviour:
   m_ObjectHideFlags: 0
