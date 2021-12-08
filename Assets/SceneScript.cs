@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private static bool created = false;
-    int index;
+    public static SceneScript Instance { get; private set; }
+    int index = 2;
     void Awake()
     {
-        if (!created)
+        if (Instance == null)
         {
-            DontDestroyOnLoad(this.gameObject);
-            created = true;
-            Debug.Log("Awake:" + this.gameObject);
-            index = 2;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -37,5 +38,13 @@ public class SceneScript : MonoBehaviour
     public void Quitgame()
     {
         Application.Quit();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            LoadLevel();
+        }
     }
 }
