@@ -17,6 +17,7 @@ public class fireSpreadScript : MonoBehaviour
     private void Start()
     {
         flammableObjects = GameObject.FindGameObjectsWithTag("Flammable");
+        flammableObjects = GameObject.FindGameObjectsWithTag("Rope");
     }
 
 
