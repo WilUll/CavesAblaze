@@ -22110,12 +22110,12 @@ ParticleSystem:
     inWorldSpace: 0
   InheritVelocityModule:
     enabled: 1
-    m_Mode: 0
+    m_Mode: 1
     m_Curve:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.3
-      minScalar: 0.2
+      minScalar: 0.6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -22165,7 +22165,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   LifetimeByEmitterSpeedModule:
-    enabled: 1
+    enabled: 0
     m_Curve:
       serializedVersion: 2
       minMaxState: 1
@@ -22502,7 +22502,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.3
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -22658,7 +22658,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxis: 0
+    separateAxis: 1
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
@@ -25511,11 +25511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4511006456511467860, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Size.y
-      value: 0.38661575
+      value: 0.3795569
       objectReference: {fileID: 0}
     - target: {fileID: 4511006456511467860, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Offset.y
-      value: -1.0563595
+      value: -1.059889
       objectReference: {fileID: 0}
     - target: {fileID: 4511006456511467860, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -25546,16 +25546,24 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9858818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Size.y
-      value: 1.5910871
+      value: 0.5463774
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.25411797
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Offset.y
-      value: -0.29554355
+      value: -0.8178984
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -25579,11 +25587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.86
+      value: -30.98
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594882, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32542,7 +32550,7 @@ SpriteRenderer:
   m_Size: {x: 1.1449999, y: 0.39415282}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1782610603
