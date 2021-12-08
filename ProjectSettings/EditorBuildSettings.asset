@@ -6,18 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial/HubWorld.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Menu/Mainmenu.unity
     guid: 47d09cf3ae77cd44aa92e141392816cd
   - enabled: 1
     path: Assets/Scenes/Menu/Settings.unity
     guid: 818e488e5cd154e4ebf9315b6582047f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Test/First Playground.unity
-    guid: 82056685979b9544892a60829f2b1998
+    path: Assets/Scenes/GameLevels/Tutorial/Level1.unity
+    guid: 79fdddcaf9128e9468b6d45b26902cbc
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Tutorial/Level2.unity
+    guid: f7c26839e19dddb4b9e34eaeced082ab
   m_configObjects: {}
