@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject jumpFlames;
+    public Animator animator;
+
+    public SpriteRenderer playerSpriteRenderer;
+    Rigidbody2D playerRB;
+    DashController dash;
+    GameObject ropeObj;
+
     public float speed;
     public float pressJumpPower;
     public float minJumpPower;
@@ -11,16 +19,12 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTimer;
     public float jumpTimerValue;
 
-    public float xAxis;
-    public float yAxis;
+    public float xAxis, yAxis;
 
     public int jumpsLeft;
-    public GameObject jumpFlames;
 
     public bool oneDashOnAir;
 
-    Rigidbody2D playerRB;
-    DashController dash;
     //JumpsCounter jumpsCounter;
 
     Vector2 movement = new Vector2();
@@ -33,12 +37,12 @@ public class PlayerMovement : MonoBehaviour
 
     bool isAttached;
 
-    GameObject ropeObj;
     bool varSet = false;
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
+
         //jumpsCounter = GetComponent<JumpsCounter>();
 
         jumpsLeft = maxJumps;
@@ -53,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
+        JumpAnimation();
+
         if (respawned) respawned = false;
         Respawn();
 
@@ -60,6 +66,10 @@ public class PlayerMovement : MonoBehaviour
 
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
+
+        animator.SetFloat("Speed", Mathf.Abs(xAxis));
+        if (xAxis < 0) playerSpriteRenderer.flipX = true;
+        else if (xAxis > 0) playerSpriteRenderer.flipX = false;
     }
 
     private void Jump()
@@ -74,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
                 oneDashOnAir = true;
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
                 Detach();
+
+                animator.SetBool("IsJumping", true);
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
@@ -116,6 +128,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void JumpAnimation()
+    {
+        if(isGrounded)
+        {
+            animator.SetBool("IsJumping", false);
+        }
+    }
     private void Timers()
     {
         if (jumpTimer > 0) jumpTimer -= Time.deltaTime;
