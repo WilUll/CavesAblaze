@@ -16,7 +16,7 @@ public class RopeScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void GenerateRope()
+    public void GenerateRope()
     {
         Rigidbody2D prevBod = hook;
         for (int i = 0; i < numSegments; i++)
