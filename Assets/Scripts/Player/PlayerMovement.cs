@@ -68,8 +68,17 @@ public class PlayerMovement : MonoBehaviour
         offsetFlames.y -= 0.2f;
 
         animator.SetFloat("Speed", Mathf.Abs(xAxis));
-        if (xAxis < 0) playerSpriteRenderer.flipX = true;
-        else if (xAxis > 0) playerSpriteRenderer.flipX = false;
+        if (xAxis < 0)
+        {
+            playerSpriteRenderer.flipX = true;
+            animator.SetBool("IsWaiting", false);
+        }
+        else if (xAxis > 0)
+        {
+            playerSpriteRenderer.flipX = false;
+            animator.SetBool("IsWaiting", false);
+        }
+        else if (xAxis == 0) WaitingAnimation();
     }
 
     private void Jump()
@@ -130,6 +139,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void WaitingAnimation()
+    {
+        animator.SetBool("IsWaiting", true);
+    }
     private void JumpAnimation()
     {
         if(isGrounded)
