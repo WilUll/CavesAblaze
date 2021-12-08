@@ -15,6 +15,7 @@ TagManager:
   - Torchlight
   - CameraParent
   - CameraController
+  - SceneManager
   layers:
   - Default
   - TransparentFX
