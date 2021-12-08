@@ -107,7 +107,6 @@ public class PlayerMovement : MonoBehaviour
         if (isAttached)
         {
             playerRB.transform.position = ropeObj.transform.position;
-            playerRB.GetComponent<BoxCollider2D>().enabled = false;
             playerRB.gravityScale = 0;
             varSet = true;
         }
@@ -151,7 +150,6 @@ public class PlayerMovement : MonoBehaviour
             varSet = false;
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
-            playerRB.GetComponent<BoxCollider2D>().enabled = true;
             playerRB.gravityScale = 4;
         }
     }

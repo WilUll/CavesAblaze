@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7930853715634794602}
   - component: {fileID: 3344372346671589932}
   - component: {fileID: 8749058978454857070}
+  - component: {fileID: 4607366760504582395}
   m_Layer: 0
   m_Name: RopeSegment
   m_TagString: Rope
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0073080063, y: -0.57902193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.947}
+    pivot: {x: 0.5, y: 0.94}
     oldSize: {x: 0.282, y: 1.2749139}
     newSize: {x: 0.282, y: 1.2749139}
     adaptiveTilingThreshold: 0.5
@@ -171,3 +172,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedAbove: {fileID: 0}
   connectedBelow: {fileID: 0}
+--- !u!114 &4607366760504582395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3264068816101787674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913ee8991c001c24095b338ba7e353f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuel: 5
+  fire: {fileID: 7427160681686832602, guid: c02368d573413c04fb11360d6129eecc, type: 3}
+  burnTimer: 5
+  objectBurn: 0
