@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1aaa393cae5705b40a6fe52c1f3a8dd3
+guid: d5d0946526b8edb409fc635a17fba71b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 4
       width: 612
       height: 1238
-    spriteID: 146b4a03ad4c0d64080bdba04b82c833
+    spriteID: 32b362ddac06ffa4da9a55fbff07edde
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +124,7 @@ ScriptedImporter:
       y: 4
       width: 610
       height: 760
-    spriteID: 8fd14d9ea2332674f94efcd4f2e72d0a
+    spriteID: 5b6d8c9b4e3375e42adc283032e31405
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +146,7 @@ ScriptedImporter:
       y: 1381
       width: 2335
       height: 1164
-    spriteID: 5f6ba82e5081d7648a6be91c369b2d56
+    spriteID: dd4bd3be8e8c03d4cb646cc31c878484
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 4
       width: 2098
       height: 1369
-    spriteID: 10e2e17714e11244597487de68f5f4e7
+    spriteID: 7125c588eec1ed54aab10c1d35524d44
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -202,28 +202,28 @@ ScriptedImporter:
     spriteName: revben
     isGroup: 0
     parentIndex: -1
-    spriteID: 146b4a03ad4c0d64080bdba04b82c833
+    spriteID: 32b362ddac06ffa4da9a55fbff07edde
     layerID: 8
     mosaicPosition: {x: 2110, y: 4}
   - name: kota
     spriteName: kota
     isGroup: 0
     parentIndex: -1
-    spriteID: 8fd14d9ea2332674f94efcd4f2e72d0a
+    spriteID: 5b6d8c9b4e3375e42adc283032e31405
     layerID: 6
     mosaicPosition: {x: 2730, y: 4}
   - name: upper jaw
     spriteName: upper jaw
     isGroup: 0
     parentIndex: -1
-    spriteID: 5f6ba82e5081d7648a6be91c369b2d56
+    spriteID: dd4bd3be8e8c03d4cb646cc31c878484
     layerID: 2
     mosaicPosition: {x: 4, y: 1381}
   - name: lower jaw
     spriteName: lower jaw
     isGroup: 0
     parentIndex: -1
-    spriteID: 10e2e17714e11244597487de68f5f4e7
+    spriteID: 7125c588eec1ed54aab10c1d35524d44
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
   characterData:

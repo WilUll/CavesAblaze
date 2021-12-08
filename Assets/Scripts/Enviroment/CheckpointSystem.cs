@@ -19,6 +19,7 @@ public class CheckpointSystem : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
         camMovementScript = GameObject.FindGameObjectWithTag("CameraParent").GetComponent<CameraMovement>();
+
     }
 
     private void Update()
@@ -64,6 +65,16 @@ public class CheckpointSystem : MonoBehaviour
                 playerScript.playerDead = false;
                 RefillJump();
             }
+        }
+        GameObject[] ropes = GameObject.FindGameObjectsWithTag("Rope");
+        foreach (GameObject rope in ropes)
+        {
+            GameObject.Destroy(rope);
+        }
+        RopeScript[] script = FindObjectsOfType<RopeScript>();
+        foreach (RopeScript scripts in script)
+        {
+            scripts.GenerateRope();
         }
     }
 
