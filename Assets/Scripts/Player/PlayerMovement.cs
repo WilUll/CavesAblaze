@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
-        //JumpAnimation();
+        JumpAnimation();
 
         if (respawned) respawned = false;
         Respawn();
@@ -71,24 +71,24 @@ public class PlayerMovement : MonoBehaviour
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
 
-        //animator.SetFloat("Speed", Mathf.Abs(xAxis));
-        //if (xAxis < 0)
-        //{
-        //    playerSpriteRenderer.flipX = true;
-        //    animator.SetBool("IsWaiting", false);
-        //    waitingAnimationTime = resetWaitingAnimTime;
-        //}
-        //else if (xAxis > 0)
-        //{
-        //    playerSpriteRenderer.flipX = false;
-        //    animator.SetBool("IsWaiting", false);
-        //    waitingAnimationTime = resetWaitingAnimTime;
-        //}
-        //else if (xAxis == 0)
-        //{
-        //    waitingAnimationTime -= Time.deltaTime;
-        //    if (waitingAnimationTime <= 0) WaitingAnimation();
-        //}
+        animator.SetFloat("Speed", Mathf.Abs(xAxis));
+        if (xAxis < 0)
+        {
+            playerSpriteRenderer.flipX = true;
+            animator.SetBool("IsWaiting", false);
+            waitingAnimationTime = resetWaitingAnimTime;
+        }
+        else if (xAxis > 0)
+        {
+            playerSpriteRenderer.flipX = false;
+            animator.SetBool("IsWaiting", false);
+            waitingAnimationTime = resetWaitingAnimTime;
+        }
+        else if (xAxis == 0)
+        {
+            waitingAnimationTime -= Time.deltaTime;
+            if (waitingAnimationTime <= 0) WaitingAnimation();
+        }
     }
 
     private void Jump()
@@ -104,12 +104,12 @@ public class PlayerMovement : MonoBehaviour
                 Instantiate(jumpFlames, transform.position, Quaternion.identity);
                 Detach();
 
-                //animator.SetBool("IsJumping", true);
+                animator.SetBool("IsJumping", true);
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
-               // animator.SetBool("IsJumping", true);
+                animator.SetBool("IsJumping", true);
             }
         }
         else if (isAttached)
