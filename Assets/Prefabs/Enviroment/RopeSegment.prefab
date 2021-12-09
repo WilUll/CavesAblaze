@@ -186,5 +186,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuel: 5
   fire: {fileID: 7427160681686832602, guid: c02368d573413c04fb11360d6129eecc, type: 3}
-  burnTimer: 5
+  burnTimer: 10
   objectBurn: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e2c2942e741d47f4580f62e75e9838dd
+guid: ebc90710958425046b405ab58a112ae8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 1967
       width: 426
       height: 637
-    spriteID: e6e04142089cac14d8cb35fd4051291f
+    spriteID: 74fd93de76c48cf4ea4607a12af58138
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +124,7 @@ ScriptedImporter:
       y: 2612
       width: 482
       height: 339
-    spriteID: cca619430e8af5f478d8a2d28330f508
+    spriteID: 4973e4fabb904bc408ff108378873fa0
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +146,7 @@ ScriptedImporter:
       y: 4
       width: 559
       height: 1955
-    spriteID: a1102e19ae255a0479b7088512545b02
+    spriteID: c75d71f70659c29449db6ad10f448c2d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 1967
       width: 559
       height: 1955
-    spriteID: 769ffee04f94d5a47ae8941944068dc6
+    spriteID: 94c7156cbe5b48b49b9d46a3abdd4c6e
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 4
       width: 559
       height: 1955
-    spriteID: b3d830b12553a3246a8f59bdb92c1722
+    spriteID: 0c44494428f13bc459b1f661471aeae3
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -224,35 +224,35 @@ ScriptedImporter:
     spriteName: dash three up
     isGroup: 0
     parentIndex: -1
-    spriteID: e6e04142089cac14d8cb35fd4051291f
+    spriteID: 74fd93de76c48cf4ea4607a12af58138
     layerID: 10
     mosaicPosition: {x: 571, y: 1967}
   - name: dash three down
     spriteName: dash three down
     isGroup: 0
     parentIndex: -1
-    spriteID: cca619430e8af5f478d8a2d28330f508
+    spriteID: 4973e4fabb904bc408ff108378873fa0
     layerID: 8
     mosaicPosition: {x: 571, y: 2612}
   - name: dash two
     spriteName: dash two
     isGroup: 0
     parentIndex: -1
-    spriteID: a1102e19ae255a0479b7088512545b02
+    spriteID: c75d71f70659c29449db6ad10f448c2d
     layerID: 6
     mosaicPosition: {x: 4, y: 4}
   - name: dash one
     spriteName: dash one
     isGroup: 0
     parentIndex: -1
-    spriteID: 769ffee04f94d5a47ae8941944068dc6
+    spriteID: 94c7156cbe5b48b49b9d46a3abdd4c6e
     layerID: 5
     mosaicPosition: {x: 4, y: 1967}
   - name: ' '
     spriteName: ' '
     isGroup: 0
     parentIndex: -1
-    spriteID: b3d830b12553a3246a8f59bdb92c1722
+    spriteID: 0c44494428f13bc459b1f661471aeae3
     layerID: 4
     mosaicPosition: {x: 571, y: 4}
   characterData:
