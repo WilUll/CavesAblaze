@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4335633826599826008}
   - component: {fileID: 636571613618512566}
   - component: {fileID: 7831020985299634152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JumpFlames
   m_TagString: jumpFlames
   m_Icon: {fileID: 0}
