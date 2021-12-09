@@ -55,6 +55,7 @@ public class CheckpointSystem : MonoBehaviour
     }
     public void RespawnPlayer()
     {
+        playerScript.Detach();
         for (int i = 0; i < checkpoints.Length; i++)
         {
             CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
@@ -74,6 +75,11 @@ public class CheckpointSystem : MonoBehaviour
         foreach (RopeScript scripts in script)
         {
             scripts.GenerateRope();
+        }
+        GameObject[] flames = GameObject.FindGameObjectsWithTag("Flame");
+        foreach (GameObject flame in flames)
+        {
+            GameObject.Destroy(flame);
         }
     }
 

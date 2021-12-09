@@ -16,6 +16,7 @@ TagManager:
   - CameraParent
   - CameraController
   - SceneManager
+  - Flame
   layers:
   - Default
   - TransparentFX
