@@ -81,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
                 jumping = true;
 
                 Instantiate(jumpFlames, transform.position, Quaternion.identity);
-                Detach();
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
