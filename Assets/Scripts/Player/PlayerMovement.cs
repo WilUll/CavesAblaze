@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject jumpFlames;
-    public Animator animator;
-
-    public SpriteRenderer playerSpriteRenderer;
+    
     Rigidbody2D playerRB;
     DashController dash;
     GameObject ropeObj;
@@ -33,13 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxJumps;
 
-    public bool isGrounded, playerDead, respawned;
-
-    public bool isAttached;
+    public bool isGrounded, playerDead, respawned, isAttached, jumping;
 
     bool varSet = false;
 
-    float waitingAnimationTime, resetWaitingAnimTime;
+   
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -50,8 +46,6 @@ public class PlayerMovement : MonoBehaviour
         jumpsLeft = maxJumps;
 
         playerDead = false;
-
-        resetWaitingAnimTime = 1.5f;
     }
 
     void Update()
@@ -61,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
-        //JumpAnimation();
 
         if (respawned) respawned = false;
         Respawn();
@@ -71,24 +64,8 @@ public class PlayerMovement : MonoBehaviour
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
 
-        //animator.SetFloat("Speed", Mathf.Abs(xAxis));
-        //if (xAxis < 0)
-        //{
-        //    playerSpriteRenderer.flipX = true;
-        //    animator.SetBool("IsWaiting", false);
-        //    waitingAnimationTime = resetWaitingAnimTime;
-        //}
-        //else if (xAxis > 0)
-        //{
-        //    playerSpriteRenderer.flipX = false;
-        //    animator.SetBool("IsWaiting", false);
-        //    waitingAnimationTime = resetWaitingAnimTime;
-        //}
-        //else if (xAxis == 0)
-        //{
-        //    waitingAnimationTime -= Time.deltaTime;
-        //    if (waitingAnimationTime <= 0) WaitingAnimation();
-        //}
+        if (jumpTimer <= 0 || isGrounded) jumping = false;
+        
     }
 
     private void Jump()
@@ -101,15 +78,15 @@ public class PlayerMovement : MonoBehaviour
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
                 oneDashOnAir = true;
+                jumping = true;
+
                 Instantiate(jumpFlames, transform.position, Quaternion.identity);
                 Detach();
-
-                //animator.SetBool("IsJumping", true);
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
-               // animator.SetBool("IsJumping", true);
+                jumping = true;
             }
         }
         else if (isAttached)
@@ -124,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
                 Detach();
-
             }
         }
     }
@@ -145,18 +121,6 @@ public class PlayerMovement : MonoBehaviour
         if (isAttached && varSet)
         {
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
-        }
-    }
-
-    private void WaitingAnimation()
-    {
-        animator.SetBool("IsWaiting", true);
-    }
-    private void JumpAnimation()
-    {
-        if(isGrounded)
-        {
-            animator.SetBool("IsJumping", false);
         }
     }
     private void Timers()
