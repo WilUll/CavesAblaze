@@ -25,13 +25,14 @@ public class TorchlightInteraction : MonoBehaviour
         {
             isBurning = false;
             playerScript.jumpsLeft += 2;
+            playerScript.refilled = false;
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(false);
             }
         }
 
-        if (playerScript.playerDead || playerScript.respawned)
+        if (playerScript.playerDead || playerScript.respawned || playerScript.refilled)
         {
             isBurning = true;
             foreach (Transform child in transform)

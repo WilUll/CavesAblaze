@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxJumps;
 
-    public bool isGrounded, playerDead, respawned, isAttached, jumping;
+    public bool isGrounded, playerDead, respawned, refilled, isAttached, jumping;
 
     bool varSet = false;
 
