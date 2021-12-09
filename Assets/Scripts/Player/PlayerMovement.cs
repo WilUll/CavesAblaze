@@ -35,9 +35,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGrounded, playerDead, respawned;
 
-    bool isAttached;
+    public bool isAttached;
 
     bool varSet = false;
+
+    float waitingAnimationTime, resetWaitingAnimTime;
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -48,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         jumpsLeft = maxJumps;
 
         playerDead = false;
+
+        resetWaitingAnimTime = 1.5f;
     }
 
     void Update()
@@ -72,13 +76,19 @@ public class PlayerMovement : MonoBehaviour
         {
             playerSpriteRenderer.flipX = true;
             animator.SetBool("IsWaiting", false);
+            waitingAnimationTime = resetWaitingAnimTime;
         }
         else if (xAxis > 0)
         {
             playerSpriteRenderer.flipX = false;
             animator.SetBool("IsWaiting", false);
+            waitingAnimationTime = resetWaitingAnimTime;
         }
-        else if (xAxis == 0) WaitingAnimation();
+        else if (xAxis == 0)
+        {
+            waitingAnimationTime -= Time.deltaTime;
+            if (waitingAnimationTime <= 0) WaitingAnimation();
+        }
     }
 
     private void Jump()
@@ -91,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
                 oneDashOnAir = true;
-                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+                Instantiate(jumpFlames, transform.position, Quaternion.identity);
                 Detach();
 
                 animator.SetBool("IsJumping", true);
@@ -100,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
                 animator.SetBool("IsJumping", true);
-
             }
         }
         else if (isAttached)
