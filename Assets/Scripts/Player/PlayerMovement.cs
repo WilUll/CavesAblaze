@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     bool isAttached;
 
     bool varSet = false;
+
+    float waitingAnimationTime, resetWaitingAnimTime;
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -48,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         jumpsLeft = maxJumps;
 
         playerDead = false;
+
+        resetWaitingAnimTime = 1.5f;
     }
 
     void Update()
@@ -57,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         Timers();
         JumpsLeftLimiter();
-        JumpAnimation();
+        //JumpAnimation();
 
         if (respawned) respawned = false;
         Respawn();
@@ -67,18 +71,24 @@ public class PlayerMovement : MonoBehaviour
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
 
-        animator.SetFloat("Speed", Mathf.Abs(xAxis));
-        if (xAxis < 0)
-        {
-            playerSpriteRenderer.flipX = true;
-            animator.SetBool("IsWaiting", false);
-        }
-        else if (xAxis > 0)
-        {
-            playerSpriteRenderer.flipX = false;
-            animator.SetBool("IsWaiting", false);
-        }
-        else if (xAxis == 0) WaitingAnimation();
+        //animator.SetFloat("Speed", Mathf.Abs(xAxis));
+        //if (xAxis < 0)
+        //{
+        //    playerSpriteRenderer.flipX = true;
+        //    animator.SetBool("IsWaiting", false);
+        //    waitingAnimationTime = resetWaitingAnimTime;
+        //}
+        //else if (xAxis > 0)
+        //{
+        //    playerSpriteRenderer.flipX = false;
+        //    animator.SetBool("IsWaiting", false);
+        //    waitingAnimationTime = resetWaitingAnimTime;
+        //}
+        //else if (xAxis == 0)
+        //{
+        //    waitingAnimationTime -= Time.deltaTime;
+        //    if (waitingAnimationTime <= 0) WaitingAnimation();
+        //}
     }
 
     private void Jump()
@@ -91,16 +101,15 @@ public class PlayerMovement : MonoBehaviour
                 jumpTimer = jumpTimerValue;
                 jumpsLeft--;
                 oneDashOnAir = true;
-                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+                Instantiate(jumpFlames, transform.position, Quaternion.identity);
                 Detach();
 
-                animator.SetBool("IsJumping", true);
+                //animator.SetBool("IsJumping", true);
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
-                animator.SetBool("IsJumping", true);
-
+               // animator.SetBool("IsJumping", true);
             }
         }
         else if (isAttached)
@@ -184,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
             varSet = false;
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
+            playerRB.velocity = Vector2.zero;
             playerRB.gravityScale = 4;
         }
     }

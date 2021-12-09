@@ -66,6 +66,17 @@ public class fireSpreadScript : MonoBehaviour
 
                 if (burnTimer <= 0)
                 {
+                    if (gameObject.transform.childCount > 1 )
+                    {
+                        for (int i = 0; i < gameObject.transform.childCount; i++)
+                        {
+                            if (gameObject.transform.GetChild(i).CompareTag("Player"))
+                            {
+                                gameObject.transform.GetChild(i).GetComponent<PlayerMovement>().Detach();
+                            }
+                        }
+                    }
+
                     Destroy(gameObject);
                     objectBurn = false;
 

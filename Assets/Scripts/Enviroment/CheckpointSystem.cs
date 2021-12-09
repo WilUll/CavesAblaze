@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckpointSystem : MonoBehaviour
 {
-    bool isPlayerClose = false;
+    public bool isPlayerClose = false;
     public bool isBurning = false;
     GameObject[] checkpoints;
     GameObject[] jumpFlames;
@@ -30,7 +30,6 @@ public class CheckpointSystem : MonoBehaviour
             {
                 CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
                 checkpointScript.isBurning = false;
-                checkpointScript.isPlayerClose = false;
             }
             isBurning = true;
         }
@@ -40,9 +39,9 @@ public class CheckpointSystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerClose = true;
         }
@@ -56,6 +55,7 @@ public class CheckpointSystem : MonoBehaviour
     }
     public void RespawnPlayer()
     {
+        playerScript.Detach();
         for (int i = 0; i < checkpoints.Length; i++)
         {
             CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
@@ -75,6 +75,11 @@ public class CheckpointSystem : MonoBehaviour
         foreach (RopeScript scripts in script)
         {
             scripts.GenerateRope();
+        }
+        GameObject[] flames = GameObject.FindGameObjectsWithTag("Flame");
+        foreach (GameObject flame in flames)
+        {
+            GameObject.Destroy(flame);
         }
     }
 
