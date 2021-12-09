@@ -53,8 +53,11 @@ public class DashController : MonoBehaviour
 
         if (dashOn)
         {
-            playerScript.Detach();
-            
+            if (playerScript.isAttached && currentDashTime >= dashTimeReset - 0.05)
+            {
+                playerScript.Detach();
+            }
+
             rb.velocity = (playerMove * dashSpeed);
             currentDashTime -= Time.deltaTime;
 

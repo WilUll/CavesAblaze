@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGrounded, playerDead, respawned;
 
-    bool isAttached;
+    public bool isAttached;
 
     bool varSet = false;
 
