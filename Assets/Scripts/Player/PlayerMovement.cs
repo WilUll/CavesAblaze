@@ -184,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
             varSet = false;
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
+            playerRB.velocity = Vector2.zero;
             playerRB.gravityScale = 4;
         }
     }
