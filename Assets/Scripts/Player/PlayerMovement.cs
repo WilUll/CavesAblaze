@@ -41,8 +41,6 @@ public class PlayerMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
 
-        //jumpsCounter = GetComponent<JumpsCounter>();
-
         jumpsLeft = maxJumps;
 
         playerDead = false;
@@ -52,14 +50,12 @@ public class PlayerMovement : MonoBehaviour
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
-        Jump();
         Timers();
         JumpsLeftLimiter();
+        Jump();
 
         if (respawned) respawned = false;
         Respawn();
-
-        //jumpsCounter.CountingJumpsLeft();
 
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
@@ -68,6 +64,25 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+
+    private void FixedUpdate()
+    {
+        if (!dash.dashOn && !isAttached)
+        {
+            playerRB.velocity = new Vector2(xAxis * speed, playerRB.velocity.y);
+        }
+
+        if (isAttached)
+        {
+            playerRB.transform.position = ropeObj.transform.position;
+            playerRB.gravityScale = 0;
+            varSet = true;
+        }
+        if (isAttached && varSet)
+        {
+            ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
+        }
+    }
     private void Jump()
     {
         if (!isAttached)
@@ -80,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
                 oneDashOnAir = true;
                 jumping = true;
 
-                Instantiate(jumpFlames, transform.position, Quaternion.identity);
+                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
                 Detach();
             }
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
@@ -102,25 +117,6 @@ public class PlayerMovement : MonoBehaviour
                 playerRB.velocity = Vector2.up * pressJumpPower;
                 Detach();
             }
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (!dash.dashOn && !isAttached)
-        {
-            playerRB.velocity = new Vector2(xAxis * speed, playerRB.velocity.y);
-        }
-
-        if (isAttached)
-        {
-            playerRB.transform.position = ropeObj.transform.position;
-            playerRB.gravityScale = 0;
-            varSet = true;
-        }
-        if (isAttached && varSet)
-        {
-            ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
         }
     }
     private void Timers()

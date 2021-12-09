@@ -20,12 +20,12 @@ public class DashController : MonoBehaviour
     float dashCooldown;
 
     float startGrav;
+    public float lastDirection;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerScript = GetComponent<PlayerMovement>();
-
 
         startGrav = rb.gravityScale;
         dashCooldown = cooldownReset;
@@ -34,9 +34,14 @@ public class DashController : MonoBehaviour
 
     void Update()
     {
+        if(playerScript.xAxis != 0)
+        {
+            lastDirection = playerScript.xAxis;
+        }
+
         dashCooldown -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire3") && playerScript.xAxis != 0 && dashCooldown <= 0)
+        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)
         {
             if (playerScript.oneDashOnAir)
             {
@@ -44,8 +49,7 @@ public class DashController : MonoBehaviour
                 playerScript.oneDashOnAir = true;
 
                 currentDashTime = dashTimeReset;
-                //rb.velocity = Vector2.zero;
-                playerMove = new Vector2(playerScript.xAxis, playerScript.yAxis);
+                playerMove = new Vector2(lastDirection, playerScript.yAxis);
                 playerMove.Normalize();
                 rb.gravityScale = 0;
             }
