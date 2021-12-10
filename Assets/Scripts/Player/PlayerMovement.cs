@@ -114,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 playerRB.velocity = Vector2.up * pressJumpPower;
-                Detach();
             }
         }
     }
