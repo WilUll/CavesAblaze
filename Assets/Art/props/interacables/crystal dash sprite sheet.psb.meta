@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fed6ac7f425b8ee44b8e105dbefaa88e
+guid: ebc90710958425046b405ab58a112ae8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +32,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 70
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -91,18 +91,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: 1
+  - name: dash three up
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 7199
-      width: 4039
-      height: 162
-    spriteID: ba52925f0eee88448b231df6a62395a3
+      x: 571
+      y: 1967
+      width: 426
+      height: 637
+    spriteID: 74fd93de76c48cf4ea4607a12af58138
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -112,8 +112,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 7199}
-  - name: 2
+    uvTransform: {x: -2001, y: 683}
+  - name: dash three down
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 571
+      y: 2612
+      width: 482
+      height: 339
+    spriteID: 4973e4fabb904bc408ff108378873fa0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1932, y: 2567}
+  - name: dash two
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -122,9 +144,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 4039
-      height: 1431
-    spriteID: beaf34311d53e084d80f0620aaec609c
+      width: 559
+      height: 1955
+    spriteID: c75d71f70659c29449db6ad10f448c2d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -134,8 +156,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-  - name: 3
+    uvTransform: {x: -1737, y: -43}
+  - name: dash one
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -143,10 +165,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1443
-      width: 4039
-      height: 1431
-    spriteID: 0083dd25fda9758419085cf7ff584724
+      y: 1967
+      width: 559
+      height: 1955
+    spriteID: 94c7156cbe5b48b49b9d46a3abdd4c6e
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -156,19 +178,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1443}
-  - name: "ljus str\xE5lar"
+    uvTransform: {x: -946, y: 1918}
+  - name: ' '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4051
+      x: 571
       y: 4
-      width: 2525
-      height: 1412
-    spriteID: 14835ca434ba0544ab96ffd41d9407ea
+      width: 559
+      height: 1955
+    spriteID: 0c44494428f13bc459b1f661471aeae3
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -178,170 +200,68 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3080, y: -15}
-  - name: 4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2882
-      width: 4039
-      height: 1431
-    spriteID: 44ac7d8eb3cc164439ba600b7c1b2c32
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2882}
-  - name: 5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4321
-      width: 4039
-      height: 1431
-    spriteID: 3acc312cea0b3c6409bebca97de03e1a
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4321}
-  - name: 6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 5760
-      width: 4039
-      height: 1431
-    spriteID: 58ab7afe46884e94aa3d417eda470a89
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 5760}
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+    uvTransform: {x: 447, y: -49}
+  platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 2048
+  importedTextureWidth: 1024
   importedTextureHeight: 2048
-  documentSize: {x: 4039, y: 1431}
+  documentSize: {x: 3217, y: 2015}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
-  textureActualWidth: 8192
-  textureActualHeight: 8192
+  textureActualWidth: 2048
+  textureActualHeight: 4096
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: 1
-    spriteName: 1
+  - name: dash three up
+    spriteName: dash three up
     isGroup: 0
     parentIndex: -1
-    spriteID: ba52925f0eee88448b231df6a62395a3
+    spriteID: 74fd93de76c48cf4ea4607a12af58138
+    layerID: 10
+    mosaicPosition: {x: 571, y: 1967}
+  - name: dash three down
+    spriteName: dash three down
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4973e4fabb904bc408ff108378873fa0
     layerID: 8
-    mosaicPosition: {x: 4, y: 7199}
-  - name: 2
-    spriteName: 2
+    mosaicPosition: {x: 571, y: 2612}
+  - name: dash two
+    spriteName: dash two
     isGroup: 0
     parentIndex: -1
-    spriteID: beaf34311d53e084d80f0620aaec609c
-    layerID: 2
-    mosaicPosition: {x: 4, y: 4}
-  - name: 3
-    spriteName: 3
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 0083dd25fda9758419085cf7ff584724
-    layerID: 4
-    mosaicPosition: {x: 4, y: 1443}
-  - name: "ljus str\xE5lar"
-    spriteName: "ljus str\xE5lar"
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 14835ca434ba0544ab96ffd41d9407ea
-    layerID: 7
-    mosaicPosition: {x: 4051, y: 4}
-  - name: 4
-    spriteName: 4
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 44ac7d8eb3cc164439ba600b7c1b2c32
-    layerID: 5
-    mosaicPosition: {x: 4, y: 2882}
-  - name: 5
-    spriteName: 5
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 3acc312cea0b3c6409bebca97de03e1a
+    spriteID: c75d71f70659c29449db6ad10f448c2d
     layerID: 6
-    mosaicPosition: {x: 4, y: 4321}
-  - name: 6
-    spriteName: 6
+    mosaicPosition: {x: 4, y: 4}
+  - name: dash one
+    spriteName: dash one
     isGroup: 0
     parentIndex: -1
-    spriteID: 58ab7afe46884e94aa3d417eda470a89
-    layerID: 20
-    mosaicPosition: {x: 4, y: 5760}
+    spriteID: 94c7156cbe5b48b49b9d46a3abdd4c6e
+    layerID: 5
+    mosaicPosition: {x: 4, y: 1967}
+  - name: ' '
+    spriteName: ' '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0c44494428f13bc459b1f661471aeae3
+    layerID: 4
+    mosaicPosition: {x: 571, y: 4}
   characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
   generateGOHierarchy: 0
-  textureAssetName: level 2 background paralax Texture
-  prefabAssetName: level 2 background paralax Prefab
-  spriteLibAssetName: level 2 background paralax Sprite Lib
+  textureAssetName: crystal dash sprite sheet Texture
+  prefabAssetName: crystal dash sprite sheet Prefab
+  spriteLibAssetName: crystal dash sprite sheet Sprite Lib
   secondarySpriteTextures: []

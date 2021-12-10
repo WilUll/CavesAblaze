@@ -91,6 +91,7 @@ public class CheckpointSystem : MonoBehaviour
             Destroy(jumpFlames[i]);
         }
         playerScript.jumpsLeft = playerScript.maxJumps;
+        playerScript.refilled = true;
     }
 
 

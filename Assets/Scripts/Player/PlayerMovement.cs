@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject jumpFlames;
-    public Animator animator;
-
-    public SpriteRenderer playerSpriteRenderer;
+    
     Rigidbody2D playerRB;
     DashController dash;
     GameObject ropeObj;
@@ -33,101 +31,39 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxJumps;
 
-    public bool isGrounded, playerDead, respawned;
-
-    public bool isAttached;
+    public bool isGrounded, playerDead, respawned, refilled, isAttached, jumping;
 
     bool varSet = false;
 
-    float waitingAnimationTime, resetWaitingAnimTime;
+   
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
 
-        //jumpsCounter = GetComponent<JumpsCounter>();
-
         jumpsLeft = maxJumps;
 
         playerDead = false;
-
-        resetWaitingAnimTime = 1.5f;
     }
 
     void Update()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
-        Jump();
         Timers();
         JumpsLeftLimiter();
-        JumpAnimation();
+        Jump();
 
         if (respawned) respawned = false;
         Respawn();
 
-        //jumpsCounter.CountingJumpsLeft();
-
         offsetFlames = transform.position;
         offsetFlames.y -= 0.2f;
 
-        animator.SetFloat("Speed", Mathf.Abs(xAxis));
-        if (xAxis < 0)
-        {
-            playerSpriteRenderer.flipX = true;
-            animator.SetBool("IsWaiting", false);
-            waitingAnimationTime = resetWaitingAnimTime;
-        }
-        else if (xAxis > 0)
-        {
-            playerSpriteRenderer.flipX = false;
-            animator.SetBool("IsWaiting", false);
-            waitingAnimationTime = resetWaitingAnimTime;
-        }
-        else if (xAxis == 0)
-        {
-            waitingAnimationTime -= Time.deltaTime;
-            if (waitingAnimationTime <= 0) WaitingAnimation();
-        }
+        if (jumpTimer <= 0 || isGrounded) jumping = false;
+        
     }
 
-    private void Jump()
-    {
-        if (!isAttached)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
-            {
-                playerRB.velocity = Vector2.up * minJumpPower;
-                jumpTimer = jumpTimerValue;
-                jumpsLeft--;
-                oneDashOnAir = true;
-                Instantiate(jumpFlames, transform.position, Quaternion.identity);
-                Detach();
-
-                animator.SetBool("IsJumping", true);
-            }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
-            {
-                playerRB.velocity = Vector2.up * pressJumpPower;
-                animator.SetBool("IsJumping", true);
-            }
-        }
-        else if (isAttached)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                playerRB.velocity = Vector2.up * minJumpPower;
-                jumpTimer = jumpTimerValue;
-                Detach();
-            }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
-            {
-                playerRB.velocity = Vector2.up * pressJumpPower;
-                Detach();
-
-            }
-        }
-    }
 
     private void FixedUpdate()
     {
@@ -147,16 +83,39 @@ public class PlayerMovement : MonoBehaviour
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
         }
     }
-
-    private void WaitingAnimation()
+    private void Jump()
     {
-        animator.SetBool("IsWaiting", true);
-    }
-    private void JumpAnimation()
-    {
-        if(isGrounded)
+        if (!isAttached)
         {
-            animator.SetBool("IsJumping", false);
+            if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
+            {
+                playerRB.velocity = Vector2.up * minJumpPower;
+                jumpTimer = jumpTimerValue;
+                jumpsLeft--;
+                oneDashOnAir = true;
+                jumping = true;
+
+                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+            }
+            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            {
+                playerRB.velocity = Vector2.up * pressJumpPower;
+                jumping = true;
+            }
+        }
+        else if (isAttached)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerRB.velocity = Vector2.up * minJumpPower;
+                jumpTimer = jumpTimerValue;
+                Detach();
+            }
+            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            {
+                playerRB.velocity = Vector2.up * pressJumpPower;
+                Detach();
+            }
         }
     }
     private void Timers()
