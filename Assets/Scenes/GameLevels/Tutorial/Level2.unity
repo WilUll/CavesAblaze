@@ -947,6 +947,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9fbeb0f5daf4f40b80518bd09555dc, type: 3}
+--- !u!1 &468760409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7085751516253164582, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+  m_PrefabInstance: {fileID: 1017182731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &468760415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468760409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1d915cc39ebbd40a559f8299f26599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484679083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,9 +1568,49 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.37881517
       objectReference: {fileID: 0}
+    - target: {fileID: 7085751516234449728, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_TagString
+      value: jumpFlames
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164579, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34013867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164579, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.094513774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164582, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164582, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164583, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Size.x
+      value: 0.48333332
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164583, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Size.y
+      value: 0.15111111
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516253164583, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7085751516781017256, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: holdJumpPower
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751516781017262, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085751517096428823, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8425373437722594881, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_Size.x
@@ -1635,7 +1692,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.65
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7085751516781017258, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
 --- !u!1 &1020411139
 GameObject:
@@ -2380,7 +2438,7 @@ GameObject:
   - component: {fileID: 2040050031}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
