@@ -10,32 +10,16 @@ public class PlayerMovement : MonoBehaviour
     DashController dash;
     GameObject ropeObj;
 
-    public float speed;
-    public float pressJumpPower;
-    public float minJumpPower;
+    public bool isGrounded, playerDead, respawned, refilled, 
+                isAttached, jumping, oneDashOnAir;
+    public float xAxis, yAxis, speed;
+    public float holdJumpPower, minJumpPower, jumpTimerValue;
+    public int maxJumps, jumpsLeft;
 
-    public float jumpTimer;
-    public float jumpTimerValue;
-
-    public float xAxis, yAxis;
-
-    public int jumpsLeft;
-
-    public bool oneDashOnAir;
-
-    //JumpsCounter jumpsCounter;
-
-    Vector2 movement = new Vector2();
-
+    float jumpTimer;
+    bool varSet = false;
     Vector3 offsetFlames;
 
-    public int maxJumps;
-
-    public bool isGrounded, playerDead, respawned, refilled, isAttached, jumping;
-
-    bool varSet = false;
-
-   
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -50,28 +34,71 @@ public class PlayerMovement : MonoBehaviour
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
-        Timers();
-        JumpsLeftLimiter();
+
         Jump();
 
-        if (respawned) respawned = false;
+        RunJumpTimer();
+        LimitJumpsLeft();
+
+        SetJumpFlamesSpawningOffset();
+
+        RestartRespawnedBool();
         Respawn();
 
-        offsetFlames = transform.position;
-        offsetFlames.y -= 0.2f;
+        CheckIfJumping();
 
-        if (jumpTimer <= 0 || isGrounded) jumping = false;
-        
     }
 
 
     private void FixedUpdate()
     {
+        Run();
+        SwingInRope();
+    }
+
+
+    private void Run()
+    {
         if (!dash.dashOn && !isAttached)
         {
             playerRB.velocity = new Vector2(xAxis * speed, playerRB.velocity.y);
         }
+    }
+    private void Jump()
+    {
+        if (!isAttached)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
+            {
+                CalculateInitialJumpPower();
+                ResetJumpTimer();
+                SetTrueJumpConditions();
+                jumpsLeft--;
 
+                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+            }
+            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            {
+                CalculateHoldJumpPower();
+            }
+        }
+        else if (isAttached)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                CalculateInitialJumpPower();
+                ResetJumpTimer();
+                SetTrueJumpConditions();
+            }
+            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            {
+                CalculateHoldJumpPower();
+                Detach();
+            }
+        }
+    }
+    private void SwingInRope()
+    {
         if (isAttached)
         {
             playerRB.transform.position = ropeObj.transform.position;
@@ -83,43 +110,45 @@ public class PlayerMovement : MonoBehaviour
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
         }
     }
-    private void Jump()
-    {
-        if (!isAttached)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
-            {
-                playerRB.velocity = Vector2.up * minJumpPower;
-                jumpTimer = jumpTimerValue;
-                jumpsLeft--;
-                oneDashOnAir = true;
-                jumping = true;
 
-                Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
-            }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
-            {
-                playerRB.velocity = Vector2.up * pressJumpPower;
-                jumping = true;
-            }
-        }
-        else if (isAttached)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                playerRB.velocity = Vector2.up * minJumpPower;
-                jumpTimer = jumpTimerValue;
-            }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
-            {
-                playerRB.velocity = Vector2.up * pressJumpPower;
-                Detach();
-            }
-        }
-    }
-    private void Timers()
+
+    private void RunJumpTimer()
     {
-        if (jumpTimer > 0) jumpTimer -= Time.deltaTime;
+        if (jumpTimer >= 0) jumpTimer -= Time.deltaTime;
+    }
+    private void ResetJumpTimer()
+    {
+        jumpTimer = jumpTimerValue;
+    }
+    private void LimitJumpsLeft()
+    {
+        if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
+    }
+
+
+    private void CalculateInitialJumpPower()
+    {
+        playerRB.velocity = Vector2.up * minJumpPower;
+    }
+    private void CalculateHoldJumpPower()
+    {
+        playerRB.velocity = Vector2.up * holdJumpPower;
+    }
+    private void SetTrueJumpConditions()
+    {
+        oneDashOnAir = true;
+        jumping = true;
+    }
+
+
+    private void SetJumpFlamesSpawningOffset()
+    {
+        offsetFlames = transform.position;
+        offsetFlames.y -= 0.2f;
+    }
+    private void RestartRespawnedBool()
+    {
+        if (respawned) respawned = false;
     }
     private void Respawn()
     {
@@ -129,10 +158,12 @@ public class PlayerMovement : MonoBehaviour
             respawned = true;
         }
     }
-    private void JumpsLeftLimiter()
+    private void CheckIfJumping()
     {
-        if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
+        if (jumpTimer <= 0 || isGrounded) jumping = false;
     }
+
+
 
     public void Attach(Rigidbody2D ropeBone)
     {
