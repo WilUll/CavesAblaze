@@ -14,64 +14,91 @@ public class CameraMovement : MonoBehaviour
 
     public float yMinClamp, yMaxClamp, xMinClamp, xMaxClamp, orthographicSize, previousOrthograficSize;
 
-    float yOffset;
+    float yOffset, moveSpeed;
 
     private Vector2 threshold;
-    private Rigidbody2D rb;
-    private PlayerMovement player;
+    private Vector3 newPosition;
+    private Rigidbody2D rigidBody;
 
-    float xDifference;
-    float yDifference;
+    float xDistance;
+    float yDistance;
 
     void Start()
     {
         threshold = CalculateThreshold();
-        rb = followObject.GetComponent<Rigidbody2D>();
-        player = followObject.GetComponent<PlayerMovement>();
+
+        rigidBody = followObject.GetComponent<Rigidbody2D>();
 
         yOffset = yOffsetPublic;
-
-        //orthographicSize = 5.5f;
     }
-
 
     void FixedUpdate()
     {
-        Vector2 follow = followObject.transform.position;
+        Vector2 followedObjectPosition = followObject.transform.position;
 
-        xDifference = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * follow.x);
+        CalculateFollowedObejctWithCameraDistance(followedObjectPosition);
 
-        yDifference = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * follow.y);
+        newPosition = transform.position;
 
-        Vector3 newPosition = transform.position;
-        newPosition.x = Mathf.Clamp(transform.position.x, xMinClamp, xMaxClamp);
-        newPosition.y = Mathf.Clamp(transform.position.y, yMinClamp, yMaxClamp);
+        DefineNewPositionXValue(followedObjectPosition);
+        DefineNewPositionYValue(followedObjectPosition);
 
-        if (Mathf.Abs(xDifference) >= threshold.x)
-        {
-            newPosition.x = Mathf.Clamp(follow.x, xMinClamp, xMaxClamp);
-        }
-        if (Mathf.Abs(yDifference) >= threshold.y) 
-        {
-            newPosition.y = Mathf.Clamp(follow.y + yOffset, yMinClamp, yMaxClamp);
-        }
-        float moveSpeed = rb.velocity.magnitude > speed ? rb.velocity.magnitude : speed;
+        RefreshCameraSpeed();
+        RefreshCameraPositionOrMovement();
+        RefreshCameraOrthographicSize();
 
-        transform.position = Vector3.Lerp(transform.position, newPosition, 5f * Time.deltaTime);
-
-        //transform.LookAt(followObject.transform);
+        //keeps rotation fixed just in case
         transform.rotation = Quaternion.identity;
-
-        Camera.main.orthographicSize = orthographicSize;
     }
+
     Vector3 CalculateThreshold()
     {
         Rect aspect = Camera.main.pixelRect;
-        Vector2 t = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
-        t.x -= followOffset.x;
-        t.y -= followOffset.y;
-        return t;
+        Vector2 threshold = new Vector2(Camera.main.orthographicSize * aspect.width / aspect.height, Camera.main.orthographicSize);
+        threshold.x -= followOffset.x;
+        threshold.y -= followOffset.y;
+        return threshold;
     }
+    private void CalculateFollowedObejctWithCameraDistance(Vector2 followedObjectPosition)
+    {
+        xDistance = Vector2.Distance(Vector2.right * transform.position.x, Vector2.right * followedObjectPosition.x);
+        yDistance = Vector2.Distance(Vector2.up * transform.position.y, Vector2.up * followedObjectPosition.y);
+    }
+    private void DefineNewPositionXValue(Vector2 followedObjectPosition)
+    {
+        if (Mathf.Abs(xDistance) >= threshold.x)
+        {
+            newPosition.x = Mathf.Clamp(followedObjectPosition.x, xMinClamp, xMaxClamp);
+        }
+        else
+        {
+            newPosition.x = Mathf.Clamp(transform.position.x, xMinClamp, xMaxClamp);
+        }
+    }
+    private void DefineNewPositionYValue(Vector2 followedObjectPosition)
+    {
+        if (Mathf.Abs(yDistance) >= threshold.y)
+        {
+            newPosition.y = Mathf.Clamp(followedObjectPosition.y + yOffset, yMinClamp, yMaxClamp);
+        }
+        else
+        {
+            newPosition.y = Mathf.Clamp(transform.position.y, yMinClamp, yMaxClamp);
+        }
+    }
+    private void RefreshCameraOrthographicSize()
+    {
+        Camera.main.orthographicSize = orthographicSize;
+    }
+    private void RefreshCameraSpeed()
+    {
+        moveSpeed = rigidBody.velocity.magnitude > speed ? rigidBody.velocity.magnitude : speed;
+    }
+    private void RefreshCameraPositionOrMovement()
+    {
+        transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeed * Time.deltaTime);
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
