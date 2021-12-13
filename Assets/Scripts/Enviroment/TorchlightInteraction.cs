@@ -16,10 +16,17 @@ public class TorchlightInteraction : MonoBehaviour
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
         isBurning = true;
-
     }
 
     private void Update()
+    {
+        GivePlayerJumpsAndDeactivate();
+
+        Reactivate();
+    }
+
+
+    private void GivePlayerJumpsAndDeactivate()
     {
         if (isPlayerClose && isBurning)
         {
@@ -31,8 +38,10 @@ public class TorchlightInteraction : MonoBehaviour
                 child.gameObject.SetActive(false);
             }
         }
-
-        if (playerScript.playerDead || playerScript.respawned || playerScript.refilled)
+    }
+    private void Reactivate()
+    {
+        if (playerScript.dead || playerScript.respawned || playerScript.refilled)
         {
             isBurning = true;
             foreach (Transform child in transform)

@@ -28,43 +28,66 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        ChangeCamera();
+    }
+
+    private void ChangeCamera()
+    {
         if (changeCamera)
         {
-            if (cameraScript.previousOrthograficSize > targetOrthographicSize)
-            {
-                if (progresiveCameraMovement > 0)
-                {
-                    progresiveCameraMovement *= -1;
-                }
-                    shrinkOrtSize = true;
-            }
-            else if (cameraScript.previousOrthograficSize < targetOrthographicSize)
-            {
-                if (progresiveCameraMovement < 0)
-                {
-                    progresiveCameraMovement *= -1;
-                }
-                expandOrtSize = true;
-            }
+            HandleZoomInConditions();
+            HandleZoomOutConditions();
 
-
-            if (expandOrtSize || shrinkOrtSize) cameraScript.orthographicSize += progresiveCameraMovement;
-
-
-            if (cameraScript.orthographicSize >= targetOrthographicSize && expandOrtSize)
-            {
-                cameraScript.orthographicSize = targetOrthographicSize;
-                changeCamera = false;
-                expandOrtSize = false;
-            }
-            else if (cameraScript.orthographicSize <= targetOrthographicSize && shrinkOrtSize)
-            {
-                cameraScript.orthographicSize = targetOrthographicSize;
-                changeCamera = false;
-                shrinkOrtSize = false;
-            }
+            MoveCameraProgressively();
+            CheckMaximumZoomInValueAndStopChanging();
+            CheckMaximumZoomOutValueAndStopChanging();
         }
+    }
 
+    private void CheckMaximumZoomInValueAndStopChanging()
+    {
+        if (cameraScript.orthographicSize <= targetOrthographicSize && shrinkOrtSize)
+        {
+            cameraScript.orthographicSize = targetOrthographicSize;
+            changeCamera = false;
+            shrinkOrtSize = false;
+        }
+    }
+    private void CheckMaximumZoomOutValueAndStopChanging()
+    {
+        if (cameraScript.orthographicSize >= targetOrthographicSize && expandOrtSize)
+        {
+            cameraScript.orthographicSize = targetOrthographicSize;
+            changeCamera = false;
+            expandOrtSize = false;
+        }
+    }
+
+    private void HandleZoomInConditions()
+    {
+        if (cameraScript.previousOrthograficSize > targetOrthographicSize)
+        {
+            if (progresiveCameraMovement > 0)
+            {
+                progresiveCameraMovement *= -1;
+            }
+            shrinkOrtSize = true;
+        }
+    }
+    private void HandleZoomOutConditions()
+    {
+        if (cameraScript.previousOrthograficSize < targetOrthographicSize)
+        {
+            if (progresiveCameraMovement < 0)
+            {
+                progresiveCameraMovement *= -1;
+            }
+            expandOrtSize = true;
+        }
+    }
+    private void MoveCameraProgressively()
+    {
+        if (expandOrtSize || shrinkOrtSize) cameraScript.orthographicSize += progresiveCameraMovement;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

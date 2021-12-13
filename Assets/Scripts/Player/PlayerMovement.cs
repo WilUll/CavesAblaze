@@ -10,8 +10,9 @@ public class PlayerMovement : MonoBehaviour
     DashController dash;
     GameObject ropeObj;
 
-    public bool isGrounded, playerDead, respawned, refilled, 
+    public bool isGrounded, dead, respawned, refilled, 
                 isAttached, jumping, oneDashOnAir;
+
     public float xAxis, yAxis, speed;
     public float holdJumpPower, minJumpPower, jumpTimerValue;
     public int maxJumps, jumpsLeft;
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         jumpsLeft = maxJumps;
 
-        playerDead = false;
+        dead = false;
     }
 
     void Update()
@@ -46,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
         Respawn();
 
         CheckIfJumping();
-
     }
 
 
@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 CalculateHoldJumpPower();
+                SetTrueJumpConditions();
             }
         }
         else if (isAttached)
@@ -93,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
             {
                 CalculateHoldJumpPower();
+                SetTrueJumpConditions();
                 Detach();
             }
         }
@@ -136,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void SetTrueJumpConditions()
     {
-        oneDashOnAir = true;
+        //oneDashOnAir = true;
         jumping = true;
     }
 
@@ -160,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void CheckIfJumping()
     {
-        if (jumpTimer <= 0 || isGrounded) jumping = false;
+        if (isGrounded) jumping = false;
     }
 
 
@@ -196,25 +198,11 @@ public class PlayerMovement : MonoBehaviour
                 Attach(other.gameObject.GetComponent<Rigidbody2D>());
             }
         }
-
-        if (other.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-
         //Destroys jumpflames
         if (other.CompareTag("jumpFlames") && jumpTimer <= 0)
         {
             Destroy(other.gameObject);
             jumpsLeft++;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Ground"))
-        {
-            isGrounded = false;
         }
     }
 
@@ -225,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
 
-            playerDead = true;
+            dead = true;
         }
     }
 
@@ -233,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Water")
         {
-            playerDead = false;
+            dead = false;
         }
     }
 
