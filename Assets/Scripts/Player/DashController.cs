@@ -43,8 +43,6 @@ public class DashController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)
         {
-            if (playerScript.oneDashOnAir)
-            {
                 dashOn = true;
                 playerScript.oneDashOnAir = true;
 
@@ -52,7 +50,6 @@ public class DashController : MonoBehaviour
                 playerMove = new Vector2(lastDirection, playerScript.yAxis);
                 playerMove.Normalize();
                 rb.gravityScale = 0;
-            }
         }
 
         if (dashOn)
