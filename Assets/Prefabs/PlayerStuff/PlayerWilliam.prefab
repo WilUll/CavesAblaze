@@ -483,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3894987958512303681}
   - component: {fileID: 3894987958512303686}
+  - component: {fileID: 7282870493760530599}
   m_Layer: 6
   m_Name: JumpFlamesCatcher
   m_TagString: Untagged
@@ -530,3 +531,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31246692, y: 0.8601934}
   m_EdgeRadius: 0
+--- !u!114 &7282870493760530599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3894987958512303680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdfb0bc71653044b9f306df491cbf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
