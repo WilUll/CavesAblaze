@@ -20,6 +20,10 @@ public class AnimationController : MonoBehaviour
         JumpAnimation();
     }
 
+    private void SetAnimatorFloatSpeed()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+    }
     private void DefineRunAndWaitingAnimations()
     {
         //Move Animation
@@ -43,10 +47,6 @@ public class AnimationController : MonoBehaviour
         }
     }
 
-    private void SetAnimatorFloatSpeed()
-    {
-        animator.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
-    }
 
     private void WaitingAnimation()
     {

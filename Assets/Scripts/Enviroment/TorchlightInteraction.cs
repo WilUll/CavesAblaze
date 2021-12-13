@@ -41,7 +41,7 @@ public class TorchlightInteraction : MonoBehaviour
     }
     private void Reactivate()
     {
-        if (playerScript.playerDead || playerScript.respawned || playerScript.refilled)
+        if (playerScript.dead || playerScript.respawned || playerScript.refilled)
         {
             isBurning = true;
             foreach (Transform child in transform)
