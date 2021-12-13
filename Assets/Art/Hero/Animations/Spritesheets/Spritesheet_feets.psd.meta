@@ -1,40 +1,28 @@
 fileFormatVersion: 2
-guid: c75d4ac7793493f468a3cd1607c66774
+guid: 46bafff8b36788346b9c4762fc066e8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1713354257685217573
-    second: Hero_Jump Animation_head_0
+      213: -8581981563419124827
+    second: Spritesheet_feets_232x534_0
   - first:
-      213: -2577058287906340704
-    second: Hero_Jump Animation_head_1
+      213: -4377618080443312028
+    second: Spritesheet_feets_232x534_1
   - first:
-      213: -1912871090202376837
-    second: Hero_Jump Animation_head_2
+      213: -8944139187155419491
+    second: Spritesheet_feets_232x534_2
   - first:
-      213: 3354315702771165478
-    second: Hero_Jump Animation_head_3
+      213: 7662595415684416241
+    second: Spritesheet_feets_232x534_3
   - first:
-      213: -7336923613389073501
-    second: Hero_Jump Animation_head_4
+      213: -4840231187259796635
+    second: Spritesheet_feets_232x534_4
   - first:
-      213: 7453120257608889478
-    second: Hero_Jump Animation_head_5
+      213: -852886689427013203
+    second: Spritesheet_feets_232x534_5
   - first:
-      213: 7004258152001202292
-    second: Hero_Jump Animation_head_6
-  - first:
-      213: -4547622667047638572
-    second: Hero_Jump Animation_head_7
-  - first:
-      213: -952267476847936703
-    second: Hero_Jump Animation_head_8
-  - first:
-      213: -3422125329196333804
-    second: Hero_Jump Animation_head_9
-  - first:
-      213: -5305363498977031368
-    second: Hero_Jump Animation_head_10
+      213: -5561140836068050142
+    second: Spritesheet_feets_232x534_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -79,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 480
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,13 +112,139 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero_Jump Animation_head_0
+      name: Spritesheet_feets_232x534_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 461
+        width: 232
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab9373cc3da6e880800000000000000
+      internalID: -8581981563419124827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 231
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46859d8ac839f33c0800000000000000
+      internalID: -4377618080443312028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 232
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e33ff1cc800e380800000000000000
+      internalID: -8944139187155419491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 232
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f20861bee1075a60800000000000000
+      internalID: 7662595415684416241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 232
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563dc9c316b04dcb0800000000000000
+      internalID: -4840231187259796635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 232
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da14b032310f924f0800000000000000
+      internalID: -852886689427013203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_feets_232x534_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 584
-        height: 437
+        width: 232
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,218 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5210bbf9e9e07c710800000000000000
-      internalID: 1713354257685217573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_1
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a0cdd714237c3cd0800000000000000
-      internalID: -2577058287906340704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_2
-      rect:
-        serializedVersion: 2
-        x: 1168
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b758f57d0ed1475e0800000000000000
-      internalID: -1912871090202376837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_3
-      rect:
-        serializedVersion: 2
-        x: 1752
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 629a0381c5cec8e20800000000000000
-      internalID: 3354315702771165478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_4
-      rect:
-        serializedVersion: 2
-        x: 2336
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a3d4c7a8d20e2a90800000000000000
-      internalID: -7336923613389073501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_5
-      rect:
-        serializedVersion: 2
-        x: 2920
-        y: 0
-        width: 582
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 684bb0fc26dce6760800000000000000
-      internalID: 7453120257608889478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_6
-      rect:
-        serializedVersion: 2
-        x: 3504
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4786a29ddaf143160800000000000000
-      internalID: 7004258152001202292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_7
-      rect:
-        serializedVersion: 2
-        x: 4088
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d96c16574993e0c0800000000000000
-      internalID: -4547622667047638572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_8
-      rect:
-        serializedVersion: 2
-        x: 4672
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14b325f66cdd8c2f0800000000000000
-      internalID: -952267476847936703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_9
-      rect:
-        serializedVersion: 2
-        x: 5256
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 415c260f42b2280d0800000000000000
-      internalID: -3422125329196333804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hero_Jump Animation_head_10
-      rect:
-        serializedVersion: 2
-        x: 5840
-        y: 0
-        width: 584
-        height: 437
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83b8627b1009f56b0800000000000000
-      internalID: -5305363498977031368
+      spriteID: 22bbe30bfdbd2d2b0800000000000000
+      internalID: -5561140836068050142
       vertices: []
       indices: 
       edges: []

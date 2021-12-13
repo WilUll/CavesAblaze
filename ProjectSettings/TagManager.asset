@@ -17,15 +17,16 @@ TagManager:
   - CameraController
   - SceneManager
   - Flame
+  - Lava
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - JumpFlames
+  - Bonfires
   - 
   - 
   - 
@@ -51,6 +52,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bonfire
+    uniqueID: 988665135
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4139921627
     locked: 0
