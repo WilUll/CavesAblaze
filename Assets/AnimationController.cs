@@ -13,8 +13,16 @@ public class AnimationController : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+        //Set the float that handles Run and waiting animations
+        SetAnimatorFloatSpeed();
 
+        DefineRunAndWaitingAnimations();
+        JumpAnimation();
+    }
+
+    private void DefineRunAndWaitingAnimations()
+    {
+        //Move Animation
         if (playerScript.xAxis < 0)
         {
             playerSpriteRenderer.flipX = true;
@@ -27,19 +35,19 @@ public class AnimationController : MonoBehaviour
             animator.SetBool("IsWaiting", false);
             waitingAnimationTime = resetWaitingAnimTime;
         }
+        //Waiting Animation
         else if (playerScript.xAxis == 0)
         {
             waitingAnimationTime -= Time.deltaTime;
             if (waitingAnimationTime <= 0) WaitingAnimation();
         }
-
-        if (playerScript.jumping)
-        {
-            animator.SetBool("IsJumping", true);
-        }
-
-        JumpAnimation();
     }
+
+    private void SetAnimatorFloatSpeed()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+    }
+
     private void WaitingAnimation()
     {
         animator.SetBool("IsWaiting", true);
@@ -49,6 +57,10 @@ public class AnimationController : MonoBehaviour
         if (playerScript.isGrounded)
         {
             animator.SetBool("IsJumping", false);
+        }
+        else if (playerScript.jumping)
+        {
+            animator.SetBool("IsJumping", true);
         }
     }
 }
