@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4494343330422731478}
   - component: {fileID: 4494343330422731481}
   - component: {fileID: 5131895446483865111}
-  - component: {fileID: 3844646735838121589}
-  m_Layer: 0
+  - component: {fileID: 7845242854235123983}
+  m_Layer: 4
   m_Name: WaterDrop
   m_TagString: WaterDrop
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3844646735838121589
+--- !u!114 &7845242854235123983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
