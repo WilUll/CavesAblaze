@@ -17,7 +17,6 @@ public class CheckGround : MonoBehaviour
         if (other.CompareTag("Ground"))
         {
             playerScript.isGrounded = true;
-            Debug.Log("Grounded");
         }
     }
     private void OnTriggerExit2D(Collider2D other)
