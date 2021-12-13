@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class WaterDropController : MonoBehaviour
 {
-
+    GameObject player;
+    PlayerMovement playerScript;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<PlayerMovement>();
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -16,6 +22,7 @@ public class WaterDropController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            playerScript.jumpsLeft--;
 
         }
     }
