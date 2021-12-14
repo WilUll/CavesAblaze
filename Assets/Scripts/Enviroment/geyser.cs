@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class geyser : MonoBehaviour
 {
-    private float boost = 25f;
+    public float boost = 25f;
     
     private void OnCollisionEnter2D(Collision2D other)
     {
