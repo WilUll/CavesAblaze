@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterGeyser : MonoBehaviour
 {
     GameObject waterSprite;
-    Transform startPos, endPos;
+    public int startPos, endPos;
     float startSpeed, backSpeed;
     bool isPlayerClose;
     bool isShooting = false;
