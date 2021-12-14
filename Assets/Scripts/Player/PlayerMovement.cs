@@ -97,6 +97,14 @@ public class PlayerMovement : MonoBehaviour
                 SetTrueJumpConditions();
                 Detach();
             }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                ClimbRope(1);
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                ClimbRope(-1);
+            }
         }
     }
     private void SwingInRope()
@@ -113,7 +121,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    private void ClimbRope(int dir)
+    {
+        RopeSegment ropeConnect = transform.parent.gameObject.GetComponent<RopeSegment>();
+        GameObject newSeg = null;
+        if (dir > 0)
+        {
+            if(ropeConnect.connectedAbove !=null && ropeConnect.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
+            {
+                Debug.Log(ropeObj.GetComponent<RopeSegment>());
+                newSeg = ropeConnect.connectedAbove;
+            }
+        }
+        else
+        {
+            if (ropeConnect.connectedBelow != null)
+            {
+                newSeg = ropeConnect.connectedBelow;
+            }
+        }
+        if (newSeg != null)
+        {
+            Detach();
+            Attach(newSeg.GetComponent<Rigidbody2D>());
+        }
+    }
     private void RunJumpTimer()
     {
         if (jumpTimer >= 0) jumpTimer -= Time.deltaTime;
@@ -170,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
     public void Attach(Rigidbody2D ropeBone)
     {
         ropeObj = ropeBone.gameObject;
+        ropeObj.GetComponent<RopeSegment>().isPlayerConnected = true;
         isAttached = true;
         gameObject.transform.parent = ropeBone.transform;
     }
@@ -177,14 +210,17 @@ public class PlayerMovement : MonoBehaviour
     //Detaches player from the rope and enables rb
     public void Detach()
     {
+        ropeObj = transform.parent.gameObject;
         gameObject.transform.parent = null;
         StartCoroutine(varTimer());
         IEnumerator varTimer()
         {
+            ropeObj.GetComponent<RopeSegment>().isPlayerConnected = false;
             varSet = false;
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
             playerRB.gravityScale = 4;
+
         }
     }
 
