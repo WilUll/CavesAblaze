@@ -14,10 +14,10 @@ public class PlayerMovement : MonoBehaviour
                 isAttached, jumping, oneDashOnAir;
 
     public float xAxis, yAxis, speed;
-    public float holdJumpPower, minJumpPower, jumpTimerValue;
-    public int maxJumps, jumpsLeft;
+    public float holdJumpPower, minJumpPower, jumpTimerValue, jumpTimer, jumpsLeft;
+    public int maxJumps;
 
-    float jumpTimer;
+   
     bool varSet = false;
     Vector3 offsetFlames;
 
@@ -197,12 +197,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 Attach(other.gameObject.GetComponent<Rigidbody2D>());
             }
-        }
-        //Destroys jumpflames
-        if (other.CompareTag("jumpFlames") && jumpTimer <= 0)
-        {
-            Destroy(other.gameObject);
-            jumpsLeft++;
         }
     }
 
