@@ -55,7 +55,10 @@ public class CheckpointSystem : MonoBehaviour
     }
     public void RespawnPlayer()
     {
-        playerScript.Detach();
+        if (playerScript.isAttached)
+        {
+            playerScript.Detach();
+        }
         for (int i = 0; i < checkpoints.Length; i++)
         {
             CheckpointSystem checkpointScript = checkpoints[i].GetComponent<CheckpointSystem>();
