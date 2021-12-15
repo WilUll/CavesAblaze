@@ -15,8 +15,7 @@ public class DashWallsDestroy : MonoBehaviour
 
     BoxCollider2D boxColliderSprite0And1;
     PolygonCollider2D polygonColliderSprite2;
-    CircleCollider2D circleColliderSprite3;
-    CapsuleCollider2D capsuleCollider2DSprite3;
+    
     SpriteRenderer spriteRenderer;
     GameObject particleShatter;
     ParticleSystem shatter;
@@ -26,9 +25,7 @@ public class DashWallsDestroy : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         boxColliderSprite0And1 = gameObject.GetComponent<BoxCollider2D>();
         polygonColliderSprite2 = gameObject.GetComponent<PolygonCollider2D>();
-        circleColliderSprite3 = gameObject.GetComponent<CircleCollider2D>();
-        capsuleCollider2DSprite3 = gameObject.GetComponent<CapsuleCollider2D>();
-        particleShatter = GameObject.FindGameObjectWithTag("ShatterParticles");
+        particleShatter = gameObject.transform.Find("ParticlesShatter").gameObject;
         shatter = particleShatter.GetComponent<ParticleSystem>();
 
         spriteRenderer.sprite = spriteArray[indexNumber];
@@ -84,9 +81,8 @@ public class DashWallsDestroy : MonoBehaviour
     }
     private void PlayParticleAnimation()
     {
-        //SelectParticlePosition(indexNumber);
-
         shatter.Play();
+        Debug.Log("play");
     }
     private void HandleColliders(int indexNumber)
     {
@@ -95,35 +91,20 @@ public class DashWallsDestroy : MonoBehaviour
             case 0:
                 boxColliderSprite0And1.enabled = true;
                 polygonColliderSprite2.enabled = false;
-                circleColliderSprite3.enabled = false;
-                capsuleCollider2DSprite3.enabled = false;
                 break;
             case 1:
                 boxColliderSprite0And1.enabled = true;
                 polygonColliderSprite2.enabled = false;
-                circleColliderSprite3.enabled = false;
-                capsuleCollider2DSprite3.enabled = false;
                 break;
             case 2:
                 boxColliderSprite0And1.enabled = false;
                 polygonColliderSprite2.enabled = true;
-                circleColliderSprite3.enabled = false;
-                capsuleCollider2DSprite3.enabled = false;
                 break;
             case 3:
                 boxColliderSprite0And1.enabled = false;
                 polygonColliderSprite2.enabled = false;
-                circleColliderSprite3.enabled = true;
-                capsuleCollider2DSprite3.enabled = true;
                 break;
         }
 
     }
-
-    private void SelectParticlePosition(int indexNumber)
-    {
-        if (indexNumber == 2) particleShatter.transform.position *= -1;
-    }
-
-    
 }
