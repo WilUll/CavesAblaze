@@ -8885,7 +8885,7 @@ GameObject:
   - component: {fileID: 834927260}
   - component: {fileID: 834927262}
   - component: {fileID: 834927263}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GeyserWater
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -8999,7 +8999,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834927258}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
