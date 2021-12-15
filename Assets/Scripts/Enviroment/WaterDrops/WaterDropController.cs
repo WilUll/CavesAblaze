@@ -6,10 +6,13 @@ public class WaterDropController : MonoBehaviour
 {
     GameObject player;
     PlayerMovement playerScript;
+    public GameObject jumpFlames;
+    Vector3 offsetFlames;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<PlayerMovement>();
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -21,10 +24,18 @@ public class WaterDropController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
+
             Destroy(gameObject);
             playerScript.jumpsLeft--;
+            Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
 
         }
+    }
+
+    private void Setflamesoffset()
+    {
+        offsetFlames = player.transform.position;
+        offsetFlames.y -= 0.2f;
     }
 
 }
