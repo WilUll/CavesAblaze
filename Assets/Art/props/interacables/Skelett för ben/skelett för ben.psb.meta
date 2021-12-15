@@ -1,0 +1,441 @@
+fileFormatVersion: 2
+guid: 1922948436d4ba14bbf6d257786a0b80
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: V underben
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1524
+      width: 521
+      height: 1779
+    spriteID: ffa9f7d1ab3df614ab1567eba07378c5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -248, y: 1524}
+  - name: "V l\xE5rben"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2428
+      y: 4
+      width: 382
+      height: 1373
+    spriteID: 557e66ed22487124bafe65cc39d4e48d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1893, y: -1599}
+  - name: H underben
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1524
+      width: 483
+      height: 1796
+    spriteID: 1096a8b0e2106244084525b9b79429e2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -964, y: 1524}
+  - name: "H l\xE5rben"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3223
+      y: 4
+      width: 366
+      height: 1355
+    spriteID: 00534390d0f6ab046bfce0411a6655db
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1851, y: -1617}
+  - name: "h\xF6ft"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 4
+      width: 820
+      height: 659
+    spriteID: e9fdc07db8a398249adc1e5e254fd6d7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 874, y: -2652}
+  - name: "br\xF6st"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1147
+      height: 1512
+    spriteID: 441d2cf88c6a9ed48b6039d8f9bc6bc1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -574, y: -3154}
+  - name: V underarm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2818
+      y: 4
+      width: 397
+      height: 1284
+    spriteID: 1d00d1f0451c6e0419c6c6d7e43869a0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2585, y: -2213}
+  - name: "V \xF6verarm"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3597
+      y: 4
+      width: 363
+      height: 1066
+    spriteID: 3967a0a186729ba4a806206e152a3aec
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3244, y: -3444}
+  - name: H underarm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1159
+      y: 4
+      width: 433
+      height: 1272
+    spriteID: 2c7266ac3b8d4914d8c028ed70ba069e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -463, y: -2213}
+  - name: "H \xF6verarm"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1524
+      width: 283
+      height: 1037
+    spriteID: 47916d2462095724d8360f04e6cbf077
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -532, y: -1915}
+  - name: huvud
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1600
+      y: 671
+      width: 580
+      height: 813
+    spriteID: d89827a59f6330b46b799628d53baf37
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 732, y: -3999}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 2289, y: 5483}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 4096
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: V underben
+    spriteName: V underben
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ffa9f7d1ab3df614ab1567eba07378c5
+    layerID: 29
+    mosaicPosition: {x: 4, y: 1524}
+  - name: "V l\xE5rben"
+    spriteName: "V l\xE5rben"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 557e66ed22487124bafe65cc39d4e48d
+    layerID: 28
+    mosaicPosition: {x: 2428, y: 4}
+  - name: H underben
+    spriteName: H underben
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1096a8b0e2106244084525b9b79429e2
+    layerID: 27
+    mosaicPosition: {x: 533, y: 1524}
+  - name: "H l\xE5rben"
+    spriteName: "H l\xE5rben"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 00534390d0f6ab046bfce0411a6655db
+    layerID: 26
+    mosaicPosition: {x: 3223, y: 4}
+  - name: "h\xF6ft"
+    spriteName: "h\xF6ft"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e9fdc07db8a398249adc1e5e254fd6d7
+    layerID: 25
+    mosaicPosition: {x: 1600, y: 4}
+  - name: "br\xF6st"
+    spriteName: "br\xF6st"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 441d2cf88c6a9ed48b6039d8f9bc6bc1
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+  - name: V underarm
+    spriteName: V underarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1d00d1f0451c6e0419c6c6d7e43869a0
+    layerID: 23
+    mosaicPosition: {x: 2818, y: 4}
+  - name: "V \xF6verarm"
+    spriteName: "V \xF6verarm"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3967a0a186729ba4a806206e152a3aec
+    layerID: 22
+    mosaicPosition: {x: 3597, y: 4}
+  - name: H underarm
+    spriteName: H underarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2c7266ac3b8d4914d8c028ed70ba069e
+    layerID: 21
+    mosaicPosition: {x: 1159, y: 4}
+  - name: "H \xF6verarm"
+    spriteName: "H \xF6verarm"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 47916d2462095724d8360f04e6cbf077
+    layerID: 20
+    mosaicPosition: {x: 1024, y: 1524}
+  - name: huvud
+    spriteName: huvud
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d89827a59f6330b46b799628d53baf37
+    layerID: 19
+    mosaicPosition: {x: 1600, y: 671}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: "skelett f\xF6r ben Texture"
+  prefabAssetName: "skelett f\xF6r ben Prefab"
+  spriteLibAssetName: "skelett f\xF6r ben Sprite Lib"
+  secondarySpriteTextures: []
