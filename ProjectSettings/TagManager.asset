@@ -19,6 +19,7 @@ TagManager:
   - Flame
   - Lava
   - Ladder
+  - ShatterParticles
   layers:
   - Default
   - TransparentFX

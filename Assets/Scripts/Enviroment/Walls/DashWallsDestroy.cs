@@ -7,7 +7,7 @@ public class DashWallsDestroy : MonoBehaviour
 {
     public int wallHP = 3;
     public Sprite[] spriteArray;
-    public float timerReset;
+    public float timerReset, xPositionSprites012, xPositionSprite3;
 
     float timer;
 
@@ -18,6 +18,7 @@ public class DashWallsDestroy : MonoBehaviour
     CircleCollider2D circleColliderSprite3;
     CapsuleCollider2D capsuleCollider2DSprite3;
     SpriteRenderer spriteRenderer;
+    GameObject particleShatter;
     ParticleSystem shatter;
 
     private void Start()
@@ -27,7 +28,8 @@ public class DashWallsDestroy : MonoBehaviour
         polygonColliderSprite2 = gameObject.GetComponent<PolygonCollider2D>();
         circleColliderSprite3 = gameObject.GetComponent<CircleCollider2D>();
         capsuleCollider2DSprite3 = gameObject.GetComponent<CapsuleCollider2D>();
-        shatter = gameObject.GetComponent<ParticleSystem>();
+        particleShatter = GameObject.FindGameObjectWithTag("ShatterParticles");
+        shatter = particleShatter.GetComponent<ParticleSystem>();
 
         spriteRenderer.sprite = spriteArray[indexNumber];
     }
@@ -56,13 +58,36 @@ public class DashWallsDestroy : MonoBehaviour
         {
             ResetTimer();
             ReduceHP();
-            DestroyCrystal();
             NextSprite();
             PlayParticleAnimation();
             HandleColliders(indexNumber);
         }
     }
 
+
+    private void RunTimer()
+    {
+        if (timer > 0) timer -= Time.deltaTime;
+    }
+    private void ResetTimer()
+    {
+        timer = timerReset;
+    }
+    private void ReduceHP()
+    {
+        wallHP--;
+    }
+    private void NextSprite()
+    {
+        indexNumber++;
+        spriteRenderer.sprite = spriteArray[indexNumber];
+    }
+    private void PlayParticleAnimation()
+    {
+        //SelectParticlePosition(indexNumber);
+
+        shatter.Play();
+    }
     private void HandleColliders(int indexNumber)
     {
         switch (indexNumber)
@@ -95,35 +120,10 @@ public class DashWallsDestroy : MonoBehaviour
 
     }
 
-    private void RunTimer()
+    private void SelectParticlePosition(int indexNumber)
     {
-        if (timer > 0) timer -= Time.deltaTime;
-    }
-    private void ResetTimer()
-    {
-        timer = timerReset;
+        if (indexNumber == 2) particleShatter.transform.position *= -1;
     }
 
-    private void PlayParticleAnimation()
-    {
-        shatter.Play();
-    }
-
-    private void NextSprite()
-    {
-        indexNumber++;
-        spriteRenderer.sprite = spriteArray[indexNumber];
-    }
-
-    private void ReduceHP()
-    {
-        wallHP--;
-    }
-    private void DestroyCrystal()
-    {
-        if (wallHP <= 0)
-        {
-            boxColliderSprite0And1.enabled = false;
-        }
-    }
+    
 }
