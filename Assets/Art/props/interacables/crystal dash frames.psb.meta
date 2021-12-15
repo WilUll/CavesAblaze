@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5e3e247d9f206d499551baf5dbf7d8b
+guid: 4e641c847e36bd74fb08e2fa286d2d4f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 1967
       width: 490
       height: 1944
-    spriteID: 6ec10419659ab544ebf0b5f111faf95a
+    spriteID: d3565639adfac6248b2395d7d28189eb
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -124,7 +124,7 @@ ScriptedImporter:
       y: 4
       width: 559
       height: 1955
-    spriteID: b300813ad45c58d40b69485421b4700f
+    spriteID: 1ff551f68fb1cc94c9d3b5d149a170d6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -146,7 +146,7 @@ ScriptedImporter:
       y: 1967
       width: 559
       height: 1955
-    spriteID: 0599e7f31c49905429c89bd993133a30
+    spriteID: 13eeacb355d5e4f48bfa8aa252729f3f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -168,7 +168,7 @@ ScriptedImporter:
       y: 4
       width: 559
       height: 1955
-    spriteID: bb00ba5bed4243644b2feb7775fe8950
+    spriteID: 4ce0c82244f4ba347b3e3c240685ac8d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -209,7 +209,7 @@ ScriptedImporter:
     spriteName: dash three up
     isGroup: 0
     parentIndex: 0
-    spriteID: 6ec10419659ab544ebf0b5f111faf95a
+    spriteID: d3565639adfac6248b2395d7d28189eb
     layerID: 10
     mosaicPosition: {x: 571, y: 1967}
   - name: dash two Frame
@@ -223,7 +223,7 @@ ScriptedImporter:
     spriteName: dash two
     isGroup: 0
     parentIndex: 2
-    spriteID: b300813ad45c58d40b69485421b4700f
+    spriteID: 1ff551f68fb1cc94c9d3b5d149a170d6
     layerID: 6
     mosaicPosition: {x: 4, y: 4}
   - name: dash one Frame
@@ -237,7 +237,7 @@ ScriptedImporter:
     spriteName: dash one
     isGroup: 0
     parentIndex: 4
-    spriteID: 0599e7f31c49905429c89bd993133a30
+    spriteID: 13eeacb355d5e4f48bfa8aa252729f3f
     layerID: 5
     mosaicPosition: {x: 4, y: 1967}
   - name: '  Frame'
@@ -251,7 +251,7 @@ ScriptedImporter:
     spriteName: ' '
     isGroup: 0
     parentIndex: 6
-    spriteID: bb00ba5bed4243644b2feb7775fe8950
+    spriteID: 4ce0c82244f4ba347b3e3c240685ac8d
     layerID: 4
     mosaicPosition: {x: 571, y: 4}
   characterData:
