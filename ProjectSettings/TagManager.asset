@@ -18,6 +18,7 @@ TagManager:
   - SceneManager
   - Flame
   - Lava
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -58,6 +59,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Water
+  - name: Player
     uniqueID: 4139921627
     locked: 0
