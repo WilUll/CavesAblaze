@@ -11,7 +11,7 @@ public class DashWallsDestroy : MonoBehaviour
 
     float timer;
 
-    int indexNumber = 0;
+    public int indexNumber = 0;
 
     BoxCollider2D boxColliderSprite0And1;
     PolygonCollider2D polygonColliderSprite2;
@@ -20,13 +20,18 @@ public class DashWallsDestroy : MonoBehaviour
     GameObject particleShatter;
     ParticleSystem shatter;
 
+    DashCrystalLightController lightPickSprite;
+
     private void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         boxColliderSprite0And1 = gameObject.GetComponent<BoxCollider2D>();
         polygonColliderSprite2 = gameObject.GetComponent<PolygonCollider2D>();
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         particleShatter = gameObject.transform.Find("ParticlesShatter").gameObject;
         shatter = particleShatter.GetComponent<ParticleSystem>();
+
+        lightPickSprite = gameObject.GetComponent<DashCrystalLightController>();
 
         spriteRenderer.sprite = spriteArray[indexNumber];
     }
@@ -58,9 +63,9 @@ public class DashWallsDestroy : MonoBehaviour
             NextSprite();
             PlayParticleAnimation();
             HandleColliders(indexNumber);
+            lightPickSprite.HandleLights(indexNumber);
         }
     }
-
 
     private void RunTimer()
     {
