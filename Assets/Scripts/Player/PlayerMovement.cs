@@ -220,7 +220,6 @@ public class PlayerMovement : MonoBehaviour
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
             playerRB.gravityScale = 4;
-
         }
     }
 
@@ -257,6 +256,3 @@ public class PlayerMovement : MonoBehaviour
 
 
 }
-
-
-
