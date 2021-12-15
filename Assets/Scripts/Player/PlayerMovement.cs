@@ -5,20 +5,21 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject jumpFlames;
-    
+
     Rigidbody2D playerRB;
     DashController dash;
     GameObject ropeObj;
 
-    public bool isGrounded, dead, respawned, refilled, 
-                isAttached, jumping, oneDashOnAir;
+    public bool isGrounded, dead, respawned, refilled,
+                isAttached, jumping, oneDashOnAir, coroutineStart;
 
     public float xAxis, yAxis, speed;
     public float holdJumpPower, minJumpPower, jumpTimerValue, jumpTimer, jumpsLeft;
     public int maxJumps;
 
-   
+
     bool varSet = false;
+
     Vector3 offsetFlames;
 
     void Start()
@@ -68,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isAttached)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
             {
                 CalculateInitialJumpPower();
                 ResetJumpTimer();
@@ -77,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
             }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            if (Input.GetButton("Jump") && jumpTimer > 0)
             {
                 CalculateHoldJumpPower();
                 SetTrueJumpConditions();
@@ -85,25 +86,47 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (isAttached)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Jump"))
             {
                 CalculateInitialJumpPower();
                 ResetJumpTimer();
                 SetTrueJumpConditions();
             }
-            if (Input.GetKey(KeyCode.Space) && jumpTimer > 0)
+            if (Input.GetButton("Jump") && jumpTimer > 0)
             {
                 CalculateHoldJumpPower();
                 SetTrueJumpConditions();
                 Detach();
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (yAxis > 0)
             {
-                ClimbRope(1);
+                if (!coroutineStart)
+                {
+                    StartCoroutine(timer());
+
+                    IEnumerator timer()
+                    {
+                        coroutineStart = true;
+                        ClimbRope(1);
+                        yield return new WaitForSeconds(0.2f);
+                        coroutineStart = false;
+                    }
+                }
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (yAxis < 0)
             {
-                ClimbRope(-1);
+                if (!coroutineStart)
+                {
+                    StartCoroutine(timer());
+
+                    IEnumerator timer()
+                    {
+                        coroutineStart = true;
+                        ClimbRope(-1);
+                        yield return new WaitForSeconds(0.2f);
+                        coroutineStart = false;
+                    }
+                }
             }
         }
     }
@@ -127,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
         GameObject newSeg = null;
         if (dir > 0)
         {
-            if(ropeConnect.connectedAbove !=null && ropeConnect.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
+            if (ropeConnect.connectedAbove != null && ropeConnect.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
             {
                 Debug.Log(ropeObj.GetComponent<RopeSegment>());
                 newSeg = ropeConnect.connectedAbove;
@@ -228,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
         //Rope attach
         if (!isAttached)
         {
-            if (other.gameObject.tag=="Rope")
+            if (other.gameObject.tag == "Rope")
             {
                 Attach(other.gameObject.GetComponent<Rigidbody2D>());
             }

@@ -47,7 +47,7 @@ public class DashController : MonoBehaviour
                 playerScript.oneDashOnAir = true;
 
                 currentDashTime = dashTimeReset;
-                playerMove = new Vector2(lastDirection, playerScript.yAxis);
+                playerMove = new Vector2(lastDirection, 0);
                 playerMove.Normalize();
                 rb.gravityScale = 0;
         }
