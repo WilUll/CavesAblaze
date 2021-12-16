@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,10 +15,10 @@ public class DashController : MonoBehaviour
     Vector2 playerMove;
     float direction;
 
-    public bool dashOn;
+    public bool dashOn, wallCollisionDashOn;
 
-    public float cooldownReset;
-    float dashCooldown;
+    public float cooldownReset, cooldownWallBounceReset;
+    float dashCooldown, wallDasHCooldown;
 
     float startGrav;
     public float lastDirection;
@@ -28,46 +29,128 @@ public class DashController : MonoBehaviour
         playerScript = GetComponent<PlayerMovement>();
 
         startGrav = rb.gravityScale;
-        dashCooldown = cooldownReset;
+        ResetDashCooldown();
     }
 
 
     void Update()
     {
-        if(playerScript.xAxis != 0)
+        CheckLastXAxisDirection();
+
+        RunDashTimer();
+        HandleDashInputConditions();
+        HandleDashMovement();
+        Bounce();
+    }
+
+    private void CheckLastXAxisDirection()
+    {
+        if (playerScript.xAxis != 0)
         {
             lastDirection = playerScript.xAxis;
         }
+    }
 
+    private void RunDashTimer()
+    {
         dashCooldown -= Time.deltaTime;
-
+    }
+    private void HandleDashInputConditions()
+    {
         if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)
         {
-                dashOn = true;
-                playerScript.oneDashOnAir = true;
+            dashOn = true;
+            playerScript.oneDashOnAir = true;
 
-                currentDashTime = dashTimeReset;
-                playerMove = new Vector2(lastDirection, 0);
-                playerMove.Normalize();
-                rb.gravityScale = 0;
+            currentDashTime = dashTimeReset;
+            playerMove = new Vector2(lastDirection, 0);
+            playerMove.Normalize();
+            rb.gravityScale = 0;
         }
-
-        if (dashOn)
+    }
+    private void HandleDashMovement()
+    {
+        if (dashOn && !wallCollisionDashOn)
         {
-            if (playerScript.isAttached && currentDashTime >= dashTimeReset - 0.05)
-            {
-                playerScript.Detach();
-            }
+            DashDetachOfRope();
 
-            rb.velocity = (playerMove * dashSpeed);
-            currentDashTime -= Time.deltaTime;
-
-            if (currentDashTime <= 0)
-            {
-                dashOn = false;
-                rb.gravityScale = startGrav;
-                dashCooldown = cooldownReset;
-            }
+            SetDashSpeed();
+            RunDashTimeDuration();
+            ResetDashConditions();
         }
+    }
+
+    private void DashDetachOfRope()
+    {
+        if (playerScript.isAttached && currentDashTime >= dashTimeReset - 0.05)
+        {
+            playerScript.Detach();
+        }
+    }
+    private void SetDashSpeed()
+    {
+        rb.velocity = (playerMove * dashSpeed);
+    }
+    private void RunDashTimeDuration()
+    {
+        currentDashTime -= Time.deltaTime;
+    }
+    private void ResetDashConditions()
+    {
+        if (currentDashTime <= 0)
+        {
+            dashOn = false;
+            RestartGravity();
+            ResetDashCooldown();
+        }
+    }
+    private void ResetDashCooldown()
+    {
+        dashCooldown = cooldownReset;
+    }
+    private void RestartGravity()
+    {
+        rb.gravityScale = startGrav;
+    }
+
+    private void Bounce()
+    {
+        if(wallCollisionDashOn)
+        {
+            MovementBounce();
+            CheckDashWallTimer();
+        }
+    }
+
+    private void MovementBounce()
+    {
+        rb.velocity = (playerMove * dashSpeed * -1);
+    }
+    private void CheckDashWallTimer()
+    {
+        if (wallDasHCooldown <= 0)
+        {
+            ResetConditions();
+            RestartGravity();
+        }
+    }
+    private void ResetConditions()
+    {
+        dashOn = false;
+        wallCollisionDashOn = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("DashWall") && dashOn)
+        {
+            ActivateConditions();
+        }
+    }
+
+    private void ActivateConditions()
+    {
+        wallCollisionDashOn = true;
+        dashOn = true;
     }
 }

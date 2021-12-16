@@ -1122,11 +1122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3894987958384342652, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.88
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 3894987958384342652, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.67
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 3894987958429888959, guid: 52ebe31c8c6871c45ab907f40ba68988, type: 3}
       propertyPath: maxJumps
