@@ -180,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
     private void LimitJumpsLeft()
     {
         if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
+        if (jumpsLeft < 0) jumpsLeft = 0;
     }
 
 

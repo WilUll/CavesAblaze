@@ -14,9 +14,6 @@ public class DashCrystalLightController : MonoBehaviour
 
     public int index;
 
-    bool runFourthLight;
-
-    // Start is called before the first frame update
     void Start()
     {
         dashWallsScript = gameObject.GetComponent<DashWallsDestroy>();
@@ -26,8 +23,8 @@ public class DashCrystalLightController : MonoBehaviour
         GetChildrenLightObjects();
 
         SetMinimunIntensityToAllLights();
-
     }
+
     void Update()
     {
         index = dashWallsScript.indexNumber;
@@ -39,7 +36,6 @@ public class DashCrystalLightController : MonoBehaviour
         if (index == 3)
         {
             crystalLightsScripts[index + 1].intensity += intensityFluctuation;
-            runFourthLight = true;
         }
     }
     

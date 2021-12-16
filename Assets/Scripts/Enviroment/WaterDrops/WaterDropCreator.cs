@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class WaterDropCreator : MonoBehaviour
 {
-    public float dropDelay;
+    public float dropDelay, yOffset;
     public GameObject waterDrop;
+
+    Vector2 positionPlusYOffset;
 
     void Start()
     {
         InvokeRepeating("SpawnWaterDrop", dropDelay, dropDelay);
+
+        positionPlusYOffset.x = transform.position.x;
+        positionPlusYOffset.y = transform.position.y + yOffset;
     }
 
     void SpawnWaterDrop()
     {   
-       Instantiate(waterDrop, transform.position, Quaternion.identity);
+       Instantiate(waterDrop, positionPlusYOffset, Quaternion.identity);
     }
 
 }

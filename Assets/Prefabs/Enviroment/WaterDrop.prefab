@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02fc11e01b09ca48aa4aed7f21d08eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpFlames: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}

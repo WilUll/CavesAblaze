@@ -22,18 +22,18 @@ public class WaterDropController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            Destroy(gameObject);
-        }
 
         if (other.gameObject.CompareTag("Player"))
         {
 
             Destroy(gameObject);
             playerScript.jumpsLeft--;
-            Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
-
+            GameObject currentFlame = Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
+            currentFlame.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 4, ForceMode2D.Impulse);
+        }
+        else 
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -41,8 +41,8 @@ public class WaterDropController : MonoBehaviour
     private void Setflamesoffset()
     {
         offsetFlames = player.transform.position;
-        offsetFlames.y -= 0.2f;
-        offsetFlames.x -= 2f;
+        offsetFlames.y += 3f;
+        //offsetFlames.x -= 2f;
     }
 
 }
