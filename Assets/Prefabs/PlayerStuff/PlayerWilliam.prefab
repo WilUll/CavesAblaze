@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3894987957152265397}
   - component: {fileID: 3894987957152265396}
   - component: {fileID: 3894987957152265399}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3646436491fa8cd458a22f7a48540fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensityFluctuation: 0.004
-  outteRadiusFluctuation: 0.04
+  intensityFluctuation: 0.0004
+  outteRadiusFluctuation: 0.004
   minIntensity: 2.2
   maxIntensity: 3
   minOutterRadius: 2.2
@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 3894987958429888896}
   - component: {fileID: 3894987958429888899}
   - component: {fileID: 3894987958429888898}
-  - component: {fileID: 3894987958429888957}
   - component: {fileID: 3894987958429888956}
   - component: {fileID: 3894987958429888959}
   - component: {fileID: 3894987958429888958}
@@ -387,32 +386,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.31246692, y: 0.8601934}
-  m_EdgeRadius: 0
---- !u!61 &3894987958429888957
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3894987958429888953}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0040813833, y: -0.4182558}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7075, y: 0.7575}
-    newSize: {x: 0.7075, y: 0.7575}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.38495705, y: 0.1857748}
   m_EdgeRadius: 0
 --- !u!114 &3894987958429888956
 MonoBehaviour:
@@ -721,7 +694,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 0.1
   simulationSpeed: 1.7
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -784,7 +757,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
   randomSeed: 0
@@ -1338,7 +1311,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 2
     angle: 7.05
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1482,7 +1455,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 180
       mode: 0
       spread: 0
       speed:

@@ -160,14 +160,16 @@ public class DashController : MonoBehaviour
         wallCollisionDashOn = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.gameObject.CompareTag("DashWall") && dashOn)
+        if(other.gameObject.CompareTag("DashWall") && dashOn)
         {
+            Debug.Log("colision");
             ActivateConditions();
             ShakeCameraDashWall();
         }
     }
+
 
     private void ShakeCameraDashWall()
     {

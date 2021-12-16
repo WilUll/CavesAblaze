@@ -263,6 +263,7 @@ public class PlayerMovement : MonoBehaviour
         //If water, respawn player
         if (collision.gameObject.tag == "Water")
         {
+            Debug.Log("dead");
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
 
             dead = true;

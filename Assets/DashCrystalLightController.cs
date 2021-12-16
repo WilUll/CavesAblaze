@@ -12,7 +12,9 @@ public class DashCrystalLightController : MonoBehaviour
     public float intensityFluctuation;
     public float minIntensity, maxIntensity;
 
-    int index;
+    public int index;
+
+    bool runFourthLight;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +26,8 @@ public class DashCrystalLightController : MonoBehaviour
         GetChildrenLightObjects();
 
         SetMinimunIntensityToAllLights();
+
     }
-
-
     void Update()
     {
         index = dashWallsScript.indexNumber;
@@ -34,8 +35,13 @@ public class DashCrystalLightController : MonoBehaviour
         ChangeIntensity();
 
         crystalLightsScripts[index].intensity += intensityFluctuation;
-    }
 
+        if (index == 3)
+        {
+            crystalLightsScripts[index + 1].intensity += intensityFluctuation;
+            runFourthLight = true;
+        }
+    }
     
     private void CheckChilds()
     {

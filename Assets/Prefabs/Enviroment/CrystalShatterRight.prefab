@@ -177,9 +177,9 @@ GameObject:
   - component: {fileID: 1477526356113910004}
   - component: {fileID: 4403513923754698314}
   - component: {fileID: 4403513923754698313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrystalShatterRight
-  m_TagString: Untagged
+  m_TagString: DashWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
