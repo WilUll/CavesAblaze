@@ -14,14 +14,13 @@ public class ShakeCamera : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
-        
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            Shake(0.1f, 0.2f);
+            Shake(1f, 0.2f);
         }
     }
 

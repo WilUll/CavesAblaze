@@ -7,6 +7,8 @@ public class DashController : MonoBehaviour
 {
     Rigidbody2D rb;
     PlayerMovement playerScript;
+    ShakeCamera cameraShake;
+    Camera camera;
 
     public float dashSpeed;
     public float dashTimeReset;
@@ -18,7 +20,10 @@ public class DashController : MonoBehaviour
     public bool dashOn, wallCollisionDashOn;
 
     public float cooldownReset, wallBounceCooldownReset = 0.2f;
+
     float dashCooldown, wallDashCooldown;
+
+    float amountShake = 0.4f, lenghtShake = 0.3f;
 
     float startGrav;
     public float lastDirection;
@@ -27,6 +32,9 @@ public class DashController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerScript = GetComponent<PlayerMovement>();
+
+        camera = Camera.main;
+        cameraShake = camera.GetComponent<ShakeCamera>(); 
 
         startGrav = rb.gravityScale;
         ResetDashCooldown();
@@ -157,6 +165,12 @@ public class DashController : MonoBehaviour
         if(collision.gameObject.CompareTag("DashWall") && dashOn)
         {
             ActivateConditions();
+            ShakeCameraDashWall();
         }
+    }
+
+    private void ShakeCameraDashWall()
+    {
+        cameraShake.Shake(amountShake, lenghtShake);
     }
 }
