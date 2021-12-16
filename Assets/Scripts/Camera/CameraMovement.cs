@@ -52,8 +52,6 @@ public class CameraMovement : MonoBehaviour
         //keeps rotation fixed just in case
         transform.rotation = Quaternion.identity;
 
-        Debug.Log(xDistance);
-        Debug.Log(yDistance);
 
     }
 
