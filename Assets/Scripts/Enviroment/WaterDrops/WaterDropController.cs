@@ -15,6 +15,11 @@ public class WaterDropController : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        Setflamesoffset();
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -32,10 +37,12 @@ public class WaterDropController : MonoBehaviour
         }
     }
 
+
     private void Setflamesoffset()
     {
         offsetFlames = player.transform.position;
         offsetFlames.y -= 0.2f;
+        offsetFlames.x -= 2f;
     }
 
 }
