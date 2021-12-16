@@ -18,8 +18,8 @@ TagManager:
   - SceneManager
   - Flame
   - Lava
-  - Ladder
   - ShatterParticles
+  - TutorialTriggers
   layers:
   - Default
   - TransparentFX
