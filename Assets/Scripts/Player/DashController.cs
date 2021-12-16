@@ -17,8 +17,8 @@ public class DashController : MonoBehaviour
 
     public bool dashOn, wallCollisionDashOn;
 
-    public float cooldownReset, cooldownWallBounceReset;
-    float dashCooldown, wallDasHCooldown;
+    public float cooldownReset, wallBounceCooldownReset = 0.2f;
+    float dashCooldown, wallDashCooldown;
 
     float startGrav;
     public float lastDirection;
@@ -38,10 +38,12 @@ public class DashController : MonoBehaviour
         CheckLastXAxisDirection();
 
         RunDashTimer();
+        RunWallCooldownTimer();
         HandleDashInputConditions();
         HandleDashMovement();
         Bounce();
     }
+
 
     private void CheckLastXAxisDirection()
     {
@@ -54,6 +56,10 @@ public class DashController : MonoBehaviour
     private void RunDashTimer()
     {
         dashCooldown -= Time.deltaTime;
+    }
+    private void RunWallCooldownTimer()
+    {
+        wallDashCooldown -= Time.deltaTime;
     }
     private void HandleDashInputConditions()
     {
@@ -77,6 +83,14 @@ public class DashController : MonoBehaviour
             SetDashSpeed();
             RunDashTimeDuration();
             ResetDashConditions();
+        }
+    }
+    private void Bounce()
+    {
+        if(wallCollisionDashOn)
+        {
+            MovementBounce();
+            CheckDashWallTimer();
         }
     }
 
@@ -112,23 +126,21 @@ public class DashController : MonoBehaviour
     {
         rb.gravityScale = startGrav;
     }
-
-    private void Bounce()
+    
+    private void ActivateConditions()
     {
-        if(wallCollisionDashOn)
-        {
-            MovementBounce();
-            CheckDashWallTimer();
-        }
+        wallCollisionDashOn = true;
+        //dashOn = true so we cannot move our player meanwhile.
+        dashOn = true;
+        wallDashCooldown = wallBounceCooldownReset;
     }
-
     private void MovementBounce()
     {
         rb.velocity = (playerMove * dashSpeed * -1);
     }
     private void CheckDashWallTimer()
     {
-        if (wallDasHCooldown <= 0)
+        if (wallDashCooldown <= 0)
         {
             ResetConditions();
             RestartGravity();
@@ -146,11 +158,5 @@ public class DashController : MonoBehaviour
         {
             ActivateConditions();
         }
-    }
-
-    private void ActivateConditions()
-    {
-        wallCollisionDashOn = true;
-        dashOn = true;
     }
 }

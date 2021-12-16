@@ -20,6 +20,8 @@ public class CameraMovement : MonoBehaviour
     private Vector3 newPosition;
     private Rigidbody2D rigidBody;
 
+    Vector2 followedObjectPosition;
+
     float xDistance;
     float yDistance;
 
@@ -34,7 +36,7 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 followedObjectPosition = followObject.transform.position;
+        followedObjectPosition = followObject.transform.position;
 
         CalculateFollowedObejctWithCameraDistance(followedObjectPosition);
 
@@ -49,6 +51,10 @@ public class CameraMovement : MonoBehaviour
 
         //keeps rotation fixed just in case
         transform.rotation = Quaternion.identity;
+
+        Debug.Log(xDistance);
+        Debug.Log(yDistance);
+
     }
 
     Vector3 CalculateThreshold()
