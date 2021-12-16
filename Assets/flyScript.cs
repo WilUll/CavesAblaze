@@ -39,7 +39,6 @@ public class flyScript : MonoBehaviour
                 if (tutScript.inTutTrigger)
                 {
                     gotScript = true;
-                    return;
                 }
             }
         }
