@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
 
-        jumpsLeft = maxJumps;
+        //jumpsLeft = maxJumps;
 
         dead = false;
     }
@@ -268,7 +268,6 @@ public class PlayerMovement : MonoBehaviour
             dead = true;
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Water")
