@@ -7,7 +7,10 @@ public class TriggerNextScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneScript.Instance.LoadLevel();
+        if (collision.CompareTag("Player"))
+        {
+            SceneScript.Instance.LoadLevel();
+        }
     }
 
 }

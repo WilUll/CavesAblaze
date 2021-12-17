@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneScript : MonoBehaviour
 {
     public static SceneScript Instance { get; private set; }
-    int index = 2;
+    int index = 3;
     void Awake()
     {
         if (Instance == null)
