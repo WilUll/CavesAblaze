@@ -5056,6 +5056,7 @@ GameObject:
   - component: {fileID: 5017078277431490279}
   - component: {fileID: 5017078277431490278}
   - component: {fileID: 5017078277431490285}
+  - component: {fileID: -1887053495200213687}
   m_Layer: 9
   m_Name: CrystalShatterLeft
   m_TagString: DashWall
@@ -5171,6 +5172,7 @@ MonoBehaviour:
   intensityFluctuation: 0.001
   minIntensity: 0.2
   maxIntensity: 0.5
+  index: 0
 --- !u!61 &5017078277431490278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5291,6 +5293,38 @@ PolygonCollider2D:
       - {x: 0.22326972, y: -1.6834011}
       - {x: 0.35737705, y: -1.73746}
       - {x: 0.45169163, y: -1.7604103}
+--- !u!114 &-1887053495200213687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5017078277431490276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 2fd5ed3a00000000db30c2f6
+  m_ShapePath:
+  - {x: -2.105487, y: -4.775713, z: 0}
+  - {x: -1.632104, y: -4.975941, z: 0}
+  - {x: -1.0194983, y: -4.9091706, z: 0}
+  - {x: -0.8415185, y: -4.664448, z: 0}
+  - {x: -1.0536677, y: -0.85292184, z: 0}
+  - {x: -1.3713175, y: -0.5859507, z: 0}
+  - {x: -1.798163, y: -0.5931427, z: 0}
+  - {x: -1.9983913, y: -1.0158463, z: 0}
+  - {x: -1.9538963, y: -2.7956517, z: 0}
+  - {x: -2.1541245, y: -2.7956517, z: 0}
+  m_ShapePathHash: 1483736722
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -67714
 --- !u!1 &5017078277487798051
 GameObject:
   m_ObjectHideFlags: 0
