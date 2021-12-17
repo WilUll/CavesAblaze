@@ -140,15 +140,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3033578345854239158}
-  - component: {fileID: 4563213511064370257}
-  - component: {fileID: 4986727051544346333}
+  - component: {fileID: 4617351909979512864}
+  - component: {fileID: 2052907011698867939}
   m_Layer: 4
   m_Name: ParticleWaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3033578345854239158
 Transform:
   m_ObjectHideFlags: 0
@@ -157,13 +157,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3778234685790683793}
   m_LocalRotation: {x: 0.69747776, y: 0, z: 0, w: 0.7166065}
-  m_LocalPosition: {x: 0.391, y: 0.462, z: 0}
+  m_LocalPosition: {x: 0.434, y: 0.831, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1644685703157226283}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 88.45, y: 0, z: 0}
---- !u!199 &4563213511064370257
+--- !u!199 &4617351909979512864
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 6
   m_RenderMode: 5
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -230,7 +230,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!198 &4986727051544346333
+--- !u!198 &2052907011698867939
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,7 +483,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.3
-      minScalar: 0.01
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4179,7 +4179,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
+    minVertexDistance: 1
     textureMode: 0
     ribbonCount: 1
     shadowBias: 0.5
@@ -4945,15 +4945,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522434076734402208}
-  - component: {fileID: 8017913625374893573}
-  - component: {fileID: 33448775409436411}
+  - component: {fileID: 5520831198119670807}
+  - component: {fileID: 2118161410507490111}
   m_Layer: 4
   m_Name: ParticleWaves (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2522434076734402208
 Transform:
   m_ObjectHideFlags: 0
@@ -4968,7 +4968,7 @@ Transform:
   m_Father: {fileID: 1644685703157226283}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!199 &8017913625374893573
+--- !u!199 &5520831198119670807
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -5009,7 +5009,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 6
   m_RenderMode: 5
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5035,7 +5035,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!198 &33448775409436411
+--- !u!198 &2118161410507490111
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5288,7 +5288,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.3
-      minScalar: 0.01
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5662,7 +5662,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 18
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
