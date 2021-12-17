@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetRotationTimer: 0.05
-  yOffsetMovement: {x: 0, y: 2}
+  yOffsetMovement: {x: 0, y: 0.1, z: 0}
 --- !u!1 &7458966877866483921
 GameObject:
   m_ObjectHideFlags: 0
