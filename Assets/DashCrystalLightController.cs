@@ -64,7 +64,6 @@ public class DashCrystalLightController : MonoBehaviour
         for (int i = 0; i < allLights.Length; i++)
         {
             crystalLightsScripts[i].intensity = minIntensity;
-            Debug.Log("MinIntensitySet");
         }
     }
     

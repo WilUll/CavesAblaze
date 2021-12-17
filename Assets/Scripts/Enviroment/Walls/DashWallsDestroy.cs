@@ -87,7 +87,6 @@ public class DashWallsDestroy : MonoBehaviour
     private void PlayParticleAnimation()
     {
         shatter.Play();
-        Debug.Log("play");
     }
     private void HandleColliders(int indexNumber)
     {

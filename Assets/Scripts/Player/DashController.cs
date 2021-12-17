@@ -164,7 +164,6 @@ public class DashController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("DashWall") && dashOn)
         {
-            Debug.Log("colision");
             ActivateConditions();
             ShakeCameraDashWall();
         }
