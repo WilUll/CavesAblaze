@@ -8,11 +8,6 @@ public class TutorialTriggers : MonoBehaviour
     public int tutIndex;
     public bool inTutTrigger;
     public flyScript helpFlyScript;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
