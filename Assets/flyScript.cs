@@ -33,12 +33,15 @@ public class flyScript : MonoBehaviour
     {
         if (checkWhatTrigger)
         {
+            textDisplay.text = "";
             for (int i = 0; i < triggerGameObject.Length; i++)
             {
                 tutScript = triggerGameObject[i].GetComponent<TutorialTriggers>();
                 if (tutScript.inTutTrigger)
                 {
                     gotScript = true;
+                    checkWhatTrigger = false;
+                    break;
                 }
             }
         }
@@ -58,6 +61,7 @@ public class flyScript : MonoBehaviour
 
         if (inPos && !isTyping)
         {
+            tutScript.gameObject.SetActive(false);
             StartCoroutine(Type(tutScript.tutIndex));
         }
     }
@@ -78,7 +82,6 @@ public class flyScript : MonoBehaviour
             }
         }
 
-        tutScript.gameObject.SetActive(false);
         isTyping = false;
         gotScript = false;
         gotPos = false;
