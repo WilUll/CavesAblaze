@@ -404,7 +404,7 @@ MonoBehaviour:
   dashOn: 0
   wallCollisionDashOn: 0
   cooldownReset: 0.5
-  wallBounceCooldownReset: 0.15
+  wallBounceCooldownReset: 0.12
   lastDirection: 0
 --- !u!114 &1046403517114946789
 MonoBehaviour:
