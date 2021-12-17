@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 4962e546ca9eaaa4a9598d5a78cbc292
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4550627544739351422
+    second: Spritesheets_jump_feets_1927x144_0
+  - first:
+      213: -6711900157553365349
+    second: Spritesheets_jump_feets_1927x144_1
+  - first:
+      213: -4173210248422690448
+    second: Spritesheets_jump_feets_1927x144_2
+  - first:
+      213: -5023288467727640203
+    second: Spritesheets_jump_feets_1927x144_3
+  - first:
+      213: 1264731316870289711
+    second: Spritesheets_jump_feets_1927x144_4
+  - first:
+      213: 9119448729241339666
+    second: Spritesheets_jump_feets_1927x144_5
+  - first:
+      213: -3327009103171737177
+    second: Spritesheets_jump_feets_1927x144_6
+  - first:
+      213: -4389337037089639298
+    second: Spritesheets_jump_feets_1927x144_7
+  - first:
+      213: -5414955511620971924
+    second: Spritesheets_jump_feets_1927x144_8
+  - first:
+      213: -2334269120147674721
+    second: Spritesheets_jump_feets_1927x144_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +71,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +98,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +119,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b0c4544a3172f30800000000000000
+      internalID: 4550627544739351422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ea42d2e5a8ad2a0800000000000000
+      internalID: -6711900157553365349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071feb1c367c516c0800000000000000
+      internalID: -4173210248422690448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57917ccc0c1b94ab0800000000000000
+      internalID: -5023288467727640203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f299d5e8e6a3d8110800000000000000
+      internalID: 1264731316870289711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21741d56d4ace8e70800000000000000
+      internalID: 9119448729241339666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a925f019d614d1d0800000000000000
+      internalID: -3327009103171737177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e747ec07831f513c0800000000000000
+      internalID: -4389337037089639298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62d94fd6a63ad4b0800000000000000
+      internalID: -5414955511620971924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheets_jump_feets_1927x144_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192.7
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f992f6b4a920b9fd0800000000000000
+      internalID: -2334269120147674721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
