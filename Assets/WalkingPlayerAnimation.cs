@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WalkingPlayerAnimation : MonoBehaviour
 {
+    PlayerMovement playerScript;
+
     float[] rotations = {-20, -10, 0, 10, 20, 10, 0, -10};
 
     public float resetRotationTimer;
@@ -18,35 +20,47 @@ public class WalkingPlayerAnimation : MonoBehaviour
     void Start()
     {
         changeRotationTimer = resetRotationTimer;
+
+        playerScript = transform.GetComponentInParent<PlayerMovement>();
     }
 
 
     void Update()
     {
-        if (changeRotationTimer <= 0)
+        if (playerScript.xAxis < 0 || playerScript.xAxis > 0)
         {
-            index++;
-
-            if (index >= rotations.Length)
+            if (changeRotationTimer <= 0)
             {
-                index = 0;
+                index++;
+
+                if (index >= rotations.Length)
+                {
+                    index = 0;
+                }
+
+                transform.rotation = Quaternion.Euler(0, 0, rotations[index]);
+
+
+                transform.localPosition += (yOffsetMovement);
+
+                changeRotationTimer = resetRotationTimer;
+                loopTimes++;
+
+                if (loopTimes == 3)
+                {
+                    yOffsetMovement = -yOffsetMovement;
+                    loopTimes = 0;
+                }
             }
-
-            transform.rotation = Quaternion.Euler(0, 0, rotations[index]);
-            transform.localPosition += (yOffsetMovement);
-
-            changeRotationTimer = resetRotationTimer;
-
-            loopTimes++;
-            if (loopTimes == 3)
+            else
             {
-                yOffsetMovement = -yOffsetMovement;
-                loopTimes = 0;
+                changeRotationTimer -= Time.deltaTime;
             }
         }
         else
         {
-            changeRotationTimer -= Time.deltaTime;
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
         }
     }
 }

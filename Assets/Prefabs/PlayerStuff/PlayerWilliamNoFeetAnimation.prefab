@@ -262,7 +262,6 @@ GameObject:
   - component: {fileID: 1046403517114946776}
   - component: {fileID: 1046403517114946790}
   - component: {fileID: 1046403517114946789}
-  - component: {fileID: 1046403517114946788}
   m_Layer: 3
   m_Name: PlayerWilliamNoFeetAnimation
   m_TagString: Player
@@ -437,23 +436,6 @@ MonoBehaviour:
   jumpTimer: 0
   jumpsLeft: 0
   maxJumps: 2
---- !u!114 &1046403517114946788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046403517114946787}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe13b2610b447dc4592b3eb5ec5d7c03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScript: {fileID: 1046403517114946789}
-  animator: {fileID: 1046403515842564577}
-  feetSpriteRenderer: {fileID: 1046403515842564588}
-  jumpParticles: {fileID: 3504407621151953131}
-  resetWaitingAnimTime: 1.5
 --- !u!1 &1046403517166951194
 GameObject:
   m_ObjectHideFlags: 0
