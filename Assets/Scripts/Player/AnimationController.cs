@@ -60,14 +60,14 @@ public class AnimationController : MonoBehaviour
             animator.SetBool("IsJumping", false);
 
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetKeyDown(KeyCode.Space) && playerScript.jumpsLeft > 0) jumpParticles.Play();
+            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0) jumpParticles.Play();
         }
         else if (playerScript.jumping)
         {
             animator.SetBool("IsJumping", true);
 
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetKeyDown(KeyCode.Space) && playerScript.jumpsLeft > 0) jumpParticles.Play();
+            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0) jumpParticles.Play();
         }
     }
 }
