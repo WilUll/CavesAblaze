@@ -23,7 +23,7 @@ public class DashController : MonoBehaviour
 
     float dashCooldown, wallDashCooldown;
 
-    float amountShake = 0.4f, lenghtShake = 0.3f;
+    float amountShake = 0.1f, lenghtShake = 0.3f;
 
     float startGrav;
     public float lastDirection;
