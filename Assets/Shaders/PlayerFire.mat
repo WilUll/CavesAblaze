@@ -19,19 +19,7 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -48,19 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_33c2f7059e2a4eab90d938941a473d00: 1
-    - Vector1_404630396775461faa6de3358707cd8b: 1.3
-    - Vector1_d40f355618d044ac968a847d8659cb3e: 1
     - _DistorsionStreangh: 1
-    - _EnableExternalAlpha: 0
     - _Firebottomoffset: 1.3
-    - _NoiseXScale: 34.86
+    - _NoiseXScale: 35
     - _Ystretch: 1
     m_Colors:
     - Color_aef171ebd32444dcbd2194322e6e492e: {r: 1.144605, g: 0.3098655, b: 0.1707422, a: 0}
-    - Vector2_3c9e15a2087341e092a7709b10f6eeab: {r: 1.59, g: 1, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseScale: {r: 1.59, g: 1, b: 0, a: 0}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
