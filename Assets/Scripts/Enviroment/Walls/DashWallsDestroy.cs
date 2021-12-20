@@ -114,7 +114,6 @@ public class DashWallsDestroy : MonoBehaviour
         }
 
     }
-
     public void ResetCrystals()
     {
         indexNumber = 0;
