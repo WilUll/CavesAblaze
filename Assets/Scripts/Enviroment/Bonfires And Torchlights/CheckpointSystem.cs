@@ -84,6 +84,11 @@ public class CheckpointSystem : MonoBehaviour
         {
             GameObject.Destroy(flame);
         }
+        GameObject[] dashWalls = GameObject.FindGameObjectsWithTag("DashWall");
+        foreach (GameObject dashWall in dashWalls)
+        {
+            dashWall.GetComponent<DashWallsDestroy>().ResetCrystals();
+        }
     }
 
     public void RefillJump()
