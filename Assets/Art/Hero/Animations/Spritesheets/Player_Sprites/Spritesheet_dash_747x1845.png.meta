@@ -112,12 +112,12 @@ TextureImporter:
       name: Spritesheet_dash_747x1845_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1537.5
-        width: 747
-        height: 307.5
+        x: 434
+        y: 1537
+        width: 313
+        height: 307
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +138,7 @@ TextureImporter:
         width: 747
         height: 307.5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +154,12 @@ TextureImporter:
       name: Spritesheet_dash_747x1845_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 923.5
-        width: 747
-        height: 307.5
+        x: 337
+        y: 921
+        width: 410
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: Spritesheet_dash_747x1845_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 616.5
-        width: 747
-        height: 307.5
+        x: 473
+        y: 616
+        width: 274
+        height: 299
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: Spritesheet_dash_747x1845_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 309.5
-        width: 747
-        height: 307.5
+        x: 525
+        y: 310
+        width: 222
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +217,12 @@ TextureImporter:
       name: Spritesheet_dash_747x1845_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2.5
-        width: 747
-        height: 307.5
+        x: 542
+        y: 2
+        width: 205
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

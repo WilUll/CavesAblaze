@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1046403515842564588}
   - component: {fileID: 1046403515842564577}
   - component: {fileID: 1046403515842564591}
-  - component: {fileID: 1046403515842564590}
   - component: {fileID: 1046403515842564589}
   m_Layer: 8
   m_Name: Feet
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046403515842564587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.036, y: -0.399, z: 0}
+  m_LocalPosition: {x: 0.031, y: -0.361, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1046403516757971750}
@@ -118,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.035533905, y: 0.11606659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,22 +128,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48333332, y: 0.15111111}
+  m_Size: {x: 0.37435532, y: 0.11020717}
   m_EdgeRadius: 0
---- !u!114 &1046403515842564590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046403515842564587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee5ad2c736599324b82dcee920d35a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feetRender: {fileID: 1046403515842564588}
-  onLava: 0
 --- !u!114 &1046403515842564589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +247,7 @@ GameObject:
   - component: {fileID: 1046403517114946776}
   - component: {fileID: 1046403517114946790}
   - component: {fileID: 1046403517114946789}
+  - component: {fileID: 7472859519154806732}
   m_Layer: 3
   m_Name: PlayerWilliamNoFeetAnimation
   m_TagString: Player
@@ -308,7 +294,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae1d4b83ac02ac34ebb64c4df1b0c328, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -374,18 +360,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0057887733, y: -0.105383515}
+  m_Offset: {x: 0.0013189316, y: 0.00746236}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0266666, y: 1.0316666}
+    oldSize: {x: 0.4928, y: 0.4952}
     newSize: {x: 1.232, y: 1.238}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31246692, y: 0.7391093}
+  m_Size: {x: 0.49725533, y: 0.47551233}
   m_EdgeRadius: 0
 --- !u!114 &1046403517114946790
 MonoBehaviour:
@@ -436,6 +422,24 @@ MonoBehaviour:
   jumpTimer: 0
   jumpsLeft: 0
   maxJumps: 2
+--- !u!114 &7472859519154806732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046403517114946787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13b2610b447dc4592b3eb5ec5d7c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1046403517114946789}
+  animatorBody: {fileID: 0}
+  bodySpriteRenderer: {fileID: 2298843017741998022}
+  jumpParticles: {fileID: 3504407621151953131}
+  dashScript: {fileID: 1046403517114946790}
+  resetWaitingAnimTime: 1.5
 --- !u!1 &1046403517166951194
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +485,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0057887733, y: -0.04484147}
+  m_Offset: {x: -0.0006246567, y: 0.0033554137}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -492,7 +496,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31246692, y: 0.8601934}
+  m_Size: {x: 0.47427177, y: 0.5572416}
   m_EdgeRadius: 0
 --- !u!114 &6744598653764963837
 MonoBehaviour:
@@ -517,6 +521,7 @@ GameObject:
   - component: {fileID: 1485291439228974419}
   - component: {fileID: 2298843017741998022}
   - component: {fileID: 4473599290281146596}
+  - component: {fileID: 9196434326877309031}
   m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
@@ -532,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319152867034379072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.009, y: 0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1046403516757971750}
@@ -557,7 +562,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae1d4b83ac02ac34ebb64c4df1b0c328, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -603,6 +608,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetRotationTimer: 0.05
   yOffsetMovement: {x: 0, y: 0.1, z: 0}
+--- !u!95 &9196434326877309031
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319152867034379072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49afd7a81951fcc4bb28f2e0152988a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7458966877866483921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,6 +5549,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0009811, y: 0.86364365}
+  m_Offset: {x: 1.0009811, y: 1.0839696}
   serializedVersion: 2
-  m_Radius: 1.7238572
+  m_Radius: 0.62222886

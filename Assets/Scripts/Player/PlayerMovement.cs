@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject jumpFlames;
 
-    Rigidbody2D playerRB;
+    public Rigidbody2D playerRB;
     DashController dash;
     GameObject ropeObj;
 
