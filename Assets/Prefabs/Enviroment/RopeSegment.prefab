@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedAbove: {fileID: 0}
   connectedBelow: {fileID: 0}
+  isPlayerConnected: 0
 --- !u!114 &4607366760504582395
 MonoBehaviour:
   m_ObjectHideFlags: 0
