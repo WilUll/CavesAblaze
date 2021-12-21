@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: dd1665d5ebe31184fb2f767fbf393014
+guid: 2694ee3b4f97dc2478e9557d02386710
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5118510176081287355
-    second: Spritesheet_dash_747x1845_0
+      213: 3730786282343680275
+    second: Master page inverted_0
   - first:
-      213: 3348860924928801929
-    second: Spritesheet_dash_747x1845_1
+      213: 4620026454194364172
+    second: Master page inverted_1
   - first:
-      213: -5584275188426555900
-    second: Spritesheet_dash_747x1845_2
+      213: -6427007937780098573
+    second: Master page inverted_2
   - first:
-      213: -7580963409171003610
-    second: Spritesheet_dash_747x1845_3
+      213: 1186481923395618103
+    second: Master page inverted_3
   - first:
-      213: -5924197451870385593
-    second: Spritesheet_dash_747x1845_4
+      213: -836106363721239925
+    second: Master page inverted_4
   - first:
-      213: -5129047324305995967
-    second: Spritesheet_dash_747x1845_5
+      213: 4314112138824316844
+    second: Master page inverted_5
+  - first:
+      213: 8470998221189448445
+    second: Master page inverted_6
+  - first:
+      213: 7518922086052878880
+    second: Master page inverted_7
+  - first:
+      213: 662684707242408547
+    second: Master page inverted_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -64,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -86,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_0
+      name: Master page inverted_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1537.5
-        width: 747
-        height: 307.5
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb81c88d2e9980740800000000000000
-      internalID: 5118510176081287355
+      spriteID: 319cef37b5a66c330800000000000000
+      internalID: 3730786282343680275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_1
+      name: Master page inverted_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1230.5
-        width: 747
-        height: 307.5
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98c3198a44b897e20800000000000000
-      internalID: 3348860924928801929
+      spriteID: c0f99270591ad1040800000000000000
+      internalID: 4620026454194364172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_2
+      name: Master page inverted_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 923.5
-        width: 747
-        height: 307.5
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40ebec98d4ba082b0800000000000000
-      internalID: -5584275188426555900
+      spriteID: 3f95004155eaec6a0800000000000000
+      internalID: -6427007937780098573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_3
+      name: Master page inverted_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 616.5
-        width: 747
-        height: 307.5
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627c02de1f10bc690800000000000000
-      internalID: -7580963409171003610
+      spriteID: 7350b68e50b377010800000000000000
+      internalID: 1186481923395618103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_4
+      name: Master page inverted_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 309.5
-        width: 747
-        height: 307.5
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74acdf52ec509cda0800000000000000
-      internalID: -5924197451870385593
+      spriteID: b82b3fb21bd8564f0800000000000000
+      internalID: -836106363721239925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_dash_747x1845_5
+      name: Master page inverted_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2.5
-        width: 747
-        height: 307.5
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +237,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 147c29622a6f1d8b0800000000000000
-      internalID: -5129047324305995967
+      spriteID: ca7f2d3122ecedb30800000000000000
+      internalID: 4314112138824316844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master page inverted_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df286fa30080f8570800000000000000
+      internalID: 8470998221189448445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master page inverted_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a5501ecc3985860800000000000000
+      internalID: 7518922086052878880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master page inverted_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a744dea34523900800000000000000
+      internalID: 662684707242408547
       vertices: []
       indices: 
       edges: []
@@ -246,7 +318,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
