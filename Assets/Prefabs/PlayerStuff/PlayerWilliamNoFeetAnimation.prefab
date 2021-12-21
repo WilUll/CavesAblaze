@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpFlames: {fileID: 8307371557317138467, guid: 8d2dcd3ab2447e047989eb99572e1bb3, type: 3}
+  playerRB: {fileID: 0}
   isGrounded: 0
   dead: 0
   respawned: 0
@@ -435,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1046403517114946789}
-  animatorBody: {fileID: 0}
+  animatorBody: {fileID: 9196434326877309031}
   bodySpriteRenderer: {fileID: 2298843017741998022}
   jumpParticles: {fileID: 3504407621151953131}
   dashScript: {fileID: 1046403517114946790}

@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 3579942302568056125}
-  animatorBody: {fileID: 0}
+  animatorBody: {fileID: 4650912956544358847}
   bodySpriteRenderer: {fileID: 2363318268536260126}
   jumpParticles: {fileID: 1119488452329636147}
   dashScript: {fileID: 3579942302568056126}
