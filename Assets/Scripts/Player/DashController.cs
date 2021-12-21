@@ -48,6 +48,8 @@ public class DashController : MonoBehaviour
         RunDashTimer();
         RunWallCooldownTimer();
         HandleDashInputConditions();
+
+        Debug.Log(dashOn);
         HandleDashMovement();
         Bounce();
     }
