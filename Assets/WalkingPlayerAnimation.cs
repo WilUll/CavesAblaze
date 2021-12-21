@@ -27,7 +27,7 @@ public class WalkingPlayerAnimation : MonoBehaviour
 
     void Update()
     {
-        if (playerScript.xAxis < 0 || playerScript.xAxis > 0)
+        if (!playerScript.jumping && playerScript.xAxis < 0 || playerScript.xAxis > 0)
         {
             if (changeRotationTimer <= 0)
             {

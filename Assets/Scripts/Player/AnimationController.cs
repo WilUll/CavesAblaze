@@ -6,9 +6,9 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     public PlayerMovement playerScript;
-    public Animator animatorFeet;
+   // public Animator animatorFeet;
     public Animator animatorBody;
-    public SpriteRenderer feetSpriteRenderer;
+    //public SpriteRenderer feetSpriteRenderer;
     public SpriteRenderer bodySpriteRenderer;
     public ParticleSystem jumpParticles;
     public DashController dashScript;
@@ -21,47 +21,51 @@ public class AnimationController : MonoBehaviour
         //Set the float that handles Run and waiting animations
         SetAnimatorFloatSpeed();
 
-        DefineRunAndWaitingAnimations();
+        //DefineRunAndWaitingAnimations();
         DefineDashAnimation();
         JumpAnimation();
+        FallAnimation();
         DashAninimation();
     }
 
-
+    private void FallAnimation()
+    {
+        animatorBody.SetFloat("YVelocity", playerScript.playerRB.velocity.y);
+    }
 
     private void SetAnimatorFloatSpeed()
     {
-        animatorFeet.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+        //animatorFeet.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
     }
     private void DefineRunAndWaitingAnimations()
     {
-        //Move Animation
-        if (playerScript.xAxis < 0)
-        {
-            feetSpriteRenderer.flipX = true;
-            animatorFeet.SetBool("IsWaiting", false);
-            waitingAnimationTime = resetWaitingAnimTime;
-        }
-        else if (playerScript.xAxis > 0)
-        {
-            feetSpriteRenderer.flipX = false;
-            animatorFeet.SetBool("IsWaiting", false);
-            waitingAnimationTime = resetWaitingAnimTime;
-        }
-        //Waiting Animation
-        else if (playerScript.xAxis == 0)
-        {
-            waitingAnimationTime -= Time.deltaTime;
-            if (waitingAnimationTime <= 0) WaitingAnimation();
-        }
+    //    //Move Animation
+    //    if (playerScript.xAxis < 0)
+    //    {
+    //        feetSpriteRenderer.flipX = true;
+    //        animatorFeet.SetBool("IsWaiting", false);
+    //        waitingAnimationTime = resetWaitingAnimTime;
+    //    }
+    //    else if (playerScript.xAxis > 0)
+    //    {
+    //        feetSpriteRenderer.flipX = false;
+    //        animatorFeet.SetBool("IsWaiting", false);
+    //        waitingAnimationTime = resetWaitingAnimTime;
+    //    }
+    //    //Waiting Animation
+    //    else if (playerScript.xAxis == 0)
+    //    {
+    //        waitingAnimationTime -= Time.deltaTime;
+    //        if (waitingAnimationTime <= 0) WaitingAnimation();
+    //    }
     }
     private void DefineDashAnimation()
     {
-        if (dashScript.lastDirection < 0 && dashScript.dashOn)
+        if (dashScript.lastDirection > 0 && dashScript.dashOn)
         {
             bodySpriteRenderer.flipX = true;
         }
-        else if (dashScript.lastDirection > 0)
+        else if (dashScript.lastDirection < 0)
         {
             bodySpriteRenderer.flipX = false;
         }
@@ -70,24 +74,32 @@ public class AnimationController : MonoBehaviour
 
     private void WaitingAnimation()
     {
-        animatorFeet.SetBool("IsWaiting", true);
+        //animatorFeet.SetBool("IsWaiting", true);
     }
     private void JumpAnimation()
     {
         if (playerScript.isGrounded)
         {
-            animatorFeet.SetBool("IsJumping", false);
-
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0) jumpParticles.Play();
+            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0)
+            {
+                jumpParticles.Play();
+            }
+            
+            //animatorFeet.SetBool("IsJumping", false);
         }
         else if (playerScript.jumping)
         {
-            animatorFeet.SetBool("IsJumping", true);
-
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0) jumpParticles.Play();
+            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0)
+            {
+                jumpParticles.Play();
+            }
+            //animatorFeet.SetBool("IsJumping", true);
         }
+
+        if (playerScript.jumping) animatorBody.SetBool("IsJumping", true);
+        else animatorBody.SetBool("IsJumping", false);
     }
     private void DashAninimation()
     {
