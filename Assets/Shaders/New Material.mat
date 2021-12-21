@@ -48,15 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DistorsionStreangh: 3.24
+    - _DistorsionStreangh: 2.11
     - _EnableExternalAlpha: 0
-    - _Firebottomoffset: 4.9
-    - _NoiseXScale: 2.65
-    - _Ystretch: 1
+    - _Firebottomoffset: 8.83
+    - _NoiseXScale: 3.03
+    - _Ystretch: 0.95
     m_Colors:
     - Color_aef171ebd32444dcbd2194322e6e492e: {r: 0.13394445, g: 0.18089128, b: 0.8113208, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _NoiseScale: {r: 2.51, g: 3.1, b: 0, a: 0}
+    - _NoiseScale: {r: 4.49, g: 3.9, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
