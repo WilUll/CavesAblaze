@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3393673495515195988}
   - component: {fileID: 3393673495515195989}
   - component: {fileID: 4307986346919579448}
-  m_Layer: 0
-  m_Name: Geyser
+  m_Layer: 10
+  m_Name: GasLeak
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07eb4339ca0a4774ab0726715ee7751b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 25
+  boost: 10000
   gasLeak: {fileID: 2747631405018962776}
   explotion: {fileID: 6881304053679072092}
 --- !u!61 &3393673495515195989
