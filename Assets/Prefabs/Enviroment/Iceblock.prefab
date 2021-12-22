@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf3d09ab1a722948b640c1c73f12c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Melting: 200
+  melting: 2
   sprite: {fileID: 0}
 --- !u!50 &2526160987535428818
 Rigidbody2D:

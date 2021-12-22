@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class icemeltscript : MonoBehaviour
 {
-    public float Melting = 50f;
+    public float melting = 5f;
 
-    public GameObject sprite; 
+    public GameObject sprite;
+   
+    void RunTimer()
+    {
+        melting -= Time.deltaTime;
+    }
 
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Melting--;
-            Debug.Log(Melting);
+            RunTimer();
+            Debug.Log(melting);
 
-            if (Melting <= 0)
+            if (melting <= 0)
             {
                 Destroy(gameObject);
             }
