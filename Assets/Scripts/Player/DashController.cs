@@ -71,7 +71,7 @@ public class DashController : MonoBehaviour
     }
     private void HandleDashInputConditions()
     {
-        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)
+        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0 && !dashOn)
         {
             dashOn = true;
             playerScript.oneDashOnAir = true;
