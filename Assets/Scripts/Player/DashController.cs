@@ -34,7 +34,7 @@ public class DashController : MonoBehaviour
         rb = playerScript.GetComponent<Rigidbody2D>();
 
         camera = Camera.main;
-        cameraShake = camera.GetComponent<ShakeCamera>(); 
+        //cameraShake = camera.GetComponent<ShakeCamera>(); 
 
         startGrav = rb.gravityScale;
         ResetDashCooldown();
@@ -71,7 +71,7 @@ public class DashController : MonoBehaviour
     }
     private void HandleDashInputConditions()
     {
-        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0)
+        if (Input.GetButtonDown("Fire3") && dashCooldown <= 0 && !dashOn)
         {
             dashOn = true;
             playerScript.oneDashOnAir = true;
