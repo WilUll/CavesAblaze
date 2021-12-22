@@ -34,7 +34,7 @@ public class DashController : MonoBehaviour
         rb = playerScript.GetComponent<Rigidbody2D>();
 
         camera = Camera.main;
-        //cameraShake = camera.GetComponent<ShakeCamera>(); 
+        cameraShake = camera.GetComponent<ShakeCamera>(); 
 
         startGrav = rb.gravityScale;
         ResetDashCooldown();
