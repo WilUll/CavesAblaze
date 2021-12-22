@@ -21565,6 +21565,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44995907
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3203065
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.8324
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.40337437
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9150351
+      objectReference: {fileID: 0}
+    - target: {fileID: -8037305793311510890, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -132.421
+      objectReference: {fileID: 0}
     - target: {fileID: -6032271568825649710, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -21572,6 +21600,54 @@ PrefabInstance:
     - target: {fileID: -6032271568825649710, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
       propertyPath: m_FlipY
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5254347845699044693, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5254347845699044693, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4512765244865103527, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6901923
+      objectReference: {fileID: 0}
+    - target: {fileID: -4512765244865103527, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6901923
+      objectReference: {fileID: 0}
+    - target: {fileID: -4512765244865103527, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.46759036
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4817
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.66016734
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7511186
+      objectReference: {fileID: 0}
+    - target: {fileID: -3641943288994312909, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 97.375
       objectReference: {fileID: 0}
     - target: {fileID: -2292887084957162430, guid: fda115fc37c549446ba11b422c1e4e3c, type: 3}
       propertyPath: m_LocalScale.x
