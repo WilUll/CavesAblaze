@@ -18,7 +18,6 @@ public class icemeltscript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             RunTimer();
-            Debug.Log(melting);
 
             if (melting <= 0)
             {
