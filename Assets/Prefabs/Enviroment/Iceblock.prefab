@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
-  m_Color: {r: 0.16470589, g: 0.27900493, b: 0.8980392, a: 1}
+  m_Color: {r: 0.03524382, g: 0.27895242, b: 0.8490566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf3d09ab1a722948b640c1c73f12c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  melting: 2
-  sprite: {fileID: 0}
+  resetMeltingValue: 2
+  iceSprite: {fileID: 2526160987535428815}
 --- !u!50 &2526160987535428818
 Rigidbody2D:
   serializedVersion: 4
