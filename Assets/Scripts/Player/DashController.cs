@@ -15,7 +15,6 @@ public class DashController : MonoBehaviour
     
     float currentDashTime;
     Vector2 playerMove;
-    float direction;
 
     public bool dashOn, wallCollisionDashOn;
 
@@ -30,8 +29,9 @@ public class DashController : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
         playerScript = GetComponent<PlayerMovement>();
+        rb = playerScript.GetComponent<Rigidbody2D>();
 
         camera = Camera.main;
         cameraShake = camera.GetComponent<ShakeCamera>(); 
