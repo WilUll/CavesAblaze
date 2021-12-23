@@ -18,7 +18,7 @@ public class CheckpointSystem : MonoBehaviour
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 
-        camMovementScript = GameObject.FindGameObjectWithTag("CameraParent").GetComponent<CameraMovement>();
+       // camMovementScript = GameObject.FindGameObjectWithTag("CameraParent").GetComponent<CameraMovement>();
 
     }
 
