@@ -11,6 +11,7 @@ public class Icemeltscript : MonoBehaviour
     PlayerMovement playerScript;
 
     EdgeCollider2D iceBlockCollider;
+    BoxCollider2D iceBlockCollider2;
 
     bool runTimer, restartIceBlocks;
 
@@ -20,6 +21,9 @@ public class Icemeltscript : MonoBehaviour
     {
         currentMeltingValue = resetMeltingValue;
         iceBlockCollider = GetComponent<EdgeCollider2D>();
+        iceBlockCollider2 = GetComponent<BoxCollider2D>();
+
+
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
@@ -42,6 +46,7 @@ public class Icemeltscript : MonoBehaviour
             currentAlpaValue = resetAlphaValue;
 
             iceBlockCollider.enabled = true;
+            iceBlockCollider2.enabled = true;
 
             restartIceBlocks = false;
         }
@@ -72,6 +77,7 @@ public class Icemeltscript : MonoBehaviour
         if (currentMeltingValue <= 0)
         {
             iceBlockCollider.enabled = false;
+            iceBlockCollider2.enabled = false;
         }
     }
 
