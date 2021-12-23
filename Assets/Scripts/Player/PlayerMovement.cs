@@ -28,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
         dash = GetComponent<DashController>();
 
         //jumpsLeft = maxJumps;
-
-        dead = false;
     }
 
     void Update()
@@ -265,27 +263,10 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Water") 
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
-
-            dead = true;
         }
         if(collision.gameObject.tag == "WaterDrop" && jumpsLeft <= 0)
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
-
-            dead = true;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Water")
-        {
-            dead = false;
-        }
-        if (collision.gameObject.tag == "WaterDrop" && jumpsLeft == 0)
-        {
-            dead = false;
-        }
-    }
-
-
 }
