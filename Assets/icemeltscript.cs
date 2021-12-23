@@ -8,6 +8,8 @@ public class icemeltscript : MonoBehaviour
     public float resetMeltingValue = 2f;
 
     public SpriteRenderer iceSprite;
+    GameObject playerObject;
+    PlayerMovement playerScript;
 
     bool runTimer;
 
@@ -16,7 +18,9 @@ public class icemeltscript : MonoBehaviour
     void Start()
     {
         currentMeltingValue = resetMeltingValue;
-        //iceSprite.color = new Color(42f, 71f, 229f, resetAlphaValue);
+
+        playerObject = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
+        playerScript = playerObject.GetComponent<PlayerMovement>();
     }
     
     void Update()
