@@ -8,7 +8,7 @@ public class Icemeltscript : MonoBehaviour
     public float resetMeltingValue = 2f;
 
     public SpriteRenderer iceSprite;
-    public PlayerMovement playerScript;
+    PlayerMovement playerScript;
 
     EdgeCollider2D iceBlockCollider;
 
@@ -20,6 +20,8 @@ public class Icemeltscript : MonoBehaviour
     {
         currentMeltingValue = resetMeltingValue;
         iceBlockCollider = GetComponent<EdgeCollider2D>();
+
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
     
     void Update()
@@ -33,11 +35,8 @@ public class Icemeltscript : MonoBehaviour
 
     private void ResetIceBlocksComponentsAndValues()
     {
-
-        Debug.Log("Restart1");
-        if (playerScript.dead || playerScript.respawned || playerScript.refilled)
+        if (playerScript.dead || playerScript.respawned)
         {
-            Debug.Log("Restart2");
 
             currentMeltingValue = resetMeltingValue;
             currentAlpaValue = resetAlphaValue;

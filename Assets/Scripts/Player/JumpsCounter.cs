@@ -15,6 +15,6 @@ public class JumpsCounter : MonoBehaviour
 
     private void Update()
     {
-        jumpsText.text = string.Format("JUMPS: {0:0}", jumps.jumpsLeft);
+        jumpsText.text = string.Format("JUMPS: {0:0}", jumps.currentJumpsLeft);
     }
 }

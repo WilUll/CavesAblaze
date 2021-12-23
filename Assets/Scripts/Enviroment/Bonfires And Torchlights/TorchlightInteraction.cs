@@ -31,7 +31,7 @@ public class TorchlightInteraction : MonoBehaviour
         if (isPlayerClose && isBurning)
         {
             isBurning = false;
-            playerScript.jumpsLeft += 2;
+            playerScript.currentJumpsLeft += 2;
             playerScript.refilled = false;
             foreach (Transform child in transform)
             {
@@ -43,7 +43,6 @@ public class TorchlightInteraction : MonoBehaviour
     {
         if (isBurning == false)
         {
-
             if (playerScript.dead || playerScript.respawned || playerScript.refilled)
             {
                 isBurning = true;

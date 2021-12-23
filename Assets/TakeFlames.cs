@@ -19,7 +19,7 @@ public class TakeFlames : MonoBehaviour
         if (other.CompareTag("jumpFlames") && playerScript.jumpTimer <= 0)
         {
             Destroy(other.gameObject);
-            playerScript.jumpsLeft++;
+            playerScript.currentJumpsLeft++;
         }
     }
 }

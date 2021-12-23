@@ -65,7 +65,8 @@ public class CheckpointSystem : MonoBehaviour
             if (checkpointScript.isBurning)
             {
                 GameObject.FindGameObjectWithTag("Player").transform.position = checkpoints[i].transform.position + Vector3.up / 2;
-                playerScript.dead = false;
+                playerScript.respawned = true;
+                playerScript.canDie = false;
                 RefillJump();
             }
         }
@@ -98,7 +99,7 @@ public class CheckpointSystem : MonoBehaviour
         {
             Destroy(jumpFlames[i]);
         }
-        playerScript.jumpsLeft = playerScript.maxJumps;
+        playerScript.currentJumpsLeft = playerScript.maxJumps;
         playerScript.refilled = true;
     }
 
