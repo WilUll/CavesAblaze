@@ -262,9 +262,14 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //If water, respawn player
-        if (collision.gameObject.tag == "Water")
+        if (collision.gameObject.tag == "Water") 
         {
-            Debug.Log("dead");
+            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+
+            dead = true;
+        }
+        if(collision.gameObject.tag == "WaterDrop" && jumpsLeft <= 0)
+        {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
 
             dead = true;
@@ -273,6 +278,10 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Water")
+        {
+            dead = false;
+        }
+        if (collision.gameObject.tag == "WaterDrop" && jumpsLeft == 0)
         {
             dead = false;
         }

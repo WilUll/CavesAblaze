@@ -11,7 +11,7 @@ public class WaterDropCreator : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnWaterDrop", dropDelay, dropDelay);
+        InvokeRepeating("SpawnWaterDrop", 0, dropDelay);
 
         positionPlusYOffset.x = transform.position.x;
         positionPlusYOffset.y = transform.position.y + yOffset;

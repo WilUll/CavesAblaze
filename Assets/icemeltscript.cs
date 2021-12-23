@@ -19,8 +19,8 @@ public class icemeltscript : MonoBehaviour
     {
         currentMeltingValue = resetMeltingValue;
 
-        playerObject = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
-        playerScript = playerObject.GetComponent<PlayerMovement>();
+        //playerObject = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
+        //playerScript = playerObject.GetComponent<PlayerMovement>();
     }
     
     void Update()
