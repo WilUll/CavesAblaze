@@ -3,32 +3,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class icemeltscript : MonoBehaviour
+public class Icemeltscript : MonoBehaviour
 {
     public float resetMeltingValue = 2f;
 
     public SpriteRenderer iceSprite;
-    GameObject playerObject;
-    PlayerMovement playerScript;
+    public PlayerMovement playerScript;
 
-    bool runTimer;
+    EdgeCollider2D iceBlockCollider;
+
+    bool runTimer, restartIceBlocks;
 
     float currentMeltingValue, resetAlphaValue = 255f, currentAlpaValue;
    
     void Start()
     {
         currentMeltingValue = resetMeltingValue;
-
-        //playerObject = GameObject.FindGameObjectWithTag("Player").GetComponent<GameObject>();
-        //playerScript = playerObject.GetComponent<PlayerMovement>();
+        iceBlockCollider = GetComponent<EdgeCollider2D>();
     }
     
     void Update()
     {
+        ResetIceBlocksComponentsAndValues();
         RunTimer();
         DefineSpriteOpacity();
         ChangeSpriteOpacity();
         CheckMeltingTimer();
+    }
+
+    private void ResetIceBlocksComponentsAndValues()
+    {
+
+        Debug.Log("Restart1");
+        if (playerScript.dead || playerScript.respawned || playerScript.refilled)
+        {
+            Debug.Log("Restart2");
+
+            currentMeltingValue = resetMeltingValue;
+            currentAlpaValue = resetAlphaValue;
+
+            iceBlockCollider.enabled = true;
+
+            restartIceBlocks = false;
+        }
     }
 
     private void ChangeSpriteOpacity()
@@ -55,10 +72,9 @@ public class icemeltscript : MonoBehaviour
     {
         if (currentMeltingValue <= 0)
         {
-            gameObject.SetActive(false);
+            iceBlockCollider.enabled = false;
         }
     }
-
 
     private void OnCollisionEnter2D(Collision2D other)
     {

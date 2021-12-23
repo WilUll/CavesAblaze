@@ -172,6 +172,6 @@ public class DashController : MonoBehaviour
 
     private void ShakeCameraDashWall()
     {
-        cameraShake.Shake(amountShake, lenghtShake);
+        //cameraShake.Shake(amountShake, lenghtShake);
     }
 }
