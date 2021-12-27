@@ -21,6 +21,7 @@ TagManager:
   - ShatterParticles
   - TutorialTriggers
   - DashWall
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - PlayerFeet
   - CrystalWall
   - GasLeak
-  - 
+  - Rope
   - 
   - 
   - 
