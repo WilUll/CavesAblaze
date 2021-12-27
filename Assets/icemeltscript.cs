@@ -23,8 +23,6 @@ public class Icemeltscript : MonoBehaviour
         iceBlockCollider = GetComponent<EdgeCollider2D>();
         iceBlockCollider2 = GetComponent<BoxCollider2D>();
 
-
-
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
     
