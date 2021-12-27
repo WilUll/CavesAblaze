@@ -26,14 +26,13 @@ public class WaterDropController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
 
-            if (playerScript.jumpsLeft > 0)
+            if (playerScript.currentJumpsLeft > 0)
             {
                 GameObject currentFlame = Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
                 currentFlame.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 4, ForceMode2D.Impulse);
-                Debug.Log("lostFlame");
             }
             Destroy(gameObject);
-            playerScript.jumpsLeft--;
+            playerScript.currentJumpsLeft--;
         }
         else 
         {

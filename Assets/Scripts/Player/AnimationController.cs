@@ -81,7 +81,7 @@ public class AnimationController : MonoBehaviour
         if (playerScript.isGrounded)
         {
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump") && playerScript.currentJumpsLeft > 0)
             {
                 jumpParticles.Play();
             }
@@ -91,7 +91,7 @@ public class AnimationController : MonoBehaviour
         else if (playerScript.jumping)
         {
             // Create a method in PlayerMovement script for the initial jump and call that instead (the code repeats here)
-            if (Input.GetButtonDown("Jump") && playerScript.jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump") && playerScript.currentJumpsLeft > 0)
             {
                 jumpParticles.Play();
             }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,13 @@ public class PlayerMovement : MonoBehaviour
     GameObject ropeObj;
 
     public bool isGrounded, dead, respawned, refilled,
-                isAttached, jumping, oneDashOnAir, coroutineStart;
+                isAttached, jumping, oneDashOnAir, coroutineStart, canDie, runImmunityTimer;
 
     public float xAxis, yAxis, speed;
-    public float holdJumpPower, minJumpPower, jumpTimerValue, jumpTimer, jumpsLeft;
-    public int maxJumps;
+    public float holdJumpPower, minJumpPower, jumpTimerValue, jumpTimer, currentJumpsLeft, resetImmunityTimer;
+    public int maxJumps, waitOneFrame = 2;
 
+    public float immunityTimer, lastFrameAmountOfJumpsLeft;
 
     bool varSet = false;
 
@@ -26,10 +28,9 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
+        lastFrameAmountOfJumpsLeft = currentJumpsLeft;
 
         //jumpsLeft = maxJumps;
-
-        dead = false;
     }
 
     void Update()
@@ -48,8 +49,34 @@ public class PlayerMovement : MonoBehaviour
         Respawn();
 
         CheckIfJumping();
+
+        GiveImmunityAfterLosingLastFlame();
+        CheckIfRunImmunityTimer();
+        SetCanDieFalseIfOneOrMoreJumpsLefts();
+
+        CompareLastAmountOfJumpFlamesWithThisFrame();
     }
 
+    private void SetCanDieFalseIfOneOrMoreJumpsLefts()
+    {
+        if (currentJumpsLeft > 0) canDie = false;
+    }
+
+    private void CheckIfRunImmunityTimer()
+    {
+        if(runImmunityTimer)
+        {
+            RunImmunityTimer();
+
+            if (immunityTimer <= 0)
+            {
+                runImmunityTimer = false;
+                immunityTimer = 0;
+
+                if(currentJumpsLeft == 0) canDie = true;
+            }
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -69,12 +96,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isAttached)
         {
-            if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump") && currentJumpsLeft > 0)
             {
                 CalculateInitialJumpPower();
                 ResetJumpTimer();
                 SetTrueJumpConditions();
-                jumpsLeft--;
+                currentJumpsLeft--;
 
                 Instantiate(jumpFlames, offsetFlames, Quaternion.identity);
             }
@@ -179,8 +206,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LimitJumpsLeft()
     {
-        if (jumpsLeft > maxJumps) jumpsLeft = maxJumps;
-        if (jumpsLeft < 0) jumpsLeft = 0;
+        if (currentJumpsLeft > maxJumps) currentJumpsLeft = maxJumps;
+        if (currentJumpsLeft < 0) currentJumpsLeft = 0;
     }
 
 
@@ -206,14 +233,24 @@ public class PlayerMovement : MonoBehaviour
     }
     private void RestartRespawnedBool()
     {
-        if (respawned) respawned = false;
+        if (respawned)
+        {
+            if(waitOneFrame == 0)
+            {
+                respawned = false;
+                waitOneFrame = 2;
+            }
+            waitOneFrame--;
+        }
     }
+   
     private void Respawn()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
             respawned = true;
+            waitOneFrame = 1;
         }
     }
     private void CheckIfJumping()
@@ -221,6 +258,34 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded) jumping = false;
     }
 
+    private void CompareLastAmountOfJumpFlamesWithThisFrame()
+    {
+        if (lastFrameAmountOfJumpsLeft != currentJumpsLeft)
+        {
+            lastFrameAmountOfJumpsLeft = currentJumpsLeft;
+        }
+    }
+
+    private void GiveImmunityAfterLosingLastFlame()
+    {
+        if (currentJumpsLeft == 0 && lastFrameAmountOfJumpsLeft == currentJumpsLeft + 1)
+        {
+            runImmunityTimer = true;
+            ResetImmunityTimer();
+        }
+    }
+
+    private void RunImmunityTimer()
+    {
+        if (currentJumpsLeft == 0) immunityTimer -= Time.deltaTime;
+        else immunityTimer = 0;
+    }
+
+    public void ResetImmunityTimer()
+    {
+        immunityTimer = resetImmunityTimer;
+        lastFrameAmountOfJumpsLeft = currentJumpsLeft; 
+    }
 
 
     public void Attach(Rigidbody2D ropeBone)
@@ -262,21 +327,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //If water, respawn player
-        if (collision.gameObject.tag == "Water")
+        if (collision.gameObject.tag == "Water") 
         {
-            Debug.Log("dead");
             GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
-
-            dead = true;
         }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Water")
+        if(collision.gameObject.tag == "WaterDrop" && canDie)
         {
-            dead = false;
+            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
         }
     }
-
-
 }
