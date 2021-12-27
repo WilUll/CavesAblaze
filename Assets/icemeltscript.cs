@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Icemeltscript : MonoBehaviour
+public class icemeltscript : MonoBehaviour
 {
     public float resetMeltingValue = 2f;
 
