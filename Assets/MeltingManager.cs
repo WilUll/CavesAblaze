@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class icemeltscript : MonoBehaviour
+public class MeltingManager : MonoBehaviour
 {
     public float resetMeltingValue = 2f;
 
@@ -16,7 +15,7 @@ public class icemeltscript : MonoBehaviour
     bool runTimer, restartIceBlocks;
 
     float currentMeltingValue, resetAlphaValue = 255f, currentAlpaValue;
-   
+
     void Start()
     {
         currentMeltingValue = resetMeltingValue;
@@ -25,7 +24,7 @@ public class icemeltscript : MonoBehaviour
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
-    
+
     void Update()
     {
         ResetIceBlocksComponentsAndValues();
