@@ -7,9 +7,7 @@ public class Dynamite : MonoBehaviour
     LineRenderer LR;
     public Transform[] fusePos;
     public bool isIgnited;
-    float speed = 0.1f;
     float startTime = 0;
-    float fuseLenght;
 
     int index = 2;
     // Start is called before the first frame update
