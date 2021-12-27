@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5613922785844923403}
   - component: {fileID: 5613922785844923639}
   - component: {fileID: 5613922785844923400}
-  - component: {fileID: 5613922785844923636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,27 +136,9 @@ MonoBehaviour:
   yOffsetPublic: 2.7
   cameraLookDown: -3
   cameraLookUp: 5
-  maxPanoramicSize: 18
-  progresiveCameraDistance: 0.1
-  fixedCameraDistance: 6.17
-  panoramicCameraON: 0
-  fixedCameraOn: 0
---- !u!95 &5613922785844923636
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5613922785844923402}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2cb27dd7833f46245ae556a82c23d21b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  yMinClamp: 0
+  yMaxClamp: 0
+  xMinClamp: 0
+  xMaxClamp: 0
+  orthographicSize: 0
+  previousOrthograficSize: 0
