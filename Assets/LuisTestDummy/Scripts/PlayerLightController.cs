@@ -22,17 +22,17 @@ public class PlayerLightController : MonoBehaviour
 
     private void Update()
     {
-        randomValueIntensity = Random.Range(minIntensity, maxIntensity);
-        randomValueOutterRadius = Random.Range(minIntensity, maxIntensity);
+        //randomValueIntensity = Random.Range(minIntensity, maxIntensity);
+        //randomValueOutterRadius = Random.Range(minIntensity, maxIntensity);
 
         ChangeIntensity();
         ChangeOutterRadius();
 
-        Player.intensity = randomValueIntensity;
-        Player.pointLightOuterRadius = randomValueOutterRadius;
+        //Player.intensity = randomValueIntensity;
+        //Player.pointLightOuterRadius = randomValueOutterRadius;
 
-        //Player.intensity += intensityFluctuation;
-        //Player.pointLightOuterRadius += outteRadiusFluctuation;
+        Player.intensity += intensityFluctuation;
+        Player.pointLightOuterRadius += outteRadiusFluctuation;
     }
 
     private void ChangeIntensity()

@@ -345,7 +345,7 @@ MonoBehaviour:
   - {x: -5.39553, y: -1.9461788, z: 0}
   m_ShapePathHash: 1478573879
   m_Mesh: {fileID: 0}
-  m_InstanceId: 228756
+  m_InstanceId: 231728
 --- !u!114 &2631313614269713553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityFluctuation: 0.004
-  outteRadiusFluctuation: 0.04
-  minIntensity: 2.4
-  maxIntensity: 3
+  outteRadiusFluctuation: 0.004
+  minIntensity: 0.4
+  maxIntensity: 1.5
   minOutterRadius: 2.8
   maxOutterRadius: 3.5
 --- !u!1 &6963911059591659039

@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 1046403516761439971}
   - component: {fileID: 1046403516761439973}
   - component: {fileID: 1046403516761439972}
+  - component: {fileID: 6845478750125944816}
   m_Layer: 3
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.61
   m_Color: {r: 0.9433962, g: 0.38945735, b: 0.14595935, a: 1}
-  m_Intensity: 0.76
+  m_Intensity: 6.54
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000db30c2f6
   m_LightCookieSprite: {fileID: 0}
@@ -222,17 +223,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046403516761439970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3646436491fa8cd458a22f7a48540fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensityFluctuation: 0.0004
+  intensityFluctuation: 0.004
   outteRadiusFluctuation: 0.004
-  minIntensity: 2.2
-  maxIntensity: 3
+  minIntensity: 0.6
+  maxIntensity: 1.5
   minOutterRadius: 2.2
   maxOutterRadius: 3
+--- !u!114 &6845478750125944816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046403516761439970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751c89bdcc06a1440810a093a8299634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensityFluctuation: 0
+  outteRadiusFluctuation: 0
+  minIntensity: 0
+  maxIntensity: 0
+  minOutterRadius: 0
+  maxOutterRadius: 0
 --- !u!1 &1046403517114946787
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class MeltingManager : MonoBehaviour
     public float resetMeltingValue = 2f;
 
     public SpriteRenderer iceSprite;
+    public Sprite[] spriteArray;
     PlayerMovement playerScript;
 
     EdgeCollider2D iceBlockCollider;
@@ -31,7 +32,15 @@ public class MeltingManager : MonoBehaviour
         RunTimer();
         DefineSpriteOpacity();
         ChangeSpriteOpacity();
+        ChooseSprite();
         CheckMeltingTimer();
+    }
+
+    private void ChooseSprite()
+    {
+        if (currentAlpaValue > 0.66f) iceSprite.sprite = spriteArray[0];
+        else if (currentAlpaValue > 0.33f && currentAlpaValue < 0.66f) iceSprite.sprite = spriteArray[1];
+        else iceSprite.sprite = spriteArray[2];
     }
 
     private void ResetIceBlocksComponentsAndValues()

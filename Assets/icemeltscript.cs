@@ -8,6 +8,7 @@ public class icemeltscript : MonoBehaviour
     public float resetMeltingValue = 2f;
 
     public SpriteRenderer iceSprite;
+    public Sprite[] spriteArray;
     PlayerMovement playerScript;
 
     EdgeCollider2D iceBlockCollider;

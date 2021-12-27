@@ -147,3 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetMeltingValue: 2
   iceSprite: {fileID: 2526160987535428815}
+  spriteArray:
+  - {fileID: 21300000, guid: 235549b52a0e8ec40931af42cc7cf695, type: 3}
+  - {fileID: 21300000, guid: 0998b37c201259246ab610d40ce37516, type: 3}
+  - {fileID: 21300000, guid: d68bd89f028847d40ab79ab91f40be0c, type: 3}
