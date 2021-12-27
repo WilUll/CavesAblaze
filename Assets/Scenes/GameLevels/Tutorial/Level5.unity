@@ -3357,6 +3357,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1046403515842564587, guid: d4932688fdd51374d8509d3c7ec70040, type: 3}
+      propertyPath: m_TagString
+      value: PlayerFeet
+      objectReference: {fileID: 0}
     - target: {fileID: 1046403516757971750, guid: d4932688fdd51374d8509d3c7ec70040, type: 3}
       propertyPath: m_RootOrder
       value: 0

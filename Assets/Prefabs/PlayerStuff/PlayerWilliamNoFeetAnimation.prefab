@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1046403515842564589}
   m_Layer: 8
   m_Name: Feet
-  m_TagString: Untagged
+  m_TagString: PlayerFeet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,6 +414,8 @@ MonoBehaviour:
   jumping: 0
   oneDashOnAir: 0
   coroutineStart: 0
+  canDie: 0
+  runImmunityTimer: 0
   xAxis: 0
   yAxis: 0
   speed: 7
@@ -421,8 +423,12 @@ MonoBehaviour:
   minJumpPower: 4
   jumpTimerValue: 0.2
   jumpTimer: 0
-  jumpsLeft: 0
+  currentJumpsLeft: 0
+  resetImmunityTimer: 0
   maxJumps: 2
+  waitOneFrame: 2
+  immunityTimer: 0
+  lastFrameAmountOfJumpsLeft: 0
 --- !u!114 &7472859519154806732
 MonoBehaviour:
   m_ObjectHideFlags: 0
