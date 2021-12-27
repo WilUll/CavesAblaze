@@ -54,7 +54,7 @@ public class Icemeltscript : MonoBehaviour
 
     private void ChangeSpriteOpacity()
     {
-        iceSprite.color = new Color(0f, 0f, 1f, currentAlpaValue);
+        iceSprite.color = new Color(1f, 1f, 1f, currentAlpaValue);
     }
 
     private void DefineSpriteOpacity()
