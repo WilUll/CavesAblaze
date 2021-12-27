@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: f2382c1503ca9dd4fb1df19b7ca0718a
-=======
-guid: 69e564afb3821f144ab7b9c518e474bc
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,11 +102,7 @@ ScriptedImporter:
       y: 2371
       width: 673
       height: 120
-<<<<<<< HEAD
-    spriteID: 4b6c923b362bb694a8cb6f68033b7df7
-=======
-    spriteID: 3e8dc7ae7b9ad8b439242f0f48c8686d
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 371995783721dee43a468e01be7fb077
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -132,11 +124,7 @@ ScriptedImporter:
       y: 2371
       width: 673
       height: 120
-<<<<<<< HEAD
-    spriteID: f12433e6a4fbe32488158807d8149c7d
-=======
-    spriteID: 5fb7bb50bffba16488e246285867a194
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 036cda4983c750942bfba58278d7fc01
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -158,11 +146,7 @@ ScriptedImporter:
       y: 2172
       width: 1505
       height: 191
-<<<<<<< HEAD
-    spriteID: 3fd2a1917dac6e545aa3d8375791917f
-=======
-    spriteID: ab0b6750a6a4ea945bb735b6cbbb5269
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 06665eab8ac03fc44861842c563651d2
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -184,11 +168,7 @@ ScriptedImporter:
       y: 2172
       width: 2304
       height: 1498
-<<<<<<< HEAD
-    spriteID: 56dcb57296656db4182cb9a620edbc69
-=======
-    spriteID: 3c029685bdf12114b964734450af25fc
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: e3efbc5dee7bd964eb1064acafbd29d8
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -210,11 +190,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-<<<<<<< HEAD
-    spriteID: caee4f2ca0a94224f831319ea36c4f21
-=======
-    spriteID: 54d02bca61dd84d4d8e94c553b8bf639
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 5255ed651fb3e294a8aa4cd514ec713b
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -248,55 +224,35 @@ ScriptedImporter:
     spriteName: button unlit
     isGroup: 0
     parentIndex: -1
-<<<<<<< HEAD
-    spriteID: 4b6c923b362bb694a8cb6f68033b7df7
-=======
-    spriteID: 3e8dc7ae7b9ad8b439242f0f48c8686d
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 371995783721dee43a468e01be7fb077
     layerID: 15
     mosaicPosition: {x: 2316, y: 2371}
   - name: button lit
     spriteName: button lit
     isGroup: 0
     parentIndex: -1
-<<<<<<< HEAD
-    spriteID: f12433e6a4fbe32488158807d8149c7d
-=======
-    spriteID: 5fb7bb50bffba16488e246285867a194
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 036cda4983c750942bfba58278d7fc01
     layerID: 14
     mosaicPosition: {x: 2997, y: 2371}
   - name: cavesablaze
     spriteName: cavesablaze
     isGroup: 0
     parentIndex: -1
-<<<<<<< HEAD
-    spriteID: 3fd2a1917dac6e545aa3d8375791917f
-=======
-    spriteID: ab0b6750a6a4ea945bb735b6cbbb5269
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 06665eab8ac03fc44861842c563651d2
     layerID: 18
     mosaicPosition: {x: 2316, y: 2172}
   - name: light
     spriteName: light
     isGroup: 0
     parentIndex: -1
-<<<<<<< HEAD
-    spriteID: 56dcb57296656db4182cb9a620edbc69
-=======
-    spriteID: 3c029685bdf12114b964734450af25fc
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: e3efbc5dee7bd964eb1064acafbd29d8
     layerID: 5
     mosaicPosition: {x: 4, y: 2172}
   - name: background menu
     spriteName: background menu
     isGroup: 0
     parentIndex: -1
-<<<<<<< HEAD
-    spriteID: caee4f2ca0a94224f831319ea36c4f21
-=======
-    spriteID: 54d02bca61dd84d4d8e94c553b8bf639
->>>>>>> 665875170baa278a93e19be17dd518d7abcd6b2a
+    spriteID: 5255ed651fb3e294a8aa4cd514ec713b
     layerID: 11
     mosaicPosition: {x: 4, y: 4}
   characterData:
