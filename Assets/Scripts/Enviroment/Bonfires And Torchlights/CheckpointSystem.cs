@@ -70,16 +70,7 @@ public class CheckpointSystem : MonoBehaviour
                 RefillJump();
             }
         }
-        GameObject[] ropes = GameObject.FindGameObjectsWithTag("Rope");
-        foreach (GameObject rope in ropes)
-        {
-            GameObject.Destroy(rope);
-        }
-        RopeScript[] script = FindObjectsOfType<RopeScript>();
-        foreach (RopeScript scripts in script)
-        {
-            scripts.GenerateRope();
-        }
+        ResetRope();
         GameObject[] flames = GameObject.FindGameObjectsWithTag("Flame");
         foreach (GameObject flame in flames)
         {
@@ -89,6 +80,20 @@ public class CheckpointSystem : MonoBehaviour
         foreach (GameObject dashWall in dashWalls)
         {
             dashWall.GetComponent<DashWallsDestroy>().ResetCrystals();
+        }
+    }
+
+    public void ResetRope()
+    {
+        GameObject[] ropes = GameObject.FindGameObjectsWithTag("Rope");
+        foreach (GameObject rope in ropes)
+        {
+            GameObject.Destroy(rope);
+        }
+        RopeScript[] script = FindObjectsOfType<RopeScript>();
+        foreach (RopeScript scripts in script)
+        {
+            scripts.GenerateRope();
         }
     }
 

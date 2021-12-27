@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         lastFrameAmountOfJumpsLeft = currentJumpsLeft;
 
         //jumpsLeft = maxJumps;
+
     }
 
     void Update()
@@ -309,6 +310,7 @@ public class PlayerMovement : MonoBehaviour
             isAttached = false;
             yield return new WaitForSeconds(0.2f);
             playerRB.gravityScale = 4;
+            coroutineStart = false;
         }
     }
 

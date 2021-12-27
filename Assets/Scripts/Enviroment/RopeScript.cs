@@ -7,12 +7,13 @@ public class RopeScript : MonoBehaviour
     public Rigidbody2D hook;
     public GameObject segment;
     public int numSegments;
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         GenerateRope();
+        StartCoroutine(timer());
     }
 
     // Update is called once per frame
@@ -30,4 +31,10 @@ public class RopeScript : MonoBehaviour
             prevBod = newSeg.GetComponent<Rigidbody2D>();
         }
     }
+    IEnumerator timer()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().ResetRope();
+    }
+
 }
