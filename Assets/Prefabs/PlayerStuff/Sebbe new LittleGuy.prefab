@@ -251,6 +251,8 @@ MonoBehaviour:
   jumping: 0
   oneDashOnAir: 0
   coroutineStart: 0
+  canDie: 0
+  runImmunityTimer: 0
   xAxis: 0
   yAxis: 0
   speed: 7
@@ -258,8 +260,12 @@ MonoBehaviour:
   minJumpPower: 4
   jumpTimerValue: 0.2
   jumpTimer: 0
-  jumpsLeft: 0
+  currentJumpsLeft: 0
+  resetImmunityTimer: 0
   maxJumps: 2
+  waitOneFrame: 2
+  immunityTimer: 0
+  lastFrameAmountOfJumpsLeft: 0
 --- !u!114 &6386103005169831444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5579,7 +5585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6628670770217963997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8307330658307937928}
