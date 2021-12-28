@@ -331,11 +331,11 @@ public class PlayerMovement : MonoBehaviour
         //If water, respawn player
         if (collision.gameObject.tag == "Water") 
         {
-            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+            dead = true;
         }
         if(collision.gameObject.tag == "WaterDrop" && canDie)
         {
-            GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+            dead = true;
         }
     }
 }
