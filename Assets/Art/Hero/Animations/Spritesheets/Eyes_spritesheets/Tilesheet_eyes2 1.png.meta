@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 22f67994cbf18bd4c9a6b1f189834a13
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -433018005072818941
+    second: Tilesheet_eyes2 1_0
+  - first:
+      213: 1643509693430112939
+    second: Tilesheet_eyes2 1_1
+  - first:
+      213: 8850625079360441551
+    second: Tilesheet_eyes2 1_2
+  - first:
+      213: 6720008522002302470
+    second: Tilesheet_eyes2 1_3
+  - first:
+      213: -2498377233702414121
+    second: Tilesheet_eyes2 1_4
+  - first:
+      213: 5930179553150036372
+    second: Tilesheet_eyes2 1_5
+  - first:
+      213: -7655797232400337447
+    second: Tilesheet_eyes2 1_6
+  - first:
+      213: -3042171158426866395
+    second: Tilesheet_eyes2 1_7
+  - first:
+      213: 1169381617184060638
+    second: Tilesheet_eyes2 1_8
+  - first:
+      213: 3211408111200341596
+    second: Tilesheet_eyes2 1_9
+  - first:
+      213: -6616486892872588938
+    second: Tilesheet_eyes2 1_10
+  - first:
+      213: -8914543152859512066
+    second: Tilesheet_eyes2 1_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +77,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 350
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +104,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +125,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d494a2b6c9df9f0800000000000000
+      internalID: -433018005072818941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 375
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba220d5cb5beec610800000000000000
+      internalID: 1643509693430112939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 375
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc4177fd9cb3da70800000000000000
+      internalID: 8850625079360441551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6068b898524424d50800000000000000
+      internalID: 6720008522002302470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 250
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d89e36942bf35dd0800000000000000
+      internalID: -2498377233702414121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 250
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499eac752ea3c4250800000000000000
+      internalID: 5930179553150036372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5fb52baf421c590800000000000000
+      internalID: -7655797232400337447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 125
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d2704137908c5d0800000000000000
+      internalID: -3042171158426866395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 125
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4b02b926a7a3010800000000000000
+      internalID: 1169381617184060638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e87e099a6319c20800000000000000
+      internalID: 3211408111200341596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6712d410a348d24a0800000000000000
+      internalID: -6616486892872588938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesheet_eyes2 1_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef20be6db3e294480800000000000000
+      internalID: -8914543152859512066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
