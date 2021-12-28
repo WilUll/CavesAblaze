@@ -183,10 +183,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3264068816101787674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913ee8991c001c24095b338ba7e353f1, type: 3}
+  m_Script: {fileID: 11500000, guid: ea8f2596e3e90cd41af5c63a65e475d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: 5
+  fuel: 15
   fire: {fileID: 7427160681686832602, guid: c02368d573413c04fb11360d6129eecc, type: 3}
   burnTimer: 10
   objectBurn: 0
