@@ -13,7 +13,6 @@ public class FadeOnDeath : MonoBehaviour
     {
         playerScript = player.GetComponent<PlayerMovement>();
         fade.CrossFadeAlpha(0f, 0f, false);
-        
     }
 
     // Update is called once per frame
@@ -28,6 +27,7 @@ public class FadeOnDeath : MonoBehaviour
     IEnumerator fadeOut()
     {
         playerScript.dead = false;
+        playerScript.playerRB.velocity = Vector2.zero;
         playerScript.enabled = false;
         fade.CrossFadeAlpha(1, 0.25f, true);
         yield return new WaitForSeconds(0.5f);
