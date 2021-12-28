@@ -94,8 +94,8 @@ GameObject:
   - component: {fileID: 5773251567916949745}
   - component: {fileID: 5773251567916949748}
   - component: {fileID: 5773251567916949747}
+  - component: {fileID: -7207278548694126327}
   - component: {fileID: 3923296959818741825}
-  - component: {fileID: 2631313614269713553}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Checkpoint
@@ -212,6 +212,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.340841, y: 16.329372}
   m_EdgeRadius: 0
+--- !u!114 &-7207278548694126327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5773251567916949744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a4e3c66c180bf4d88f03a35a1bd005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3923296959818741825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,19 +357,7 @@ MonoBehaviour:
   - {x: -5.39553, y: -1.9461788, z: 0}
   m_ShapePathHash: 1478573879
   m_Mesh: {fileID: 0}
-  m_InstanceId: 231728
---- !u!114 &2631313614269713553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773251567916949744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3b19b8e08143b4d8225f8f00aecb77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_InstanceId: 59110
 --- !u!1 &5773251569646442720
 GameObject:
   m_ObjectHideFlags: 0
