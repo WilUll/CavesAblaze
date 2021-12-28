@@ -71,6 +71,7 @@ public class CheckpointSystem : MonoBehaviour
             }
         }
         ResetRope();
+
         GameObject[] flames = GameObject.FindGameObjectsWithTag("Flame");
         foreach (GameObject flame in flames)
         {

@@ -104,7 +104,7 @@ public class DashController : MonoBehaviour
 
     private void DashDetachOfRope()
     {
-        if (playerScript.isAttached && currentDashTime >= dashTimeReset - 0.05)
+        if (playerScript.isAttached && currentDashTime >= dashTimeReset - 0.01)
         {
             playerScript.Detach();
         }
