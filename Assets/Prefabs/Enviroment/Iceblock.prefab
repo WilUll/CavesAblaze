@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!68 &7790812821833894080
@@ -142,12 +142,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2526160987535428813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad294ab5a8a82994780fd866319de503, type: 3}
+  m_Script: {fileID: 11500000, guid: a5725739b45d8b84fa3b60c173958f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resetMeltingValue: 2
   iceSprite: {fileID: 2526160987535428815}
   spriteArray:
-  - {fileID: 21300000, guid: 1a2cc246178f5434381c963e4d9a2e6a, type: 3}
-  - {fileID: 21300000, guid: 8dfd6317eb2a9954aae6a77a85103d05, type: 3}
-  - {fileID: 21300000, guid: ceec960b34d93124ebd993ca4b10a36f, type: 3}
+  - {fileID: 21300000, guid: 235549b52a0e8ec40931af42cc7cf695, type: 3}
+  - {fileID: 21300000, guid: 0998b37c201259246ab610d40ce37516, type: 3}
+  - {fileID: 21300000, guid: d68bd89f028847d40ab79ab91f40be0c, type: 3}
