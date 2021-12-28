@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     DashController dash;
     GameObject ropeObj;
 
-    public bool isGrounded, dead, respawned, refilled,
+    public bool isGrounded, dead, respawned, refilled, attachJump,
                 isAttached, jumping, oneDashOnAir, coroutineStart, canDie, runImmunityTimer;
 
     public float xAxis, yAxis, speed;
@@ -169,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
         if (isAttached && varSet)
         {
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
+            gameObject.transform.localPosition = Vector2.zero;
         }
     }
 
@@ -180,7 +181,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ropeConnect.connectedAbove != null && ropeConnect.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
             {
-                Debug.Log(ropeObj.GetComponent<RopeSegment>());
                 newSeg = ropeConnect.connectedAbove;
             }
         }
@@ -302,6 +302,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ropeObj = transform.parent.gameObject;
         gameObject.transform.parent = null;
+        attachJump = false;
         StartCoroutine(varTimer());
         IEnumerator varTimer()
         {
