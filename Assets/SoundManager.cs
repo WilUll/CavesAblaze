@@ -26,7 +26,9 @@ public class SoundManager : MonoBehaviour
 
             else isMoving = false;
 
-        if (Input.GetButtonDown("Fire3")) audioSource.PlayOneShot(clips[0]);
-        else if (dashScript.dashOn == false);
-        }
+        if (Input.GetButtonDown("Fire3") && dashScript.dashCooldown <= 0 && dashScript.wallDashCooldown <= 0) audioSource.PlayOneShot(clips[0]);
+        //else if (dashScript.dashOn == false) audioSource.Stop(clips[0]);
+
+        if (Input.GetButtonDown("Jump") && playerScript.currentJumpsLeft > 0) audioSource.PlayOneShot(clips[1]);
+    }
 }

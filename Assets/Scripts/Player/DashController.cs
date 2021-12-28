@@ -20,7 +20,7 @@ public class DashController : MonoBehaviour
 
     public float cooldownReset, wallBounceCooldownReset = 0.2f;
 
-    float dashCooldown, wallDashCooldown;
+    public float dashCooldown, wallDashCooldown;
 
     float amountShake = 0.1f, lenghtShake = 0.3f;
 
