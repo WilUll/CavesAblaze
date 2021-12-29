@@ -22,6 +22,8 @@ TagManager:
   - TutorialTriggers
   - DashWall
   - PlayerFeet
+  - Ladder
+  - Bat
   layers:
   - Default
   - TransparentFX
