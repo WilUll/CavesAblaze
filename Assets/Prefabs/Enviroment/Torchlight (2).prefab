@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195818267752752319}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.02, y: 1.57, z: -358.61526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.61, z: -358.61526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9195818267788079740}
   m_Father: {fileID: 9195818267771613221}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9195818267752752317
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: ae1d4b83ac02ac34ebb64c4df1b0c328, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
-  m_Color: {r: 0.9811321, g: 0.45471025, b: 0.2443574, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Color: {r: 0.990566, g: 0.72013867, b: 0.6111605, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,12 +158,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 1544122061473082700, guid: 74e4a23f96ab4ff4abb88ccc820e1514, type: 3}
+  m_Sprite: {fileID: 3371453249607679628, guid: dc0eef8550777bc4dab612310f108921, type: 3}
   m_Color: {r: 0.3301887, g: 0.21965908, b: 0.113385536, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.725, y: 2.716721}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -186,8 +186,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.67333335, y: 2.5583334}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.725, y: 2.716721}
+    newSize: {x: 0.725, y: 2.716721}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -228,17 +228,26 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.27131057, y: -1.0032187, z: 0}
-  - {x: 0.1405983, y: -1.0395274, z: 0}
-  - {x: 0.12298989, y: -0.44258642, z: 0}
+  - {x: 0.021464348, y: -1.2959936, z: 0}
+  - {x: 0.25038815, y: -1.2883859, z: 0}
+  - {x: 0.29600334, y: -1.179239, z: 0}
+  - {x: 0.24476719, y: -0.7034795, z: 0}
+  - {x: 0.28136444, y: -0.5424533, z: 0}
+  - {x: 0.23278046, y: -0.3840313, z: 0}
+  - {x: 0.15693569, y: -0.30823302, z: 0}
   - {x: 0.1520369, y: -0.23199463, z: 0}
   - {x: 0.25370216, y: -0.1158061, z: 0}
-  - {x: 0.18834591, y: 0.11657143, z: 0}
-  - {x: 0.16656065, y: 0.39978123, z: 0}
+  - {x: 0.15906906, y: 0.13121009, z: 0}
+  - {x: 0.14460278, y: 0.39978123, z: 0}
   - {x: 0.2101314, y: 0.58858776, z: 0}
   - {x: 0.29727268, y: 0.7846565, z: 0}
-  - {x: 0.25678682, y: 1.0540524, z: 0}
-  - {x: -0.30035758, y: 1.2428579, z: 0}
+  - {x: 0.23744392, y: 0.9799807, z: 0}
+  - {x: 0.26672173, y: 1.1336873, z: 0}
+  - {x: 0.22750854, y: 1.2150786, z: 0}
+  - {x: -0.004096985, y: 1.1483257, z: 0}
+  - {x: -0.27108097, y: 1.184303, z: 0}
+  - {x: -0.31882858, y: 1.0312164, z: 0}
+  - {x: -0.24563503, y: 0.89214826, z: 0}
   - {x: -0.28367043, y: 0.7483473, z: 0}
   - {x: -0.27958965, y: 0.631258, z: 0}
   - {x: -0.23223352, y: 0.74361324, z: -0.000030517578}
@@ -252,13 +261,14 @@ MonoBehaviour:
   - {x: -0.240237, y: 0.1914773, z: 0.000030517578}
   - {x: -0.22623348, y: 0.101454735, z: 0.000030517578}
   - {x: -0.22823477, y: -0.018574715, z: 0.000030517578}
-  - {x: -0.28624916, y: -0.10459614, z: 0.000030517578}
-  - {x: -0.27424717, y: -0.24263, z: 0.000030517578}
-  - {x: -0.23423743, y: -0.21862364, z: 0.000030517578}
-  - {x: -0.23456478, y: -0.33568, z: 0}
-  m_ShapePathHash: -145265803
+  - {x: -0.19841671, y: -0.2290256, z: 0.000030517578}
+  - {x: -0.08460426, y: -0.3594687, z: 0}
+  - {x: -0.18707561, y: -0.63028574, z: 0}
+  - {x: -0.14315891, y: -0.8498671, z: 0}
+  - {x: -0.04800701, y: -1.0108933, z: 0}
+  m_ShapePathHash: 191347941
   m_Mesh: {fileID: 0}
-  m_InstanceId: -22568
+  m_InstanceId: 434400
 --- !u!1 &9195818267788079743
 GameObject:
   m_ObjectHideFlags: 0
