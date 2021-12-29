@@ -21,11 +21,11 @@ public class AnimationController : MonoBehaviour
         //Set the float that handles Run and waiting animations
         SetAnimatorFloatSpeed();
 
+        DashAninimation();
         DefineRunAndWaitingAnimations();
         DefineDashAnimation();
         JumpAnimation();
         FallAnimation();
-        DashAninimation();
     }
 
     private void FallAnimation()
@@ -39,14 +39,17 @@ public class AnimationController : MonoBehaviour
     }
     private void DefineRunAndWaitingAnimations()
     {
+        Debug.Log("1");
         //Move Animation
         if (playerScript.xAxis < 0)
         {
             eyesSpriteRenderer.flipX = false;
         }
-        else if (playerScript.xAxis > 0)
+        if (playerScript.xAxis > 0)
         {
+            Debug.Log("2");
             eyesSpriteRenderer.flipX = true;
+            Debug.Log("3");
         }
         ////Waiting Animation
         //else if (playerScript.xAxis == 0)
@@ -61,7 +64,7 @@ public class AnimationController : MonoBehaviour
         {
             eyesSpriteRenderer.flipX = true;
         }
-        else if (dashScript.lastDirection < 0)
+        else if (dashScript.lastDirection < 0 && dashScript.dashOn)
         {
             eyesSpriteRenderer.flipX = false;
         }

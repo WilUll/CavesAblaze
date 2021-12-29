@@ -577,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2351470942917612077, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2363318268536260126, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
       propertyPath: m_FlipY
@@ -743,7 +743,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4650912956544358847, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
 --- !u!1 &80549551
 GameObject:
@@ -4386,7 +4387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 758581512}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &838829045
 MonoBehaviour:
@@ -6640,7 +6641,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 758581512}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1371966096
 ParticleSystem:
