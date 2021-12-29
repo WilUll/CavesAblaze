@@ -35,7 +35,7 @@ public class AnimationController : MonoBehaviour
 
     private void SetAnimatorFloatSpeed()
     {
-        //animatorFeet.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+        animatorBody.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
     }
     private void DefineRunAndWaitingAnimations()
     {
