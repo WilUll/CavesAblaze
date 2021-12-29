@@ -9,7 +9,7 @@ public class AnimationController : MonoBehaviour
    // public Animator animatorFeet;
     public Animator animatorBody;
     //public SpriteRenderer feetSpriteRenderer;
-    public SpriteRenderer bodySpriteRenderer;
+    public SpriteRenderer eyesSpriteRenderer;
     public ParticleSystem jumpParticles;
     public DashController dashScript;
 
@@ -21,11 +21,11 @@ public class AnimationController : MonoBehaviour
         //Set the float that handles Run and waiting animations
         SetAnimatorFloatSpeed();
 
-        //DefineRunAndWaitingAnimations();
+        DashAninimation();
+        DefineRunAndWaitingAnimations();
         DefineDashAnimation();
         JumpAnimation();
         FallAnimation();
-        DashAninimation();
     }
 
     private void FallAnimation()
@@ -35,39 +35,38 @@ public class AnimationController : MonoBehaviour
 
     private void SetAnimatorFloatSpeed()
     {
-        //animatorFeet.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
+        animatorBody.SetFloat("Speed", Mathf.Abs(playerScript.xAxis));
     }
     private void DefineRunAndWaitingAnimations()
     {
-    //    //Move Animation
-    //    if (playerScript.xAxis < 0)
-    //    {
-    //        feetSpriteRenderer.flipX = true;
-    //        animatorFeet.SetBool("IsWaiting", false);
-    //        waitingAnimationTime = resetWaitingAnimTime;
-    //    }
-    //    else if (playerScript.xAxis > 0)
-    //    {
-    //        feetSpriteRenderer.flipX = false;
-    //        animatorFeet.SetBool("IsWaiting", false);
-    //        waitingAnimationTime = resetWaitingAnimTime;
-    //    }
-    //    //Waiting Animation
-    //    else if (playerScript.xAxis == 0)
-    //    {
-    //        waitingAnimationTime -= Time.deltaTime;
-    //        if (waitingAnimationTime <= 0) WaitingAnimation();
-    //    }
+        Debug.Log("1");
+        //Move Animation
+        if (playerScript.xAxis < 0)
+        {
+            eyesSpriteRenderer.flipX = false;
+        }
+        if (playerScript.xAxis > 0)
+        {
+            Debug.Log("2");
+            eyesSpriteRenderer.flipX = true;
+            Debug.Log("3");
+        }
+        ////Waiting Animation
+        //else if (playerScript.xAxis == 0)
+        //{
+        //    waitingAnimationTime -= Time.deltaTime;
+        //    if (waitingAnimationTime <= 0) WaitingAnimation();
+        //}
     }
     private void DefineDashAnimation()
     {
         if (dashScript.lastDirection > 0 && dashScript.dashOn)
         {
-            bodySpriteRenderer.flipX = true;
+            eyesSpriteRenderer.flipX = true;
         }
-        else if (dashScript.lastDirection < 0)
+        else if (dashScript.lastDirection < 0 && dashScript.dashOn)
         {
-            bodySpriteRenderer.flipX = false;
+            eyesSpriteRenderer.flipX = false;
         }
     }
 
