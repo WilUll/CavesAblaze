@@ -79,16 +79,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3579942303184814846}
-  - component: {fileID: 3579942302568056066}
   - component: {fileID: 3579942302568056065}
   - component: {fileID: 3579942302568056064}
   - component: {fileID: 3579942302568056126}
   - component: {fileID: 3579942302568056125}
   - component: {fileID: 6386103005169831444}
-  - component: {fileID: 9048039810694313319}
   - component: {fileID: 6838948440297983934}
-  - component: {fileID: 4674124445006725039}
   - component: {fileID: 6076584084376880392}
+  - component: {fileID: 4674124445006725039}
+  - component: {fileID: 9048039810694313319}
   m_Layer: 3
   m_Name: Sebbe new LittleGuy
   m_TagString: Player
@@ -117,57 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3579942302568056066
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3579942302568056123}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -155045669
-  m_SortingLayer: 1
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 454cd51a99ce3b544aa687df31fed88f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.232, y: 1.238}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!50 &3579942302568056065
 Rigidbody2D:
   serializedVersion: 4
@@ -232,7 +180,7 @@ MonoBehaviour:
   dashOn: 0
   wallCollisionDashOn: 0
   cooldownReset: 0.5
-  wallBounceCooldownReset: 0.12
+  wallBounceCooldownReset: 0.1
   dashCooldown: 0
   wallDashCooldown: 0
   lastDirection: 0
@@ -292,14 +240,6 @@ MonoBehaviour:
   jumpParticles: {fileID: 1119488452329636147}
   dashScript: {fileID: 3579942302568056126}
   resetWaitingAnimTime: 1.5
---- !u!81 &9048039810694313319
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3579942302568056123}
-  m_Enabled: 1
 --- !u!114 &6838948440297983934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +255,20 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 3af9593143a48fe45b44aabaf3560a7b, type: 3}
   - {fileID: 8300000, guid: b9f83c47ddbd3b248932cac9c814cc75, type: 3}
+--- !u!114 &6076584084376880392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579942302568056123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5dccf083cb4f944949385710124864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3579942302568056123}
+  fade: {fileID: 8751632751299849640}
 --- !u!82 &4674124445006725039
 AudioSource:
   m_ObjectHideFlags: 0
@@ -411,20 +365,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6076584084376880392
-MonoBehaviour:
+--- !u!81 &9048039810694313319
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3579942302568056123}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5dccf083cb4f944949385710124864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3579942302568056123}
-  fade: {fileID: 8751632751299849640}
 --- !u!1 &3579942303187693370
 GameObject:
   m_ObjectHideFlags: 0
