@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
     private void SetJumpFlamesSpawningOffset()
     {
         offsetFlames = transform.position;
-        offsetFlames.y -= 0.2f;
+        offsetFlames.y -= 0f;
     }
     private void RestartRespawnedBool()
     {
