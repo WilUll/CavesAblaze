@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6939815226944898411}
   - component: {fileID: 5034546437554824230}
   - component: {fileID: 8821519567632061836}
-  - component: {fileID: 8462216672626093047}
   m_Layer: 0
   m_Name: Point Light 2D (1)
   m_TagString: Untagged
@@ -92,19 +91,6 @@ MonoBehaviour:
   maxIntensity: 1.4
   minOutterRadius: 0.5
   maxOutterRadius: 0.8
---- !u!114 &8462216672626093047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2975052970688474318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6613a31a8996ee74496ccbf1461e2dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireManagerScript: {fileID: -7207278548694126327}
 --- !u!1 &3740295890306720883
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +450,7 @@ MonoBehaviour:
   - {x: -5.39553, y: -1.9461788, z: 0}
   m_ShapePathHash: 1478573879
   m_Mesh: {fileID: 0}
-  m_InstanceId: 117270
+  m_InstanceId: 127642
 --- !u!1 &5773251569646442720
 GameObject:
   m_ObjectHideFlags: 0
