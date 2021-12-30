@@ -84,10 +84,17 @@ public class DashCrystalLightController : MonoBehaviour
         {
             case 0:
                 allLights[0].SetActive(true);
+                allLights[1].SetActive(false);
+                allLights[2].SetActive(false);
+                allLights[3].SetActive(false);
+                allLights[4].SetActive(false);
                 break;
             case 1:
                 allLights[0].SetActive(false);
                 allLights[1].SetActive(true);
+                allLights[2].SetActive(false);
+                allLights[3].SetActive(false);
+                allLights[4].SetActive(false);
                 break;
             case 2:
                 allLights[1].SetActive(false);
