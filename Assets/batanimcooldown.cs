@@ -9,7 +9,7 @@ public class batanimcooldown : MonoBehaviour
     public bool keepplaying;
     public int stop = 20;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         batflying = GetComponent<Animation>();
@@ -35,10 +35,4 @@ public class batanimcooldown : MonoBehaviour
         yield return null;
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
