@@ -8,8 +8,10 @@ public class Dynamite : MonoBehaviour
     public Transform[] fusePos;
     public bool isIgnited;
     float startTime = 0;
+    GameObject particleExplosion;
+    ParticleSystem explosion;
 
-    int index = 2;
+    public int index;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,9 @@ public class Dynamite : MonoBehaviour
         {
             LR.SetPosition(i, (fusePos[i].position));
         }
+        index = fusePos.Length - 1;
+        particleExplosion = gameObject.transform.Find("explotion").gameObject;
+        explosion = particleExplosion.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -29,15 +34,14 @@ public class Dynamite : MonoBehaviour
             if (Vector2.Distance(fusePos[fusePos.Length - 1].position, fusePos[0].position) > 1f)
             {
                 startTime += Time.deltaTime;
-                float leftToGo = (startTime / 5);
+                float leftToGo = (startTime / 10);
+                Debug.Log(leftToGo);
                 LR.SetPosition(index, Vector2.Lerp(fusePos[index].position, fusePos[index - 1].position, leftToGo));
                 fusePos[index].position = LR.GetPosition(index);
-                Debug.Log(leftToGo);
-                if (leftToGo >= 1)
+                if (leftToGo >= 1 || Vector2.Distance(fusePos[index].position, fusePos[index - 1].position) <= 0.1f)
                 {
                     startTime = 0;
                     index--;
-                    Debug.Log(index);
                     if (index == 0)
                     {
                         index = fusePos.Length - 1;
@@ -47,8 +51,16 @@ public class Dynamite : MonoBehaviour
             }
             else
             {
-                isIgnited = false;
-                gameObject.SetActive(false);
+                StartCoroutine(explodeTimer());
+                IEnumerator explodeTimer()
+                {
+                    isIgnited = false;
+                    explosion.Play();
+                    yield return new WaitForSeconds(0.2f);
+                    transform.parent.gameObject.GetComponent<ExplodingWall>().DamageWall();
+                    gameObject.SetActive(false);
+                }
+
             }
         }
     }
@@ -59,10 +71,5 @@ public class Dynamite : MonoBehaviour
         {
             isIgnited = true;
         }
-    }
-
-    void IgniteFuse()
-    {
-
     }
 }

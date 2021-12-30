@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneScript : MonoBehaviour
 {
     public static SceneScript Instance { get; private set; }
-    int index = 2;
+    int index;
     void Awake()
     {
         if (Instance == null)
@@ -22,8 +22,9 @@ public class SceneScript : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(index, LoadSceneMode.Single);
+        index = SceneManager.GetActiveScene().buildIndex;
         index++;
+        SceneManager.LoadScene(index, LoadSceneMode.Single);
     }
     public void Gotosettings()
     {
