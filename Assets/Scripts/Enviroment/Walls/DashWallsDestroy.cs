@@ -14,6 +14,9 @@ public class DashWallsDestroy : MonoBehaviour
 
     public int indexNumber = 0;
 
+    public AudioSource audioSource;
+    public AudioClip[] clip;
+
     BoxCollider2D boxColliderSprite0And1;
     PolygonCollider2D polygonColliderSprite2;
 
@@ -22,6 +25,8 @@ public class DashWallsDestroy : MonoBehaviour
     ParticleSystem shatter;
 
     DashCrystalLightController lightPickSprite;
+
+
 
     private void Start()
     {
@@ -65,9 +70,15 @@ public class DashWallsDestroy : MonoBehaviour
             ReduceHP();
             NextSprite();
             PlayParticleAnimation();
+            PlayShatterSound();
             HandleColliders(indexNumber);
             lightPickSprite.HandleLights(indexNumber);
         }
+    }
+
+    private void PlayShatterSound()
+    {
+        audioSource.PlayOneShot(clip[0]);
     }
 
     private void RunTimer()
