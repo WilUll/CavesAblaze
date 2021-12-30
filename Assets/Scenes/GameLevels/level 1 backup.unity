@@ -24123,7 +24123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3579942302568056123, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3579942302568056125, guid: 67df9ef6ac7390f49a46319d51ceeda1, type: 3}
       propertyPath: playerRB
