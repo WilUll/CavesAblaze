@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireManager : MonoBehaviour
 {
     CheckpointSystem checkpointScript;
+    public bool baseLight;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class FireManager : MonoBehaviour
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(false);
+                baseLight = true;
             }
         }
         else
@@ -26,6 +28,7 @@ public class FireManager : MonoBehaviour
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(true);
+                baseLight = false;
             }
         }
     }
