@@ -19,7 +19,6 @@ public class geyser : MonoBehaviour
             gasLeak.SetActive(false);
             explotion.Play();
             audioSource.PlayOneShot(clip[0]);
-
         }
     }
 

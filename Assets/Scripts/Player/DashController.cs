@@ -11,8 +11,8 @@ public class DashController : MonoBehaviour
     Camera camera;
 
     public float dashSpeed;
-    public float dashTimeReset;
-    
+    public float dashTimeReset, pushBackTimeReset;
+
     float currentDashTime;
     Vector2 playerMove;
 
@@ -24,12 +24,14 @@ public class DashController : MonoBehaviour
 
     float amountShake = 0.1f, lenghtShake = 0.3f;
 
+    bool pushBack;
+
     float startGrav;
     public float lastDirection;
 
     void Start()
     {
-        
+
         playerScript = GetComponent<PlayerMovement>();
         rb = playerScript.GetComponent<Rigidbody2D>();
 
@@ -78,14 +80,29 @@ public class DashController : MonoBehaviour
             {
                 if (hit.collider == hit.collider.CompareTag("Ground"))
                 {
-                    Debug.Log("ground");
+                    pushBack = true;
+                    dashOn = true;
+                    playerScript.oneDashOnAir = true;
+
+                    currentDashTime = pushBackTimeReset;
+                    playerMove = new Vector2(-lastDirection, 0);
+                    playerMove.Normalize();
+                    rb.gravityScale = 0;
                 }
                 else if (hit.collider == hit.collider.CompareTag("DashWall"))
                 {
-                    Debug.Log("walldash");
+                    pushBack = true;
+                    dashOn = true;
+                    playerScript.oneDashOnAir = true;
+
+                    currentDashTime = pushBackTimeReset;
+                    playerMove = new Vector2(-lastDirection, 0);
+                    playerMove.Normalize();
+                    rb.gravityScale = 0;
                 }
                 else
                 {
+                    pushBack = false;
                     dashOn = true;
                     playerScript.oneDashOnAir = true;
 
@@ -94,16 +111,6 @@ public class DashController : MonoBehaviour
                     playerMove.Normalize();
                     rb.gravityScale = 0;
                 }
-            }
-            else
-            {
-                dashOn = true;
-                playerScript.oneDashOnAir = true;
-
-                currentDashTime = dashTimeReset;
-                playerMove = new Vector2(lastDirection, 0);
-                playerMove.Normalize();
-                rb.gravityScale = 0;
             }
         }
     }
@@ -120,7 +127,7 @@ public class DashController : MonoBehaviour
     }
     private void Bounce()
     {
-        if(wallCollisionDashOn)
+        if (wallCollisionDashOn)
         {
             MovementBounce();
             CheckDashWallTimer();
@@ -136,7 +143,14 @@ public class DashController : MonoBehaviour
     }
     private void SetDashSpeed()
     {
-        rb.velocity = (playerMove * dashSpeed);
+        if (pushBack)
+        {
+            rb.velocity = (playerMove * dashSpeed / 4);
+        }
+        else
+        {
+            rb.velocity = (playerMove * dashSpeed);
+        }
     }
     private void RunDashTimeDuration()
     {
@@ -159,7 +173,7 @@ public class DashController : MonoBehaviour
     {
         rb.gravityScale = startGrav;
     }
-    
+
     private void ActivateConditions()
     {
         wallCollisionDashOn = true;
@@ -187,7 +201,7 @@ public class DashController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("DashWall") && dashOn)
+        if (other.gameObject.CompareTag("DashWall") && dashOn)
         {
             ActivateConditions();
             ShakeCameraDashWall();
