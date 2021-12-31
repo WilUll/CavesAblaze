@@ -9,18 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Mainmenu.unity
     guid: 47d09cf3ae77cd44aa92e141392816cd
   - enabled: 1
-    path: Assets/Scenes/GameLevels/level 1 backup.unity
-    guid: dfe840734ffa0344ca359acdd6119ad6
-  - enabled: 1
     path: Assets/Scenes/GameLevels/Tutorial/Level1.unity
     guid: 79fdddcaf9128e9468b6d45b26902cbc
   - enabled: 1
-    path: Assets/Annikas test/A lev 2.unity
-    guid: 43e63c47ee7fd4e4a878a6c7a816a4e4
+    path: Assets/Scenes/GameLevels/Tutorial/Level3.unity
+    guid: e919f976e6d369a4c87f30f503c7c612
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Tutorial/Level4.unity
+    guid: 3cad3cb6017268d42bfcc6cfd22814b7
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Tutorial/Level5.unity
+    guid: f03498ec8fad3f04892250ada9f27b48
   - enabled: 1
     path: Assets/Scenes/GameLevels/Tutorial/Level8.unity
     guid: f7c26839e19dddb4b9e34eaeced082ab
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}

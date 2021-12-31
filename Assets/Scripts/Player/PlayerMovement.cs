@@ -292,6 +292,7 @@ public class PlayerMovement : MonoBehaviour
     public void Attach(Rigidbody2D ropeBone)
     {
         ropeObj = ropeBone.gameObject;
+        playerRB.velocity = Vector2.zero;
         ropeObj.GetComponent<RopeSegment>().isPlayerConnected = true;
         isAttached = true;
         gameObject.transform.parent = ropeBone.transform;
