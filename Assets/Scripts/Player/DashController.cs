@@ -112,6 +112,17 @@ public class DashController : MonoBehaviour
                     rb.gravityScale = 0;
                 }
             }
+            else
+            {
+                pushBack = false;
+                dashOn = true;
+                playerScript.oneDashOnAir = true;
+
+                currentDashTime = dashTimeReset;
+                playerMove = new Vector2(lastDirection, 0);
+                playerMove.Normalize();
+                rb.gravityScale = 0;
+            }
         }
     }
     private void HandleDashMovement()
