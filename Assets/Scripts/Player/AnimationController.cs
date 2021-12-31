@@ -39,7 +39,6 @@ public class AnimationController : MonoBehaviour
     }
     private void DefineRunAndWaitingAnimations()
     {
-        Debug.Log("1");
         //Move Animation
         if (playerScript.xAxis < 0)
         {
@@ -47,9 +46,7 @@ public class AnimationController : MonoBehaviour
         }
         if (playerScript.xAxis > 0)
         {
-            Debug.Log("2");
             eyesSpriteRenderer.flipX = true;
-            Debug.Log("3");
         }
         ////Waiting Animation
         //else if (playerScript.xAxis == 0)

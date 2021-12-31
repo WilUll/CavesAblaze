@@ -73,13 +73,38 @@ public class DashController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire3") && dashCooldown <= 0 && !dashOn)
         {
-            dashOn = true;
-            playerScript.oneDashOnAir = true;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, 0.2f);
+            if (hit.collider != null)
+            {
+                if (hit.collider == hit.collider.CompareTag("Ground"))
+                {
+                    Debug.Log("ground");
+                }
+                else if (hit.collider == hit.collider.CompareTag("DashWall"))
+                {
+                    Debug.Log("walldash");
+                }
+                else
+                {
+                    dashOn = true;
+                    playerScript.oneDashOnAir = true;
 
-            currentDashTime = dashTimeReset;
-            playerMove = new Vector2(lastDirection, 0);
-            playerMove.Normalize();
-            rb.gravityScale = 0;
+                    currentDashTime = dashTimeReset;
+                    playerMove = new Vector2(lastDirection, 0);
+                    playerMove.Normalize();
+                    rb.gravityScale = 0;
+                }
+            }
+            else
+            {
+                dashOn = true;
+                playerScript.oneDashOnAir = true;
+
+                currentDashTime = dashTimeReset;
+                playerMove = new Vector2(lastDirection, 0);
+                playerMove.Normalize();
+                rb.gravityScale = 0;
+            }
         }
     }
     private void HandleDashMovement()
