@@ -75,7 +75,7 @@ public class DashController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire3") && dashCooldown <= 0 && !dashOn) 
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection,5f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection,0.2f);
                 Debug.Log(hit.collider);
             if (hit.collider != null)
             {
