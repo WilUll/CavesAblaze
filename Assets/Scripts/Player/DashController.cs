@@ -75,32 +75,41 @@ public class DashController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire3") && dashCooldown <= 0 && !dashOn) 
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection,0.2f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, 0.5f);
                 Debug.Log(hit.collider);
+            Debug.DrawRay(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, Color.red, 10);
             if (hit.collider != null)
             {
                 if (hit.collider == hit.collider.CompareTag("Ground"))
                 {
                     Debug.Log("Ground");
-                    pushBack = true;
-                    dashOn = true;
-                    playerScript.oneDashOnAir = true;
-
-                    currentDashTime = pushBackTimeReset;
-                    playerMove = new Vector2(-lastDirection, 0);
-                    playerMove.Normalize();
-                    rb.gravityScale = 0;
                 }
                 else if (hit.collider == hit.collider.CompareTag("DashWall"))
                 {
-                    pushBack = true;
-                    dashOn = true;
-                    playerScript.oneDashOnAir = true;
+                    RaycastHit2D hit2 = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, 0.1f);
+                    if (hit2.collider == hit.collider.CompareTag("DashWall"))
+                    {
+                        pushBack = true;
+                        dashOn = true;
+                        playerScript.oneDashOnAir = true;
 
-                    currentDashTime = pushBackTimeReset;
-                    playerMove = new Vector2(-lastDirection, 0);
-                    playerMove.Normalize();
-                    rb.gravityScale = 0;
+                        currentDashTime = pushBackTimeReset;
+                        playerMove = new Vector2(-lastDirection, 0);
+                        playerMove.Normalize();
+                        rb.gravityScale = 0;
+                    }
+                    else
+                    {
+                        pushBack = false;
+                        dashOn = true;
+                        playerScript.oneDashOnAir = true;
+
+                        currentDashTime = dashTimeReset;
+                        playerMove = new Vector2(lastDirection, 0);
+                        playerMove.Normalize();
+                        rb.gravityScale = 0;
+                    }
+                    
                 }
                 else
                 {
