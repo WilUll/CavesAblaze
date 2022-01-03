@@ -23,7 +23,7 @@ public class TutorialText : MonoBehaviour
             sentences = new string[controllerSentences.Length];
             for (int i = 0; i < controllerSentences.Length; i++)
             {
-                controllerSentences.CopyTo(sentences, 0);
+                sentences[i] = controllerSentences[i];
             }
         }
         else
