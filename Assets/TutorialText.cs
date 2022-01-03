@@ -71,7 +71,7 @@ public class TutorialText : MonoBehaviour
         }
         else
         {
-            tutText.text = pcSentences[index].ToString();
+            tutText.text = sentences[index].ToString();
             tutText.CrossFadeAlpha(1f, 0.2f, false);
         }
     }
