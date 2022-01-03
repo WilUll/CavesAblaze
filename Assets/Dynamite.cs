@@ -43,7 +43,7 @@ public class Dynamite : MonoBehaviour
             if (Vector2.Distance(fusePos[fusePos.Length - 1].position, fusePos[0].position) > 1f)
             {
                 startTime += Time.deltaTime;
-                float leftToGo = (startTime / 20);
+                float leftToGo = (startTime / 200);
                 LR.SetPosition(index, Vector2.Lerp(fusePos[index].position, fusePos[index - 1].position, leftToGo));
                 if (index == fusePos.Length - 2)
                 {
