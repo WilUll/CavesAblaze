@@ -7,6 +7,8 @@ public class geyser : MonoBehaviour
     public float boost = 25f;
     public GameObject gasLeak;
     public ParticleSystem explotion;
+    public AudioClip[] clip;
+    public AudioSource audioSource;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -16,6 +18,7 @@ public class geyser : MonoBehaviour
 
             gasLeak.SetActive(false);
             explotion.Play();
+            audioSource.PlayOneShot(clip[0]);
         }
     }
 

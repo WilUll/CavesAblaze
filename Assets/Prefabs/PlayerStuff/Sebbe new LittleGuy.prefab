@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 25
   dashTimeReset: 0.15
+  pushBackTimeReset: 0.15
   dashOn: 0
   wallCollisionDashOn: 0
   cooldownReset: 0.5
@@ -269,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3579942302568056123}
   fade: {fileID: 8751632751299849640}
+  playerSpawned: 0
 --- !u!82 &4674124445006725039
 AudioSource:
   m_ObjectHideFlags: 0
@@ -479,7 +481,7 @@ GameObject:
   - component: {fileID: 3579942304366559285}
   m_Layer: 8
   m_Name: Feet
-  m_TagString: Untagged
+  m_TagString: PlayerFeet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

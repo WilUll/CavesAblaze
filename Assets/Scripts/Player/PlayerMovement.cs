@@ -168,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (isAttached && varSet)
         {
+            playerRB.velocity = Vector2.zero;
             ropeObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(xAxis * speed, 0));
             gameObject.transform.localPosition = Vector2.zero;
         }

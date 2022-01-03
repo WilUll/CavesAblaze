@@ -8,11 +8,13 @@ public class FadeOnDeath : MonoBehaviour
     public GameObject player;
     PlayerMovement playerScript;
     public Image fade;
+    public bool playerSpawned = false;
     // Start is called before the first frame update
     void Start()
     {
         playerScript = player.GetComponent<PlayerMovement>();
-        fade.CrossFadeAlpha(0f, 0f, false);
+        fade.CrossFadeAlpha(1f, 0f, false);
+        playerSpawned = true;
     }
 
     // Update is called once per frame
@@ -21,6 +23,11 @@ public class FadeOnDeath : MonoBehaviour
         if (playerScript.dead)
         {
             StartCoroutine(fadeOut());
+        }
+        if (playerSpawned)
+        {
+            fade.CrossFadeAlpha(0, 2f, true);
+            playerSpawned = false;
         }
     }
 
