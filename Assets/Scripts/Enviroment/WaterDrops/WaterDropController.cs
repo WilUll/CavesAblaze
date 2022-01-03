@@ -6,12 +6,21 @@ public class WaterDropController : MonoBehaviour
 {
     GameObject player;
     PlayerMovement playerScript;
+    AudioSource audioSource;
+    
+    public SpriteRenderer spriteDrop;
+    public BoxCollider2D colliderDrop;
+    public GameObject spriteLight;
+
+    public AudioClip[] clip;
+
     public GameObject jumpFlames;
     Vector3 offsetFlames;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<PlayerMovement>();
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -36,7 +45,22 @@ public class WaterDropController : MonoBehaviour
         }
         else 
         {
-            Destroy(gameObject);
+            colliderDrop.enabled = false;
+            spriteDrop.enabled = false;
+            spriteLight.SetActive(false);
+
+            float randomPitch = Random.Range(0.8f, 1.2f);
+
+            int index = Random.Range(0, 4);
+
+            StartCoroutine(playWaterDrop());
+            IEnumerator playWaterDrop()
+            {
+                audioSource.pitch = randomPitch;
+                audioSource.PlayOneShot(clip[index]);
+                yield return new WaitForSeconds(clip[index].length);
+                Destroy(gameObject);
+            }
         }
     }
 

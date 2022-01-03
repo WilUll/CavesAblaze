@@ -68,7 +68,7 @@ public class Dynamite : MonoBehaviour
                     isIgnited = false;
                     explosion.Play();
                     wallScript.audioSource.Play();
-                    cameraShake.Shake(0.3f, 0.4f);
+                    cameraShake.Shake(0.3f, 0.5f);
 
                     yield return new WaitForSeconds(0.2f);
                     transform.parent.gameObject.GetComponent<ExplodingWall>().DamageWall(transform);

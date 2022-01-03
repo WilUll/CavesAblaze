@@ -5160,6 +5160,10 @@ MonoBehaviour:
   audioSource: {fileID: 8208641955831057112}
   clip:
   - {fileID: 8300000, guid: d6f74bf66a34d894ba323be92e3370cf, type: 3}
+  - {fileID: 8300000, guid: a43af34ea628ab844ae1b5f1b75bb7d3, type: 3}
+  - {fileID: 8300000, guid: 82effda2f4f601b4e92faac7aada28da, type: 3}
+  - {fileID: 8300000, guid: e04e91eaf405ee44c8bb44f9ece0d062, type: 3}
+  - {fileID: 8300000, guid: 58baeeed7e03da142a90fe00b93d1c77, type: 3}
 --- !u!114 &5017078277431490279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5308,7 +5312,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.17
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5319,7 +5323,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
