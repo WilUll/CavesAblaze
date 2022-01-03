@@ -42,6 +42,7 @@ public class Dynamite : MonoBehaviour
         {
             if (Vector2.Distance(fusePos[fusePos.Length - 1].position, fusePos[0].position) > 1f)
             {
+                //audioSource.PlayOneShot(clips[1]);
                 startTime += Time.deltaTime;
                 float leftToGo = (startTime / 200);
                 LR.SetPosition(index, Vector2.Lerp(fusePos[index].position, fusePos[index - 1].position, leftToGo));
@@ -75,11 +76,25 @@ public class Dynamite : MonoBehaviour
         }
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !isIgnited)
         {
             isIgnited = true;
+
+            StartCoroutine(playFuseLoop()); 
+            IEnumerator playFuseLoop()
+            {
+                audioSource.PlayOneShot(clips[0]);
+                yield return new WaitForSeconds(clips[0].length);
+                audioSource.PlayOneShot(clips[1]);
+                audioSource.loop = true;
+
+            }
+
+            audioSource.PlayOneShot(clips[0]);
         }
     }
 }

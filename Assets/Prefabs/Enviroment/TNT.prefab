@@ -4969,13 +4969,11 @@ MonoBehaviour:
   fusePos:
   - {fileID: 3390865424913723104}
   - {fileID: 3390865424389859291}
-  - {fileID: 3390865425057549227}
   isIgnited: 0
   audioSource: {fileID: 3686192777286637696}
   clips:
   - {fileID: 8300000, guid: 216372adff1f9ec4e89fe5a592750fa8, type: 3}
   - {fileID: 8300000, guid: 5897b58a03b529945995305a43537628, type: 3}
-  - {fileID: 8300000, guid: a58b11e7bf38f9146b62858e549232d5, type: 3}
   index: 0
 --- !u!120 &3390865424146363099
 LineRenderer:
@@ -5112,7 +5110,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
