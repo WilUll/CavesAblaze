@@ -9,6 +9,7 @@ public class Dynamite : MonoBehaviour
     public bool isIgnited;
     public AudioSource audioSource;
     public AudioClip[] clips;
+    public GameObject fuseSparks;
 
     float startTime = 0;
     GameObject particleExplosion;
@@ -21,6 +22,7 @@ public class Dynamite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fuseSparks.SetActive(false);
         LR = GetComponent<LineRenderer>();
         LR.positionCount = fusePos.Length;
         for (int i = 0; i < fusePos.Length; i++)
@@ -83,6 +85,7 @@ public class Dynamite : MonoBehaviour
         if (collision.CompareTag("Player") && !isIgnited)
         {
             isIgnited = true;
+            fuseSparks.SetActive(true);
 
             StartCoroutine(playFuseLoop()); 
             IEnumerator playFuseLoop()

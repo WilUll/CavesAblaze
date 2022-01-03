@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5482729343387888285}
   m_Layer: 0
   m_Name: TNT RockExplotion
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,8 +328,7 @@ MonoBehaviour:
   - {fileID: -5646698960982202731, guid: c762569c557f3d442a5d9f1506fef126, type: 3}
   - {fileID: 2302541314076435781, guid: c762569c557f3d442a5d9f1506fef126, type: 3}
   - {fileID: -7534096182908071325, guid: c762569c557f3d442a5d9f1506fef126, type: 3}
-  explotionWallAudio:
-  - {fileID: 8300000, guid: a58b11e7bf38f9146b62858e549232d5, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &7576743890058162784
 GameObject:
   m_ObjectHideFlags: 0
