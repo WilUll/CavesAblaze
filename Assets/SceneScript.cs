@@ -22,7 +22,9 @@ public class SceneScript : MonoBehaviour
 
     public void LoadLevel()
     {
-        StartCoroutine(fadeNextLevel());
+        index = SceneManager.GetActiveScene().buildIndex;
+        index++;
+        SceneManager.LoadScene(index, LoadSceneMode.Single);
     }
 
     IEnumerator fadeNextLevel()
@@ -31,7 +33,7 @@ public class SceneScript : MonoBehaviour
         FadeOnDeath fadeScript = playerObject.GetComponent<FadeOnDeath>();
         index = SceneManager.GetActiveScene().buildIndex;
         index++;
-        fadeScript.fade.CrossFadeAlpha(1, 0.25f, true);
+        fadeScript.fade.CrossFadeAlpha(1, 0.15f, true);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(index, LoadSceneMode.Single);
     }
@@ -54,7 +56,7 @@ public class SceneScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            LoadLevel();
+            StartCoroutine(fadeNextLevel());
         }
     }
 }
