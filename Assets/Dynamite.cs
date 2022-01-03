@@ -7,9 +7,15 @@ public class Dynamite : MonoBehaviour
     LineRenderer LR;
     public Transform[] fusePos;
     public bool isIgnited;
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+
     float startTime = 0;
     GameObject particleExplosion;
+    ExplodingWall wallScript;
     ParticleSystem explosion;
+    SpriteRenderer dinamyteSprite;
+
 
     public int index;
     // Start is called before the first frame update
@@ -23,7 +29,10 @@ public class Dynamite : MonoBehaviour
         }
         index = fusePos.Length - 1;
         particleExplosion = gameObject.transform.Find("explotion").gameObject;
+        wallScript = GetComponentInParent<ExplodingWall>();
+
         explosion = particleExplosion.GetComponent<ParticleSystem>();
+        dinamyteSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -48,7 +57,6 @@ public class Dynamite : MonoBehaviour
                     startTime = 0;
                     index--;
                 }
-
             }
             else
             {
@@ -57,6 +65,7 @@ public class Dynamite : MonoBehaviour
                 {
                     isIgnited = false;
                     explosion.Play();
+                    wallScript.audioSource.Play();
                     yield return new WaitForSeconds(0.2f);
                     transform.parent.gameObject.GetComponent<ExplodingWall>().DamageWall(transform);
                     gameObject.SetActive(false);
