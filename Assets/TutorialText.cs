@@ -17,13 +17,13 @@ public class TutorialText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            tutText.text = "";
-            for (int i = 0; i < triggerGameObject.Length; i++)
-            {
-                tutScript = triggerGameObject[i].GetComponent<TutorialTriggers>();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    tutText.text = "";
+        //    for (int i = 0; i < triggerGameObject.Length; i++)
+        //    {
+        //        tutScript = triggerGameObject[i].GetComponent<TutorialTriggers>();
+        //    }
+        //}
     }
 }
