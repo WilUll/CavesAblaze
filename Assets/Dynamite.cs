@@ -15,7 +15,7 @@ public class Dynamite : MonoBehaviour
     GameObject particleExplosion;
     ExplodingWall wallScript;
     ParticleSystem explosion;
-    SpriteRenderer dinamyteSprite;
+    ShakeCamera cameraShake;
 
 
     public int index;
@@ -32,9 +32,8 @@ public class Dynamite : MonoBehaviour
         index = fusePos.Length - 1;
         particleExplosion = gameObject.transform.Find("explotion").gameObject;
         wallScript = GetComponentInParent<ExplodingWall>();
-
+        cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ShakeCamera>();
         explosion = particleExplosion.GetComponent<ParticleSystem>();
-        dinamyteSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -69,6 +68,8 @@ public class Dynamite : MonoBehaviour
                     isIgnited = false;
                     explosion.Play();
                     wallScript.audioSource.Play();
+                    cameraShake.Shake(0.3f, 0.4f);
+
                     yield return new WaitForSeconds(0.2f);
                     transform.parent.gameObject.GetComponent<ExplodingWall>().DamageWall(transform);
                     gameObject.SetActive(false);

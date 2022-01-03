@@ -6,7 +6,9 @@ public class ShakeCamera : MonoBehaviour
 {
     Camera mainCamera;
 
-    float shakeAmount = 0;
+    float shakeAmount = 0, startTime;
+
+    bool stopShaking;
 
     private void Awake()
     {
@@ -18,22 +20,38 @@ public class ShakeCamera : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            Shake(1f, 0.2f);
+            Shake(0.3f, 0.4f);
         }
+
+        if (stopShaking)
+        {
+            startTime += Time.deltaTime;
+            float leftToGo = (startTime / 10);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, Vector3.zero, leftToGo);
+
+            if (transform.localPosition == Vector3.zero)
+            {
+                startTime = 0;
+                stopShaking = false;
+            }
+            if (startTime == 0) transform.localPosition = Vector3.zero;
+
+        }
+
     }
 
-    public void Shake (float amount, float lenght)
+    public void Shake(float amount, float lenght)
     {
         shakeAmount = amount;
-        InvokeRepeating("StartShake", 0, 0.1f);
+        InvokeRepeating("StartShake", 0, 0.01f);
         Invoke("StopShake", lenght);
     }
 
     void StartShake()
     {
-        if(shakeAmount > 0)
+        if (shakeAmount > 0)
         {
             Vector3 cameraPosition = mainCamera.transform.position;
 
@@ -44,13 +62,15 @@ public class ShakeCamera : MonoBehaviour
             cameraPosition.y += offsetY;
 
             mainCamera.transform.position = cameraPosition;
+
+            stopShaking = false;
         }
     }
 
-    void StopShake ()
+    void StopShake()
     {
         CancelInvoke("StartShake");
 
-        mainCamera.transform.localPosition = Vector3.zero;
+        stopShaking = true;
     }
 }
