@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4335633826599826008}
   - component: {fileID: 636571613618512566}
   - component: {fileID: 7831020985299634152}
+  - component: {fileID: 8390206814357197268}
   m_Layer: 6
   m_Name: JumpFlames
   m_TagString: jumpFlames
@@ -240,3 +241,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8390206814357197268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307371557317138467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0397de3621c8e1468f87ebabd55d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

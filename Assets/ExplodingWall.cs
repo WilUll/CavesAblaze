@@ -39,7 +39,6 @@ public class ExplodingWall : MonoBehaviour
                 wallSprite.sprite = spriteArray[1];
                 boxCollider.enabled = false;
                 polygonCollider.enabled = true;
-                Debug.Log("1");
                 break;
             case 2:
                 wallSprite.sprite = spriteArray[0];
