@@ -78,7 +78,37 @@ public class DashWallsDestroy : MonoBehaviour
 
     private void PlayShatterSound()
     {
-        audioSource.PlayOneShot(clip[0]);
+        switch(wallHP)
+        {
+            case 2:
+                StartCoroutine(playFallingRocks1());
+                IEnumerator playFallingRocks1()
+                {
+                    audioSource.PlayOneShot(clip[1]);
+                    yield return new WaitForSeconds(clip[1].length - 1.5f);
+                    audioSource.PlayOneShot(clip[0]);
+                }
+                break;
+            case 1:
+                StartCoroutine(playFallingRocks2());
+                IEnumerator playFallingRocks2()
+                {
+                    audioSource.PlayOneShot(clip[2]);
+                    yield return new WaitForSeconds(clip[2].length - 1.5f);
+                    audioSource.PlayOneShot(clip[4]);
+                }
+                break;
+            case 0:
+                StartCoroutine(playFallingRocks3());
+                IEnumerator playFallingRocks3()
+                {
+                    audioSource.PlayOneShot(clip[3]);
+                    yield return new WaitForSeconds(clip[3].length - 1.5f);
+                    audioSource.pitch = 1.1f;
+                    audioSource.PlayOneShot(clip[0]);
+                }
+                break;
+        }
     }
 
     private void RunTimer()
