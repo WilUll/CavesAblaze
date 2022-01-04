@@ -11,10 +11,14 @@ public class TutorialText : MonoBehaviour
     int index;
     public string[] sentences;
     bool isUsingController;
+    PlayerMovement playerScript;
+    DashController playerDashScript;
+    public bool move = false, dash = false, jump = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        move = true;
         tutText = GetComponent<TextMeshProUGUI>();
         tutText.CrossFadeAlpha(1f, 0f, false);
         Debug.Log(Input.GetJoystickNames());
@@ -48,19 +52,35 @@ public class TutorialText : MonoBehaviour
             }
         }
         tutText.text = sentences[index].ToString();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerDashScript = GameObject.FindGameObjectWithTag("Player").GetComponent<DashController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (move && playerScript.xAxis < 0 || playerScript.xAxis > 0 && move)
         {
+            move = false;
+            dash = true;
+            StartCoroutine(fade());
+        }
+        else if (dash && playerDashScript.dashOn)
+        {
+            dash = false;
+            jump = true;
+            StartCoroutine(fade());
+        }
+        else if (jump && playerScript.jumping)
+        {
+            jump = false;
             StartCoroutine(fade());
         }
     }
 
     IEnumerator fade()
     {
+
         tutText.CrossFadeAlpha(0f, 0.2f, false);
         yield return new WaitForSeconds(0.2f);
         tutText.text = "";
@@ -74,5 +94,6 @@ public class TutorialText : MonoBehaviour
             tutText.text = sentences[index].ToString();
             tutText.CrossFadeAlpha(1f, 0.2f, false);
         }
+
     }
 }
