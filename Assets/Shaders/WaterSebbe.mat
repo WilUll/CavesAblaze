@@ -54,7 +54,7 @@ Material:
     - _NoiseXScale: 0.23
     - _Ystretch: 0.38
     m_Colors:
-    - Color_aef171ebd32444dcbd2194322e6e492e: {r: 0.01372549, g: 0.023529412, b: 0.08039216, a: 0}
+    - Color_aef171ebd32444dcbd2194322e6e492e: {r: 0.026237093, g: 0.19386563, b: 0.20754719, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseScale: {r: 12.54, g: 9.52, b: 0, a: 0}
