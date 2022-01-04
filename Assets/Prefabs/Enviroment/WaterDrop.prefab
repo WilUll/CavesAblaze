@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5012702813093887572}
   - component: {fileID: 8701016885349236282}
   - component: {fileID: 3733204674833343427}
-  m_Layer: 4
+  m_Layer: 13
   m_Name: Sprite Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 885744645123495904}
   - component: {fileID: 6581858444937397297}
   - component: {fileID: 588721804936530996}
-  m_Layer: 4
+  m_Layer: 13
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 5131895446483865111}
   - component: {fileID: 7845242854235123983}
   - component: {fileID: 2346305039922390344}
-  m_Layer: 4
+  m_Layer: 13
   m_Name: WaterDrop
   m_TagString: WaterDrop
   m_Icon: {fileID: 0}
