@@ -7,6 +7,11 @@ public class SceneScript : MonoBehaviour
 {
     public static SceneScript Instance { get; private set; }
     int index;
+    GameObject player;
+    public int playerDeaths;
+    public float timer;
+    public bool stopTimer = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -20,23 +25,34 @@ public class SceneScript : MonoBehaviour
         }
     }
 
-    public void LoadLevel()
+    private void Start()
     {
-        index = SceneManager.GetActiveScene().buildIndex;
-        index++;
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public void LoadLoadingScreen()
+    {
+        StartCoroutine(fadeLoadScreen());
+    }
+
+    public void loadNextLevel()
+    {
+        Debug.Log("Dåligt");
         SceneManager.LoadScene(index, LoadSceneMode.Single);
     }
 
-    IEnumerator fadeNextLevel()
+    IEnumerator fadeLoadScreen()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         FadeOnDeath fadeScript = playerObject.GetComponent<FadeOnDeath>();
+        fadeScript.fade.CrossFadeAlpha(1, 0.15f, true);
         index = SceneManager.GetActiveScene().buildIndex;
         index++;
-        fadeScript.fade.CrossFadeAlpha(1, 0.15f, true);
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(index, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
+
     }
+
     public void Gotosettings()
     {
         SceneManager.LoadScene("Settings");
@@ -51,12 +67,11 @@ public class SceneScript : MonoBehaviour
     {
         Application.Quit();
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (player != null && !stopTimer)
         {
-            StartCoroutine(fadeNextLevel());
+            timer += Time.deltaTime;
         }
     }
 }
