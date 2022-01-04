@@ -45,7 +45,7 @@ public class Dynamite : MonoBehaviour
             {
                 //audioSource.PlayOneShot(clips[1]);
                 startTime += Time.deltaTime;
-                float leftToGo = (startTime / 200);
+                float leftToGo = (startTime / 300);
                 LR.SetPosition(index, Vector2.Lerp(fusePos[index].position, fusePos[index - 1].position, leftToGo));
                 if (index == fusePos.Length - 2)
                 {
