@@ -6034,7 +6034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &741819094
 Transform:
   m_ObjectHideFlags: 0
@@ -6430,15 +6430,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349792683185, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_Name
@@ -6538,11 +6538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349919546737, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349919546737, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
@@ -7513,6 +7513,18 @@ PrefabInstance:
     - target: {fileID: 8098785610348797537, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
       propertyPath: m_Name
       value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474676793}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Setfullscreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
@@ -13387,7 +13399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2091773681
 Transform:
   m_ObjectHideFlags: 0

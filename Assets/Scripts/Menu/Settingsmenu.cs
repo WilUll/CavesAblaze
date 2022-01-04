@@ -17,4 +17,8 @@ public class Settingsmenu : MonoBehaviour
     {
         Screen.fullScreen = isfullscreen;
     }
+    public void NotSetSetfullscreen(bool isfullscreen)
+    {
+        Screen.fullScreen = !isfullscreen;
+    }
 }
