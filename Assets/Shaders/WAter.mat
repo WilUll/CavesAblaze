@@ -52,7 +52,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Firebottomoffset: 0.51
     - _NoiseXScale: 7.26
-    - _Ystretch: 7.08
+    - _Ystretch: 2.7
     m_Colors:
     - Color_aef171ebd32444dcbd2194322e6e492e: {r: 0.06018165, g: 0.1120075, b: 0.8505674, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

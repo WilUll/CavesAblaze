@@ -55,6 +55,7 @@ public class CheckpointSystem : MonoBehaviour
     }
     public void RespawnPlayer()
     {
+        SceneScript.Instance.playerDeaths++;
         if (playerScript.isAttached)
         {
             playerScript.Detach();

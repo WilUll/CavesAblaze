@@ -9,7 +9,8 @@ public class TriggerNextScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneScript.Instance.LoadLevel();
+            SceneScript.Instance.stopTimer = true;
+            SceneScript.Instance.LoadLoadingScreen();
         }
     }
 
