@@ -5951,6 +5951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: caves ablaze logo for unity (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -3120921823658018107, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5977,7 +5981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3835.9277
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6766,8 +6770,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277758397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 226.2331, y: -43.42, z: 71.57612}
-  m_LocalScale: {x: 18.145618, y: 20.203814, z: 0.93792164}
+  m_LocalPosition: {x: 225.75, y: -43.42, z: 71.57612}
+  m_LocalScale: {x: 18.510345, y: 20.203814, z: 0.93792164}
   m_Children: []
   m_Father: {fileID: 741819094}
   m_RootOrder: 6
@@ -7599,7 +7603,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 967321305}
         m_TargetAssemblyTypeName: SceneScript, Assembly-CSharp
-        m_MethodName: LoadLevel
+        m_MethodName: loadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18302,6 +18306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pausemenureal
       objectReference: {fileID: 0}
+    - target: {fileID: 674605519143056925, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1728440058911199840, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -18348,23 +18356,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6950946399918291559, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6950946399918291559, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}

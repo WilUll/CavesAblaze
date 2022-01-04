@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneScript : MonoBehaviour
 {
     public static SceneScript Instance { get; private set; }
-    int index;
+    int index = 2;
     GameObject player;
     public int playerDeaths;
     public float timer;
