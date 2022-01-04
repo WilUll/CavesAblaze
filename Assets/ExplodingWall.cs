@@ -11,6 +11,8 @@ public class ExplodingWall : MonoBehaviour
     public Sprite[] spriteArray;
     public AudioSource audioSource;
 
+    public AudioClip[] clips;
+
     BoxCollider2D boxCollider;
     PolygonCollider2D polygonCollider;
 
