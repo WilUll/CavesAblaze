@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class FadeOnDeath : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject playerBody;
     PlayerMovement playerScript;
     public Image fade;
     public bool playerSpawned = false;
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = player.GetComponent<PlayerMovement>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         fade.CrossFadeAlpha(1f, 0f, false);
         playerSpawned = true;
     }
@@ -34,10 +34,12 @@ public class FadeOnDeath : MonoBehaviour
     IEnumerator fadeOut()
     {
         playerScript.dead = false;
+        playerBody.SetActive(false);
         playerScript.playerRB.velocity = Vector2.zero;
         playerScript.enabled = false;
-        fade.CrossFadeAlpha(1, 0.25f, true);
-        yield return new WaitForSeconds(0.5f);
+        fade.CrossFadeAlpha(1, 1f, true);
+        yield return new WaitForSeconds(1f);
+        playerBody.SetActive(true);
         GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
         playerScript.enabled = true;
         fade.CrossFadeAlpha(0, 0.5f, true);
