@@ -71,6 +71,7 @@ public class Dynamite : MonoBehaviour
                     cameraShake.Shake(0.3f, 0.5f);
 
                     yield return new WaitForSeconds(0.2f);
+                    //wallScript.audioSource.PlayOneShot(wallScript.clips[Random.Range(0, 2)]);
                     transform.parent.gameObject.GetComponent<ExplodingWall>().DamageWall(transform);
                     gameObject.SetActive(false);
                 }
