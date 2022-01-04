@@ -37,8 +37,10 @@ public class SceneScript : MonoBehaviour
 
     public void loadNextLevel()
     {
-        Debug.Log("Dåligt");
         SceneManager.LoadScene(index, LoadSceneMode.Single);
+        timer = 0;
+        stopTimer = false;
+        playerDeaths = 0;
     }
 
     IEnumerator fadeLoadScreen()
@@ -72,6 +74,10 @@ public class SceneScript : MonoBehaviour
         if (player != null && !stopTimer)
         {
             timer += Time.deltaTime;
+        }
+        else if (player == null && SceneManager.GetActiveScene().name != "LoadingScreen")
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 }
