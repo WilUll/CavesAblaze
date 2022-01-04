@@ -5951,6 +5951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: caves ablaze logo for unity (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -3120921823658018107, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5973,11 +5977,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.45867
+      value: 57.16
       objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3835.9277
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6633849233672894555, guid: 211373c16a1579d4d96154a72c7235bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6030,7 +6034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &741819094
 Transform:
   m_ObjectHideFlags: 0
@@ -6426,15 +6430,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349737695170, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349792683185, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_Name
@@ -6534,11 +6538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349919546737, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229623349919546737, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7a29084a45f48468f1ae0a9ae1c012, type: 3}
@@ -6766,8 +6770,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277758397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 226.2331, y: -43.42, z: 71.57612}
-  m_LocalScale: {x: 18.145618, y: 20.203814, z: 0.93792164}
+  m_LocalPosition: {x: 225.75, y: -43.42, z: 71.57612}
+  m_LocalScale: {x: 18.510345, y: 20.203814, z: 0.93792164}
   m_Children: []
   m_Father: {fileID: 741819094}
   m_RootOrder: 6
@@ -7510,6 +7514,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toggle
       objectReference: {fileID: 0}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474676793}
+    - target: {fileID: 8098785610348797539, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Setfullscreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0438053c2a8bfc3409220bed19d29057, type: 3}
 --- !u!1 &1548612966
@@ -7599,7 +7615,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 967321305}
         m_TargetAssemblyTypeName: SceneScript, Assembly-CSharp
-        m_MethodName: LoadLevel
+        m_MethodName: loadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13383,7 +13399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2091773681
 Transform:
   m_ObjectHideFlags: 0
@@ -18302,6 +18318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pausemenureal
       objectReference: {fileID: 0}
+    - target: {fileID: 674605519143056925, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1728440058911199840, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -18348,23 +18368,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6950946399918291559, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6950946399918291559, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6950946400198598868, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59fa3689cfdebfe4ea772ee790e280b4, type: 3}
