@@ -450,7 +450,7 @@ MonoBehaviour:
   - {x: -5.39553, y: -1.9461788, z: 0}
   m_ShapePathHash: 1478573879
   m_Mesh: {fileID: 0}
-  m_InstanceId: 24500
+  m_InstanceId: 763908
 --- !u!1 &5773251569646442720
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +555,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -194102211539910391, guid: d9a7d21723e8be4448976fe837aed1e5, type: 2}
   m_audioClip: {fileID: 8300000, guid: feae973e3113984419f70731b5202b6a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.38
+  m_Volume: 0.66
   m_Pitch: 1
   Loop: 1
   Mute: 0
