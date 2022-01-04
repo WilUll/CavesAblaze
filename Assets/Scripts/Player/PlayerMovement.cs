@@ -24,11 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 offsetFlames;
 
+    public ParticleSystem deathFlames;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         dash = GetComponent<DashController>();
         lastFrameAmountOfJumpsLeft = currentJumpsLeft;
+
 
         //jumpsLeft = maxJumps;
 
@@ -334,10 +337,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Water") 
         {
             dead = true;
+            deathFlames.Play();
         }
         if(collision.gameObject.tag == "WaterDrop" && canDie)
         {
             dead = true;
+            deathFlames.Play();
         }
     }
 }
