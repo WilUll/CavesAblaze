@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevels/Tutorial/Level3.unity
     guid: e919f976e6d369a4c87f30f503c7c612
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameLevels/Tutorial/level 4 backup.unity
     guid: f5de44b68d868cd4c8dfb20c57755439
   - enabled: 0
