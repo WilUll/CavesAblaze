@@ -11,6 +11,7 @@ public class SceneScript : MonoBehaviour
     public int playerDeaths;
     public float timer;
     public bool stopTimer = false;
+    public float totalScore;
 
     void Awake()
     {
