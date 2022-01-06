@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d02f84bdd362b3c43aa8e3a71454c928
+guid: 64fbb0d058200354081f032f451a32e0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +32,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 50
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -98,11 +98,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 218
-      width: 457
-      height: 150
-    spriteID: 836de54b5a16a9e4c9c12564498c8c1c
+      x: 568
+      y: 4
+      width: 397
+      height: 155
+    spriteID: 86715f6791a16994aa54bedcdbfeeca5
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -112,29 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -43, y: 162}
-  - name: Hel copy
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 376
-      width: 556
-      height: 105
-    spriteID: 78be621d5939c5d42869ed3aa7c7064a
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 376}
+    uvTransform: {x: 499, y: -47}
   - name: Hel
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -146,7 +124,7 @@ ScriptedImporter:
       y: 4
       width: 556
       height: 206
-    spriteID: f01337386cb00ac419fa15d91d2a0475
+    spriteID: 5fe011686f29670478980f3689294466
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -157,29 +135,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
@@ -202,21 +158,14 @@ ScriptedImporter:
     spriteName: Layer 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 836de54b5a16a9e4c9c12564498c8c1c
-    layerID: 11
-    mosaicPosition: {x: 4, y: 218}
-  - name: Hel copy
-    spriteName: Hel copy
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 78be621d5939c5d42869ed3aa7c7064a
-    layerID: 10
-    mosaicPosition: {x: 4, y: 376}
+    spriteID: 86715f6791a16994aa54bedcdbfeeca5
+    layerID: 16
+    mosaicPosition: {x: 568, y: 4}
   - name: Hel
     spriteName: Hel
     isGroup: 0
     parentIndex: -1
-    spriteID: f01337386cb00ac419fa15d91d2a0475
+    spriteID: 5fe011686f29670478980f3689294466
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
   characterData:
@@ -225,7 +174,7 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
   generateGOHierarchy: 0
-  textureAssetName: Bonfire_1_PSB Texture
-  prefabAssetName: Bonfire_1_PSB Prefab
-  spriteLibAssetName: Bonfire_1_PSB Sprite Lib
+  textureAssetName: Bonfire_1_PSB 1 Texture
+  prefabAssetName: Bonfire_1_PSB 1 Prefab
+  spriteLibAssetName: Bonfire_1_PSB 1 Sprite Lib
   secondarySpriteTextures: []
