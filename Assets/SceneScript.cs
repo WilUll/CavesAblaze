@@ -36,6 +36,10 @@ public class SceneScript : MonoBehaviour
         StartCoroutine(fadeLoadScreen());
     }
 
+    public void LoadMainScreen()
+    {
+        StartCoroutine(fadeMainScreen());
+    }
     public void loadNextLevel()
     {
         stopTimer = false;
@@ -54,6 +58,16 @@ public class SceneScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
 
+    }
+
+    IEnumerator fadeMainScreen()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        FadeOnDeath fadeScript = playerObject.GetComponent<FadeOnDeath>();
+        fadeScript.fade.CrossFadeAlpha(1, 0.15f, true);
+        index = SceneManager.GetActiveScene().buildIndex;
+        yield return new WaitForSeconds(0.1f);
+        SceneManager.LoadScene("Mainmenu");
     }
 
     public void Gotosettings()
