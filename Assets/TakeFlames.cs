@@ -6,11 +6,13 @@ public class TakeFlames : MonoBehaviour
 {
     GameObject player;
     PlayerMovement playerScript;
+    AudioSource audioSource;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<PlayerMovement>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,6 +22,7 @@ public class TakeFlames : MonoBehaviour
         {
             Destroy(other.gameObject);
             playerScript.currentJumpsLeft++;
+            audioSource.Play();
         }
     }
 }
