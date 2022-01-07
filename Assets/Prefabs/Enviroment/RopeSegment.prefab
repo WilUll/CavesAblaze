@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuel: 15
-  fire: {fileID: 7427160681686832602, guid: c02368d573413c04fb11360d6129eecc, type: 3}
+  fire: {fileID: 7427160681686832602, guid: 4f9b1512479dc724d8bcec800f73b700, type: 3}
   burnTimer: 10
   objectBurn: 0
 --- !u!61 &7877645492883511230

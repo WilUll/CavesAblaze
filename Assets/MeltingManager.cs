@@ -8,10 +8,14 @@ public class MeltingManager : MonoBehaviour
 
     public SpriteRenderer iceSprite;
     public Sprite[] spriteArray;
+    public AudioClip[] clip;
+
     PlayerMovement playerScript;
 
     EdgeCollider2D iceBlockCollider;
     BoxCollider2D iceBlockCollider2;
+
+    AudioSource audioSource;
 
     bool runTimer, restartIceBlocks;
 
@@ -24,6 +28,8 @@ public class MeltingManager : MonoBehaviour
         iceBlockCollider2 = GetComponent<BoxCollider2D>();
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -92,6 +98,9 @@ public class MeltingManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("jumpFlames"))
         {
             runTimer = true;
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            int index = Random.Range(0, 2);
+            audioSource.PlayOneShot(clip[index]);
         }
     }
     private void OnCollisionExit2D(Collision2D other)
@@ -99,6 +108,7 @@ public class MeltingManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("jumpFlames"))
         {
             runTimer = false;
+            audioSource.Stop();
         }
     }
 }
