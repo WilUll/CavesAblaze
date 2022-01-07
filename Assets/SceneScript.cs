@@ -38,9 +38,9 @@ public class SceneScript : MonoBehaviour
 
     public void loadNextLevel()
     {
+        stopTimer = false;
         SceneManager.LoadScene(index, LoadSceneMode.Single);
         timer = 0;
-        stopTimer = false;
         playerDeaths = 0;
     }
 
@@ -72,7 +72,7 @@ public class SceneScript : MonoBehaviour
     }
     private void Update()
     {
-        if (player != null && !stopTimer)
+        if (!stopTimer && player != null)
         {
             timer += Time.deltaTime;
         }
