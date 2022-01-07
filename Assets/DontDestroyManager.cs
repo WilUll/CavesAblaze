@@ -5,19 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class DontDestroyManager : MonoBehaviour
 {
-    AudioSource audioSource;
-    public AudioClip [] clip;
+    public static DontDestroyManager musicSingleton { get; private set; }
 
+    public AudioSource audioSource;
+    public AudioClip[] clip;
+
+
+
+    private void Awake()
+    {
+        if (musicSingleton == null)
+        {
+            musicSingleton = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        DontDestroyOnLoad(this.gameObject);
-
-        if(SceneManager.GetActiveScene().name == "End scen")
-        {
-            audioSource.clip = clip[0];
-            audioSource.Play();
-        }
     }
+
+    public void PlayEndSceneMusic()
+    {
+        Debug.Log("3");
+        audioSource.clip =clip[0];
+        audioSource.Play();
+
+        Debug.Log("4");
+    }
+
 }
