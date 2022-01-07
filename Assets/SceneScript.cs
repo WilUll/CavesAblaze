@@ -47,11 +47,8 @@ public class SceneScript : MonoBehaviour
         timer = 0;
         playerDeaths = 0;
 
-        Debug.Log(index);
-
         if (index == 8)
         {
-            Debug.Log("2");
             DontDestroyManager.musicSingleton.PlayEndSceneMusic();
         }
     }
