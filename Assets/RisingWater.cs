@@ -4,28 +4,63 @@ using UnityEngine;
 
 public class RisingWater : MonoBehaviour
 {
-    public float yScaleStart, yScaleEnd;
-    public bool isRising;
+    public float yScaleStart, yScaleEnd, yPositionStart, yPositionEnd;
+    public bool isRising, startTheRise;
+
+    public float timer, resetTimer;
+
     PlayerMovement playerScript;
+
+    Vector3 originalPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+        originalPosition = gameObject.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isRising)
+        if (isRising && !startTheRise)
         {
-            gameObject.transform.localScale += (Vector3.up * Time.deltaTime);
-            if (playerScript.dead)
+            timer -= Time.deltaTime;
+        }
+
+        if (timer <= 0)
+        {
+            startTheRise = true;
+            timer = resetTimer;
+        }
+
+        if (isRising && startTheRise)
+        {
+            if (gameObject.transform.localPosition.y >= yPositionEnd)
+            {
+            }
+            else
+            {
+                gameObject.transform.localPosition += (Vector3.up * Time.deltaTime);
+            }
+            if (gameObject.transform.localScale.y >= yScaleEnd)
             {
                 isRising = false;
-                gameObject.transform.localScale = (new Vector3(gameObject.transform.localScale.x, yScaleStart, gameObject.transform.localScale.z));
             }
-        } 
+            else
+            {
+                gameObject.transform.localScale += (Vector3.up * Time.deltaTime);
+            }
+
+        }
+        if (playerScript.respawned)
+        {
+            isRising = false;
+            startTheRise = false;
+            gameObject.transform.localScale = (new Vector3(gameObject.transform.localScale.x, yScaleStart, gameObject.transform.localScale.z));
+            gameObject.transform.localPosition = originalPosition;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

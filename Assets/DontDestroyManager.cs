@@ -32,11 +32,8 @@ public class DontDestroyManager : MonoBehaviour
 
     public void PlayEndSceneMusic()
     {
-        Debug.Log("3");
         audioSource.clip =clip[0];
         audioSource.Play();
-
-        Debug.Log("4");
     }
 
 }
