@@ -4116,6 +4116,9 @@ MonoBehaviour:
   time: {fileID: 892786070}
   score: {fileID: 966590289}
   deaths: {fileID: 1603145989}
+  added: 0
+  stop: 1
+  nextButton: {fileID: 2109324311}
 --- !u!4 &1583363373
 Transform:
   m_ObjectHideFlags: 0
@@ -5260,7 +5263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109324312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5388,3 +5391,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadButton: {fileID: 2109324313}
+  button: 0

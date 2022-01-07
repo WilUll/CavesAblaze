@@ -8,6 +8,7 @@ public class LoadingScreenManager : MonoBehaviour
     public TextMeshProUGUI time, score, deaths;
     float finalScore, x, timer;
     public bool added,stop = true;
+    public GameObject nextButton;
 
     private void Start()
     {
@@ -61,6 +62,7 @@ public class LoadingScreenManager : MonoBehaviour
             {
                 SceneScript.Instance.totalScore += finalScore;
                 added = true;
+                nextButton.SetActive(true);
             }
             score.text = x.ToString();
         }
