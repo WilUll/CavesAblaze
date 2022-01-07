@@ -15,7 +15,7 @@ public class LoadingScreenManager : MonoBehaviour
         score.text = 0.ToString();
         deaths.text = SceneScript.Instance.playerDeaths.ToString();
         string minutes = Mathf.Floor(SceneScript.Instance.timer / 60).ToString("00");
-        string seconds = Mathf.FloorToInt((SceneScript.Instance.timer % 60)).ToString();
+        string seconds = Mathf.FloorToInt((SceneScript.Instance.timer % 60)).ToString("00");
         string milliseconds = ((SceneScript.Instance.timer * 1000) % 1000).ToString("000");
         time.text = string.Format("{0:0}:{1:00}:{2:000}", minutes, seconds, milliseconds);
 
