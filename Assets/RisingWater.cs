@@ -10,6 +10,7 @@ public class RisingWater : MonoBehaviour
     public float timer, resetTimer;
 
     PlayerMovement playerScript;
+    AudioSource audioSource;
 
     Vector3 originalPosition;
 
@@ -17,6 +18,7 @@ public class RisingWater : MonoBehaviour
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        audioSource = GetComponent<AudioSource>();
 
         originalPosition = gameObject.transform.localPosition;
     }
@@ -24,6 +26,8 @@ public class RisingWater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isRising) audioSource.Stop();
+
         if (isRising && !startTheRise)
         {
             timer -= Time.deltaTime;
@@ -68,6 +72,8 @@ public class RisingWater : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isRising = true;
+
+            audioSource.Play();
         }
     }
 
