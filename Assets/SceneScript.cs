@@ -12,6 +12,7 @@ public class SceneScript : MonoBehaviour
     public float timer;
     public bool stopTimer = false;
     public float totalScore;
+    public float master, fx, music;
 
     void Awake()
     {

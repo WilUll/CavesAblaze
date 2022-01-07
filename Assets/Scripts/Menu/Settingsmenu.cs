@@ -35,14 +35,18 @@ public class Settingsmenu : MonoBehaviour
     public void SetMasterVolume (float Master)
     {
         audiomixer.SetFloat("master", Master);
+        SceneScript.Instance.master = Master;
     }
     public void SetMusicVolume(float Music)
     {
         audiomixer.SetFloat("music", Music);
+        SceneScript.Instance.music = Music;
+
     }
     public void SetFxVolume(float fx)
     {
         audiomixer.SetFloat("fx", fx);
+        SceneScript.Instance.fx = fx;
     }
 
     public void Setfullscreen(bool isfullscreen)
