@@ -24,6 +24,7 @@ TagManager:
   - PlayerFeet
   - Ladder
   - Bat
+  - MainMusicPlayer
   layers:
   - Default
   - TransparentFX
