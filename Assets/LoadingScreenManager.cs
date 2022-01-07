@@ -7,14 +7,14 @@ public class LoadingScreenManager : MonoBehaviour
 {
     public TextMeshProUGUI time, score, deaths;
     float finalScore, x;
-    bool added,stop = true;
+    public bool added,stop = true;
 
     private void Start()
     {
         x = 0;
         deaths.text = SceneScript.Instance.playerDeaths.ToString();
         string minutes = Mathf.Floor(SceneScript.Instance.timer / 60).ToString("00");
-        string seconds = (SceneScript.Instance.timer % 60).ToString("00");
+        string seconds = Mathf.FloorToInt((SceneScript.Instance.timer % 60)).ToString();
         string milliseconds = ((SceneScript.Instance.timer * 1000) % 1000).ToString("000");
         time.text = string.Format("{0:0}:{1:00}:{2:000}", minutes, seconds, milliseconds);
 
@@ -32,15 +32,7 @@ public class LoadingScreenManager : MonoBehaviour
             finalScore = scoreInt;
             stop = false;
         }
-        if (added)
-        {
-
-        }
-        else
-        {
-            SceneScript.Instance.totalScore += finalScore;
-            added = true;
-        }
+        
 
     }
     private void Update()
@@ -50,11 +42,21 @@ public class LoadingScreenManager : MonoBehaviour
             x +=(finalScore - x) * 0.005f;
             x = Mathf.RoundToInt(x);
         }
-        else if (x + 1 >= finalScore)
+        if (x + 100 >= finalScore && !stop)
         {
             stop = true;
             x = finalScore;
+            if (added)
+            {
+
+            }
+            else
+            {
+                SceneScript.Instance.totalScore += finalScore;
+                added = true;
+            }
         }
         score.text = x.ToString();
+
     }
 }
