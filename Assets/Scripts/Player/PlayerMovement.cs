@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRB;
     DashController dash;
     GameObject ropeObj;
+    SoundManager soundScript;
+    AudioSource audioSource;
 
     public bool isGrounded, dead, respawned, refilled, attachJump,
                 isAttached, jumping, oneDashOnAir, coroutineStart, canDie, runImmunityTimer;
@@ -32,9 +34,9 @@ public class PlayerMovement : MonoBehaviour
         dash = GetComponent<DashController>();
         lastFrameAmountOfJumpsLeft = currentJumpsLeft;
 
-
+        soundScript = GetComponent<SoundManager>();
+        audioSource = GetComponent<AudioSource>();
         //jumpsLeft = maxJumps;
-
     }
 
     void Update()
@@ -338,11 +340,13 @@ public class PlayerMovement : MonoBehaviour
         {
             dead = true;
             deathFlames.Play();
+            audioSource.PlayOneShot(soundScript.clips[6]);
         }
         if(collision.gameObject.tag == "WaterDrop" && canDie)
         {
             dead = true;
             deathFlames.Play();
+            audioSource.PlayOneShot(soundScript.clips[6]);
         }
     }
 }
