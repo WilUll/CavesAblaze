@@ -35,12 +35,14 @@ public class FadeOnDeath : MonoBehaviour
     {
         playerScript.dead = false;
         playerBody.SetActive(false);
+        playerScript.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         playerScript.playerRB.velocity = Vector2.zero;
         playerScript.enabled = false;
         fade.CrossFadeAlpha(1, 1f, true);
         yield return new WaitForSeconds(1f);
         playerBody.SetActive(true);
         GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointSystem>().RespawnPlayer();
+        playerScript.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         playerScript.enabled = true;
         fade.CrossFadeAlpha(0, 0.5f, true);
     }
