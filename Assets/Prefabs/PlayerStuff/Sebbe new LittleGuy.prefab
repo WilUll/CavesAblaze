@@ -1145,7 +1145,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -6162,6 +6162,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Pausemenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1710265598784332511, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1710265599121398144, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
       propertyPath: m_Name
       value: SettingsMenu
@@ -6210,9 +6214,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1710265599407719484, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1710265599407719486, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710265599469891162, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1710265599469891164, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -6221,6 +6233,14 @@ PrefabInstance:
     - target: {fileID: 1710265599469891164, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710265599609244409, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710265599878698428, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1710265599878698430, guid: 4f8e68c78376e8a4d98fe8925355b792, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
