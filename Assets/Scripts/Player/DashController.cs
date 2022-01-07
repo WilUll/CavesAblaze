@@ -85,7 +85,7 @@ public class DashController : MonoBehaviour
                 }
                 else if (hit.collider == hit.collider.CompareTag("DashWall"))
                 {
-                    RaycastHit2D hit2 = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, 0.1f);
+                    RaycastHit2D hit2 = Physics2D.Raycast(transform.position + Vector3.right * lastDirection, Vector3.right * lastDirection, 0.001f);
                     if (hit2.collider == hit.collider.CompareTag("DashWall"))
                     {
                         pushBack = true;
