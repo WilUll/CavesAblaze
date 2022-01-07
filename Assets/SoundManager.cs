@@ -45,6 +45,10 @@ public class SoundManager : MonoBehaviour
                 case 1:
                     audioSource.PlayOneShot(clips[4]);
                     break;
+                default:
+                    int index = Random.Range(1, 4);
+                    audioSource.PlayOneShot(clips[index]);
+                    break;
             }
         }
     }
